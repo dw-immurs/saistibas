@@ -1,154 +1,178 @@
 export const CONNECTION_GAMES = [
   [
-    {
-      category: "Black Women Authors",
-      words: ["Toni", "Paule", "Zora", "Alice"],
-      difficulty: 1,
-      imageSrc: "https://i.ibb.co/Gn36Ypb/Connections-1.png",
-    },
-    {
-      category: "Michael ____",
-      words: ["Jackson", "Jordan", "Johnson", "Tyson"],
-      difficulty: 2,
-      imageSrc: "https://i.ibb.co/3B44zXX/Connections-2.png",
-    },
-    {
-      category: "Black Greek Sorority Symbols",
-      words: ["Poodle", "Dove", "Ivy", "Pyramid"],
-      difficulty: 3,
-      imageSrc: "https://i.ibb.co/4MwD7zv/Connections-3.png",
-    },
-
-    {
-      category: "Boyz II Men",
-      words: ["Michael", "Nathan", "Wanyá", "Shawn"],
-      difficulty: 4,
-      imageSrc:
-        "https://i.ibb.co/V2vnr5P/boys2men-2-d53afdddf480401fac1204a3954aa5f6.webp",
-    },
+{
+  category: "ĪPAŠĪBAS VĀRDI SIEVIEŠU DZIMTĒ",
+  words: ["KAILA", "GARDA", "BRANGA", "NERETA"],
+  difficulty: 1,
+},
+{
+  category: "KONDITOREJAS/BEĶEREJAS RĪGĀ",
+  words: ["KŪRE", "DRUSTI", "MĪKLA", "SALA"],
+  difficulty: 2,
+},
+{
+  category: "UPES AR DZĪVNIEKIEM NOSAUKUMĀ",
+  words: ["STIRNA", "VĒRŠĀDA", "NEVĒŽA", "BRIEDE"],
+  difficulty: 3,
+},
+{
+  category: "VĀRDI NEGATĪVU EMOCIJU PAUŠANAI",
+  words: ["DIEVIŅŠ", "SVIESTS", "NELAIME", "NERAŽA"],
+  difficulty: 4,
+},
+  ],
+  [
+{
+  category: "KRŪMI",
+  words: ["CERIŅI", "KORINTE", "KAMĒLIJA", "IEVA"],
+  difficulty: 1,
+},
+{
+  category: "PALINDROMI",
+  words: ["ANNA", "IKI", "ALLA", "SALAS"],
+  difficulty: 2,
+},
+{
+  category: "SĀKAS AR NOTI",
+  words: ["SOLISTS", "RENEGĀTS", "MIO", "DODO"],
+  difficulty: 3,
+},
+{
+  category: "FINANŠU MINISTRU UZVĀRDI",
+  words: ["VILKS", "OSIS", "ZĪLE", "VILKS"],
+  difficulty: 4,
+},
+  ],
+  [
+{
+  category: "CEĻU SATIKSME",
+  words: ["TILTS", "PĀRVADS", "APVEDCEĻŠ", "TRANZĪTS"],
+  difficulty: 1,
+},
+{
+  category: "VELOSIPĒDA RITEŅA ELEMENTI",
+  words: ["RUMBA", "SPIEĶI", "APLOKS", "RIEPA"],
+  difficulty: 2,
+},
+{
+  category: "IELAS DZIESMU NOSAUKUMOS",
+  words: ["PELDU", "BRĪVĪBAS", "ALISES", "MIERA"],
+  difficulty: 3,
+},
+{
+  category: "SATUR ARHITEKTŪRAS TERMINU (ARKA, ĀTRIJS, MARGA, JOMS)",
+  words: ["MARKA", "NĀTRIJS", "MARGARITAS", "APJOMS"],
+  difficulty: 4,
+},
   ],
   [
     {
-      category: "Countries in West Africa",
-      words: ["Nigeria", "Cameroon", "Togo", "Benin"],
-      difficulty: 1,
-    },
-    {
-      category: "Countries in East Africa",
-      words: ["Tanzania", "Kenya", "Ethiopia", "Somalia"],
-      difficulty: 2,
-    },
-    {
-      category: "Countries in North Africa",
-      words: ["Morocco", "Algeria", "Tunisia", "Libya"],
-      difficulty: 3,
-    },
-    {
-      category: "African Islands",
-      words: ["Madagascar", "Mauritius", "Comoros", "Mayotte"],
-      difficulty: 4,
-    },
+  category: "TENISA ELEMENTI",
+  words: ["TROSE", "TĪKLS", "KORTS", "BUMBIŅA"],
+  difficulty: 1,
+},
+{
+  category: "PĀRSLAS",
+  words: ["SNIEGS", "PAPĪRA", "AUZAS", "BROKASTIS"],
+  difficulty: 3,
+},
+{
+  category: "PIRMAIS VĀRDS ERUDĪCIJAS SPĒĻU NOSAUKUMĀ",
+  words: ["ZINI", "GRIBI", "PRĀTA", "GUDRS"],
+  difficulty: 2,
+},
+{
+  category: "SVĀRKU VEIDI",
+  words: ["MINI", "ĀDAS", "ZVANS", "VOLĀNS"],
+  difficulty: 4,
+},
   ],
   [
-    {
-      category: "California Rappers",
-      words: ["O'Shea", "Eric", "Lesane", "Todd"],
-      difficulty: 1,
-    },
-    {
-      category: "Black Founded Clothing Brands",
-      words: ["Fubu", "Phat Farm", "Enyce", "Rocawear"],
-      difficulty: 2,
-    },
-    {
-      category: "Hair Cut Styles",
-      words: ["Ceasar", "Wavelength", "Fade", "Taper"],
-      difficulty: 3,
-    },
-    {
-      category: "Black Mayors",
-      words: ["Bass", "Turner", "Adams", "Washington"],
-      difficulty: 4,
-      imageSrc: "https://i.ibb.co/pP1xn0Z/Connections.png",
-    },
+  {
+  category: "TAUTUMEITAS",
+  words: ["AURĒLIJA", "LAURA", "KATE", "GABRIĒLA"],
+  difficulty: 1,
+},
+{
+  category: "OSCARS LABĀKĀS AKTRISES NO 2020. GADA",
+  words: ["EMMA", "DŽESIKA", "MIŠELA", "MAIKIJA"],
+  difficulty: 2,
+},
+{
+  category: "IELAS RĪGAS CENTRĀ",
+  words: ["MARIJA", "MARTA", "ELIZABETE", "ANNA"],
+  difficulty: 3,
+},
+{
+  category: "DŽILINDŽERA SIEVAS",
+  words: ["INGA", "BINNIJA", "DACE", "MAIJA"],
+  difficulty: 4,
+},
   ],
   [
-    {
-      category: "Church Leadership Roles",
-      words: ["Deacon", "Elder", "Minister", "Pastor"],
-      difficulty: 1,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/3/Church-Roles.png",
-    },
-    {
-      category: "Synonyms for Lucky",
-      words: ["Blessed", "Fortunate", "Favored", "Providential"],
-      difficulty: 2,
-      imageSrc:
-        "https://d1isxmzxwhhjbk.cloudfront.net/3/Synonyms-for-Lucky.png",
-    },
-    {
-      category: "R&B Icons",
-      words: ["Tyrese", "Usher", "Brandy", "Maxwell"],
-      difficulty: 3,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/3/R-B-Icons.png",
-    },
-
-    {
-      category: "Tupac's Movie Character Names",
-      words: ["Bishop", "Lucky", "Birdie", "Tank"],
-      difficulty: 4,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/3/Tupac-Movie-Roles.png",
-    },
-  ],
+      {
+    category: "MĒRVIENĪBAS DAUDZSKAITLĪ",
+    words: ["PĒDAS", "KUBI", "ARKLI", "GRĀDI"],
+    difficulty: 1,
+  },
+  {
+    category: "“IELAS” LĪMEŅA ADRESĀCIJAS SUGAS VĀRDI",
+    words: ["STŪRIS", "SĒTA", "LĪNIJA", "LAUKUMS"],
+    difficulty: 4,
+  },
+  {
+    category: "SILA …",
+    words: ["CIEMS", "STRAZDS", "KROGS", "VIRSIS"],
+    difficulty: 3,
+  },
+  {
+    category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM VAI KRĀPŠANU",
+    words: ["KĀJAS", "DEGUNS", "KĀJAS", "ACIS"],
+    difficulty: 2,
+  },
+  ]
   [
-    {
-      category: "Slang for 'A Lot'",
-      words: ["Bare", "Mad", "Hella", "Buku"],
-      difficulty: 1,
-    },
-    {
-      category: "Slang for 'Great'",
-      words: ["Cold", "Raw", "Dope", "Lit"],
-      difficulty: 2,
-    },
-    {
-      category: "Ways to Refer to Money",
-      words: ["Brick", "Band", "Rack", "C-Note"],
-      difficulty: 3,
-    },
-
-    {
-      category: "Things Needed to Make a Pizza",
-      words: ["Cheddar", "Dough", "Sauce", "Heat"],
-      difficulty: 4,
-    },
-  ],
-  [
-    {
-      category: "Boondocks Characters",
-      words: ["Riley", "Huey", "Jazmine", "Robert"],
-      difficulty: 1,
-      imageSrc:
-        "https://d1isxmzxwhhjbk.cloudfront.net/4/Boondocks-Characters.png",
-    },
-    {
-      category: "Uncle ____",
-      words: ["Ruckus", "Tom", "Luke", "Ben's"],
-      difficulty: 2,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/4/Uncle___.png",
-    },
-    {
-      category: "Bobby ____",
-      words: ["Brown", "Womack", "Schmurda", "Valentino"],
-      difficulty: 3,
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/4/Bobby___.png",
-    },
-    {
-      category: "Black Panther Leadership",
-      words: ["Bobby", "Fred", "Elaine", "Kathleen"],
-      difficulty: 4,
-
-      imageSrc: "https://d1isxmzxwhhjbk.cloudfront.net/4/Black-Panthers.png",
-    },
-  ],
+  {
+    category: "SALDAIS …",
+    words: ["PĀRĪTIS", "KRĒJUMS", "ĒDIENS", "VĪNS"],
+    difficulty: 1,
+  },
+  {
+    category: "MATEMĀTIKAS PALĪGLĪDZEKĻI",
+    words: ["PIRKSTI", "KAULIŅI", "KALKULATORS", "PAPĪRS"],
+    difficulty: 2,
+  },
+  {
+    category: "DIVDABJI",
+    words: ["SVIESTS", "PROTAMS", "METAMS", "ZINOŠI"],
+    difficulty: 3,
+  },
+  {
+    category: "MĒRVIENĪBAS",
+    words: ["PĒDAS", "ARKLI", "KUBI", "PINTES"],
+    difficulty: 4,
+  },
+]
+[
+  {
+    category: "NAUDAS APZĪMĒJUMI ĢENITĪVĀ",
+    words: ["PIĶA", "KĀPOSTA", "SKANOŠĀ", "PESO"],
+    difficulty: 1,
+  },
+  {
+    category: "… STACIJAS",
+    words: ["VILCES", "BĀZES", "PASTA", "DZELZCEĻA"],
+    difficulty: 2,
+  },
+  {
+    category: "… PILIENS",
+    words: ["DARVAS", "APRĪĻA", "MEDUS", "PĒDĒJAIS"],
+    difficulty: 3,
+  },
+  {
+    category: "PĒDĒJAIS VĀRDS KULDĪGAS GRUPU NOSAUKUMOS ĢENITĪVĀ",
+    words: ["KVARTETA", "ZĒVELES", "PUTNU", "VAGONA"],
+    difficulty: 4,
+  },
+]
 ];
