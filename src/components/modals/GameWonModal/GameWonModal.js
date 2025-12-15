@@ -11,7 +11,7 @@ function GameWonModal({ open, submittedGuesses }) {
 
   return (
     <BaseModal
-      title="You won the game!"
+      title="Apsveicam! Tu atminēji šodienas Saistības!"
       initiallyOpen={open}
       footerElements={<ShareScoreButton />}
       showActionButton={false}

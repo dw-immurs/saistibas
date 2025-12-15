@@ -20,28 +20,27 @@ function InfoModal() {
     >
       <Tabs defaultValue="how-to-play">
         <TabsList className="grid w-full grid-cols-1">
-          <TabsTrigger value="how-to-play">How To Play</TabsTrigger>
+          <TabsTrigger value="how-to-play">Kā spēlēt?</TabsTrigger>
         </TabsList>
         <TabsContent value="how-to-play">
           {" "}
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger>What's The Goal?</AccordionTrigger>
+              <AccordionTrigger>Kāds ir spēles mērķis?</AccordionTrigger>
               <AccordionContent>
-                Find groups of items or names that share something in common.
+                Atrast četras grupas ar kartītēm (vārdiem, frāzēm, vārdkopām), kuras kaut kas saista.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>How Do I Play?</AccordionTrigger>
+              <AccordionTrigger>Kā spēlēt?</AccordionTrigger>
               <AccordionContent>
-                Select the items and tap 'Submit' to check if your guess matches
-                one of the answer categories.
+                Pa vienai izvēlies četras kartītes un spied "Iesniegt", lai pārbaudītu, vai minējums ir pareizs. Pareiza minējuma gadījumā atklāsies konkrētās grupas saistība jeb kopīgais.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>How Many Tries Do I Get?</AccordionTrigger>
+              <AccordionTrigger>Cik reizes var minēt?</AccordionTrigger>
               <AccordionContent>
-                {`You can make ${MAX_MISTAKES} mistakes before the game ends.`}
+                {`Pieļaujot ${MAX_MISTAKES} kļūdas, spēle beidzas.`}
               </AccordionContent>
             </AccordionItem>
           </Accordion>

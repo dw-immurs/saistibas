@@ -63,7 +63,7 @@ export function SolvedWordRow({ ...props }) {
             >
               {!hasBeenClicked && (
                 <Badge className="animate-pulse absolute top-0 right-0 mr-2 mt-2">
-                  View More
+                  Skatīt vairāk
                 </Badge>
               )}
               <p className="font-bold pt-2 pl-4">{props.category}</p>
@@ -122,7 +122,7 @@ function GameGrid({ gameRows, shouldGridShake, setShouldGridShake }) {
       {/* Show correct answers here after the game is over if they lost */}
       {isGameOverAndLost && (
         <div className="grid gap-y-2 pb-2">
-          <p>The answer categories are below.</p>
+          <p>Atbilžu kategorijas redzamas zemāk.</p>
           {gameData.map((obj) => (
             <SolvedWordRow key={obj.category} {...obj} />
           ))}

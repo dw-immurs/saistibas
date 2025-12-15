@@ -63,7 +63,7 @@ function Game() {
   return (
     <>
       <h3 className="text-xl text-center mt-4">
-        Create {numCategories} groups of {categorySize}
+        Izveido {numCategories} grupas ar {categorySize} kartītēm
       </h3>
 
       <div className={`game-wrapper`}>

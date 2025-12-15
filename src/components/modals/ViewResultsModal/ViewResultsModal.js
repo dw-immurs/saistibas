@@ -24,7 +24,7 @@ function ViewResultsModal() {
     >
       <div className="flex flex-col place-content-center">
         <p className="text-center font-[600]">
-          Your Guesses Are Represented Below
+          Tavi minējumi redzami zemāk
         </p>
         <span className="text-center whitespace-pre mb-2">
           {"\n"}

@@ -9,7 +9,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
     return (
       <span className="font-[600]">
-        New Game Available! Refresh Your Browser.
+        Jau pieejama jauna spēle! Atsvaidzini pārlūkprogrammu!.
       </span>
     );
   }
@@ -26,12 +26,12 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
   }
 
   // Create a sentence based on the time parts
-  let timeLeftString = "Next Puzzle Released in ";
+  let timeLeftString = "Nākamās Saistības varēsi uzņemties pēc";
   if (timeParts.length > 2) {
     timeLeftString += timeParts.slice(0, -1).join(", ");
-    timeLeftString += `, and ${timeParts.slice(-1)}`;
+    timeLeftString += `, un ${timeParts.slice(-1)}`;
   } else if (timeParts.length == 2) {
-    timeLeftString += `${timeParts[0]} and ${timeParts[1]}`;
+    timeLeftString += `${timeParts[0]} un ${timeParts[1]}`;
   } else {
     timeLeftString += timeParts[0];
   }

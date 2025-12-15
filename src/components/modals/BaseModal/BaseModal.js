@@ -18,7 +18,7 @@ function BaseModal({
   initiallyOpen = true,
   footerElements,
   children,
-  actionButtonText = "Continue",
+  actionButtonText = "Turpināt",
   showActionButton = true,
 }) {
   const [isOpen, setIsOpen] = React.useState(initiallyOpen);
