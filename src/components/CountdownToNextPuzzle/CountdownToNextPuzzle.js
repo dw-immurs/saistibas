@@ -13,17 +13,20 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
       </span>
     );
   }
-  const timeParts = [];
+const timeParts = [];
 
-  if (days > 0) {
-    timeParts.push(`${days} Day${days > 1 ? "s" : ""}`);
-  }
-  if (hours > 0) {
-    timeParts.push(`${hours} Hour${hours > 1 ? "s" : ""}`);
-  }
-  if (minutes > 0) {
-    timeParts.push(`${minutes} Minute${minutes > 1 ? "s" : ""}`);
-  }
+if (days > 0) {
+  const dayForm = (days % 10 === 1 && days % 100 !== 11) ? "dienas" : "dienām";
+  timeParts.push(`${days} ${dayForm}`);
+}
+if (hours > 0) {
+  const hourForm = (hours % 10 === 1 && hours % 100 !== 11) ? "stundas" : "stundām";
+  timeParts.push(`${hours} ${hourForm}`);
+}
+if (minutes > 0) {
+  const minuteForm = (minutes % 10 === 1 && minutes % 100 !== 11) ? "minūtes" : "minūtēm";
+  timeParts.push(`${minutes} ${minuteForm}`);
+}
 
   // Create a sentence based on the time parts
   let timeLeftString = "Nākamās Saistības varēsi uzņemties pēc";

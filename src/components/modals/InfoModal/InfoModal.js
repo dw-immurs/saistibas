@@ -16,11 +16,11 @@ function InfoModal() {
       title=""
       trigger={<Info className="mr-4" />}
       initiallyOpen={false}
-      actionButtonText="Got It!"
+      actionButtonText="Sapratu!"
     >
       <Tabs defaultValue="how-to-play">
         <TabsList className="grid w-full grid-cols-1">
-          <TabsTrigger value="how-to-play">Kā spēlēt?</TabsTrigger>
+          <TabsTrigger value="how-to-play">Noteikumi</TabsTrigger>
         </TabsList>
         <TabsContent value="how-to-play">
           {" "}
