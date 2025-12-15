@@ -2,7 +2,7 @@ export const CONNECTION_GAMES = [
   [
     {
       category: "ĪPAŠĪBAS VĀRDI SIEVIEŠU DZIMTĒ",
-      words: ["KAILA", "GARDA", "BRANGA", "NERETA"],
+      words: ["KAILA", "GARDA", "BRANGA", "SKAISTA"],
       difficulty: 1,
     },
     {
@@ -16,7 +16,7 @@ export const CONNECTION_GAMES = [
       difficulty: 3,
     },
     {
-      category: "VĀRDI NEGATĪVU EMOCIJU PAUŠANAI",
+      category: "LIETVĀRDI, KAS MĒDZ BUT ARĪ IZSAUKSMES VĀRDI",
       words: ["DIEVIŅŠ", "SVIESTS", "NELAIME", "NERAŽA"],
       difficulty: 4,
     },
@@ -34,7 +34,7 @@ export const CONNECTION_GAMES = [
     },
     {
       category: "SĀKAS AR NOTI",
-      words: ["SOLISTS", "RENEGĀTS", "MIO", "DODO"],
+      words: ["SOLISTS", "REDĪSS", "MIO", "DODO"],
       difficulty: 3,
     },
     {
