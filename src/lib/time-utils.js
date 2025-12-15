@@ -17,7 +17,7 @@ export const getYesterday = () => startOfYesterday();
 
 // October 2023 Game Epoch
 // https://stackoverflow.com/questions/2552483/why-does-the-month-argument-range-from-0-to-11-in-javascripts-date-constructor
-export const firstGameDate = new Date(2025, 12, 15);
+export const firstGameDate = new Date(2025, 11, 15);
 export const periodInDays = 3;
 
 export const getLastGameDate = (today) => {
@@ -40,7 +40,7 @@ export const isValidGameDate = (date) => {
 
 export const getIndex = (gameDate) => {
   let start = firstGameDate;
-  let index = -1;
+  let index = 0; // Mainīts no -1 uz 0
   console.log(firstGameDate);
   do {
     index++;
@@ -51,11 +51,11 @@ export const getIndex = (gameDate) => {
 };
 
 export const getPuzzleOfDay = (index) => {
-  if (index < 0) {
+  if (index < 1) { // Mainīts no 0 uz 1
     throw new Error("Invalid index");
   }
 
-  return CONNECTION_GAMES[index % CONNECTION_GAMES.length];
+  return CONNECTION_GAMES[(index - 1) % CONNECTION_GAMES.length]; // Pievienots -1
 };
 
 export const getSolution = (gameDate) => {
