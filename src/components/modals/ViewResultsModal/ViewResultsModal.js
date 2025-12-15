@@ -16,11 +16,11 @@ function ViewResultsModal() {
     <BaseModal
       title=""
       trigger={
-        <Button variant="submit" className="w-full" children={"View Results"} />
+        <Button variant="submit" className="w-full" children={"Skatīt rezultātus!"} />
       }
       initiallyOpen={false}
       showActionButton={false}
-      footerElements={<ShareScoreButton buttonText={"Share Your Score!"} />}
+      footerElements={<ShareScoreButton buttonText={"Dalies ar rezultātiem!"} />}
     >
       <div className="flex flex-col place-content-center">
         <p className="text-center font-[600]">
