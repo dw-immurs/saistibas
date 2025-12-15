@@ -29,10 +29,10 @@ if (minutes > 0) {
 }
 
   // Create a sentence based on the time parts
-  let timeLeftString = "Nākamās Saistības varēsi uzņemties pēc";
+  let timeLeftString = "Nākamās Saistības varēsi uzņemties pēc ";
   if (timeParts.length > 2) {
     timeLeftString += timeParts.slice(0, -1).join(", ");
-    timeLeftString += `, un ${timeParts.slice(-1)}`;
+    timeLeftString += ` un ${timeParts.slice(-1)}`;
   } else if (timeParts.length == 2) {
     timeLeftString += `${timeParts[0]} un ${timeParts[1]}`;
   } else {

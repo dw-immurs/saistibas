@@ -16,7 +16,7 @@ function GameWonModal({ open, submittedGuesses }) {
       footerElements={<ShareScoreButton />}
       showActionButton={false}
     >
-      <p>{"Great job, share your results!"}</p>
+      <p>{"Lielisks veikums! Dalies ar saviem rezultātiem!"}</p>
       <div className="justify-center">
         {/* the whitespace: pre style makes the emoji grid appear with new lines character */}
         <span className="text-center whitespace-pre">

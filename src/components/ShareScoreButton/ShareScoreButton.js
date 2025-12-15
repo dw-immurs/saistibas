@@ -7,7 +7,7 @@ import { shareStatus } from "../../lib/share-game";
 import { GameStatusContext } from "../../providers/GameStatusProvider";
 import { PuzzleDataContext } from "../../providers/PuzzleDataProvider";
 
-function ShareScoreButton({ buttonText = "Share", className = "" }) {
+function ShareScoreButton({ buttonText = "Dalīties!", className = "" }) {
   const { gameData } = React.useContext(PuzzleDataContext);
   const { submittedGuesses } = React.useContext(GameStatusContext);
   const { toast } = useToast();
