@@ -39,7 +39,8 @@ function InfoModal() {
               <AccordionContent>
                 Pa vienai izvēlies četras kartītes un spied "Iesniegt", lai
                 pārbaudītu, vai minējums ir pareizs. Pareiza minējuma gadījumā
-                atklāsies konkrētās grupas saistība jeb kopīgais.
+                atklāsies konkrētās grupas saistība jeb kopīgais. Katrai kategorijai ir sava grūtības pakāpe, ko iezīmē krāsa — dzeltenā, zaļā, zilā un violetā (no vieglākā uz grūtāko), tomēr individuālais sarežģītības līmenis var būt atšķirīgs.
+
               </AccordionContent>
             </AccordionItem>
 
@@ -69,7 +70,7 @@ function InfoModal() {
                     >
                       Connections
                     </a>
-                    . Spēles mērķis ir atrast slēptās saistības starp vārdiem un sagrupēt tos četrās saistītās kategorijās.
+                    . Spēles mērķis ir atrast slēptās saistības starp vārdiem un sagrupēt tos četrās saistītās kategorijās. Katrai kategorijai ir sava grūtības pakāpe, ko iezīmē krāsa — dzeltenā, zaļā, zilā un violetā (no vieglākā uz grūtāko), tomēr individuālais sarežģītības līmenis var būt atšķirīgs.
                   </p>
 
                   <p>
