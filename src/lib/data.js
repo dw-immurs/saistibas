@@ -39,7 +39,7 @@ export const CONNECTION_GAMES = [
     },
     {
       category: "FINANŠU MINISTRU UZVĀRDI",
-      words: ["VILKS", "OSIS", "ZĪLE", "VILKS"],
+      words: ["VILKS", "OSIS", "ZĪLE", "BĒRZIŅŠ"],
       difficulty: 4,
     },
   ],
