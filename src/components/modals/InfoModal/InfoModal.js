@@ -103,7 +103,20 @@ function InfoModal() {
                       Gustavs
                     </a>
                   </p>
-
+                
+                  <p>
+  Oriģinālais kods: 
+  
+    href="https://github.com/and-computers/react-connections-game"
+    target="_blank"
+    rel="noreferrer"
+    className="underline"
+  >
+    react-connections-game
+  </a>
+  {" "}(GPL v3 licence)
+                  </p>
+                        
                   <p>Veiksmi meklējot saistības!</p>
                 </div>
               </AccordionContent>

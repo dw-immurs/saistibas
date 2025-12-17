@@ -2,11 +2,15 @@
 
 This is a clone of the [NYT Connections Game](https://www.nytimes.com/games/connections). Which itself seems to be an unacknowledged clone of the British game [`Only Connect`](https://kotaku.com/new-york-times-connections-only-connect-puzzle-wordle-1850553072).
 
-Anyways..
+## Attribution
+- This project is a fork of _react-connections-game_
+- Original repository: [https://github.com/and-computers/react-connections-game]
+- Licensed under GNU GPL v3
 
-### [Click Here To Try Out The Demo](https://blackconnections.andcomputers.io/)
-
-![Gif of Connections Gameplay](/docs/instructions-gif-connections.gif)
+### Modifications
+- Translation in Latvian
+- Latvian language content
+- Changed game numbering to start from #1
 
 ## To Run Locally:
 
@@ -50,12 +54,3 @@ npm run dev
 - _your fork here!_
 
 _Want to add one to the list? Please make a pull request._
-
-#### If you found this helpful or entertaining feel free to check out our other work!
-
-- [Writings & Thoughts](https://andcomputers.io)
-- [Black Wordle](https://blackwords.andcomputers.io)
-
-##### If you'd like to support financially
-
-- [One-Time Contribution via Stripe](https://buy.stripe.com/7sIg1Udac6xZegodQR)
