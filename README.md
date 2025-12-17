@@ -12,7 +12,7 @@ This is a clone of the [NYT Connections Game](https://www.nytimes.com/games/conn
 - Latvian language content
 - Changed game numbering to start from #1
 
-## To Run Locally:
+## To Run Locally:npm run build
 
 ```
 cd react-connections-game
