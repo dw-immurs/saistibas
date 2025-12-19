@@ -67,8 +67,8 @@ export const CONNECTION_GAMES = [
   ],
   [
     {
-      category: "TENISA ELEMENTI",
-      words: ["TROSE", "TĪKLS", "KORTS", "BUMBIŅA"],
+      category: "TENISA LAUKUMA ELEMENTI",
+      words: ["LĪNIJAS", "TĪKLS", "KORTS", "BUMBIŅA"],
       difficulty: 1,
     },
     {
@@ -82,14 +82,14 @@ export const CONNECTION_GAMES = [
       difficulty: 2,
     },
     {
-      category: "SVĀRKU VEIDI",
-      words: ["MINI", "ĀDAS", "ZVANS", "VOLĀNS"],
+      category: "SVĀRKU VEIDI VAI STILI",
+      words: ["MINI", "ĀDA", "ZVANA", "VOLĀNS"],
       difficulty: 4,
     },
   ],
   [
     {
-      category: "TAUTUMEITAS",
+      category: "'TAUTUMEITAS'",
       words: ["AURĒLIJA", "LAURA", "KATE", "GABRIĒLA"],
       difficulty: 1,
     },
@@ -116,7 +116,7 @@ export const CONNECTION_GAMES = [
       difficulty: 1,
     },
     {
-      category: "“IELAS” LĪMEŅA ADRESĀCIJAS SUGAS VĀRDI",
+      category: "IELAS LĪMEŅA ADRESĀCIJAS SUGAS VĀRDI",
       words: ["STŪRIS", "SĒTA", "LĪNIJA", "LAUKUMS"],
       difficulty: 4,
     },
@@ -126,33 +126,33 @@ export const CONNECTION_GAMES = [
       difficulty: 3,
     },
     {
-      category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM VAI KRĀPŠANU",
+      category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM",
       words: ["KĀJAS", "DEGUNS", "KĀJAS", "ACIS"],
       difficulty: 2,
     },
   ],
-  [
-    {
-      category: "SALDAIS …",
-      words: ["PĀRĪTIS", "KRĒJUMS", "ĒDIENS", "VĪNS"],
-      difficulty: 1,
-    },
-    {
-      category: "MATEMĀTIKAS PALĪGLĪDZEKĻI",
-      words: ["PIRKSTI", "KAULIŅI", "KALKULATORS", "PAPĪRS"],
-      difficulty: 2,
-    },
-    {
-      category: "DIVDABJI",
-      words: ["SVIESTS", "PROTAMS", "METAMS", "ZINOŠI"],
-      difficulty: 3,
-    },
-    {
-      category: "MĒRVIENĪBAS",
-      words: ["PĒDAS", "ARKLI", "KUBI", "PINTES"],
-      difficulty: 4,
-    },
-  ],
+  // [
+  //   {
+  //     category: "SALDAIS …",
+  //     words: ["PĀRĪTIS", "KRĒJUMS", "ĒDIENS", "VĪNS"],
+  //     difficulty: 1,
+  //   },
+  //   {
+  //     category: "MATEMĀTIKAS PALĪGLĪDZEKĻI",
+  //     words: ["PIRKSTI", "KAULIŅI", "KALKULATORS", "PAPĪRS"],
+  //     difficulty: 2,
+  //   },
+  //   {
+  //     category: "DIVDABJI",
+  //     words: ["SVIESTS", "PROTAMS", "METAMS", "ZINOŠI"],
+  //     difficulty: 3,
+  //   },
+  //   {
+  //     category: "MĒRVIENĪBAS",
+  //     words: ["PĒDAS", "ARKLI", "KUBI", "PINTES"],
+  //     difficulty: 4,
+  //   },
+  // ],
   [
     {
       category: "NAUDAS APZĪMĒJUMI ĢENITĪVĀ",
