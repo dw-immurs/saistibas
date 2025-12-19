@@ -6,24 +6,60 @@ import ShareScoreButton from "../../ShareScoreButton";
 import CountdownToNextPuzzle from "../../CountdownToNextPuzzle";
 import { PuzzleDataContext } from "../../../providers/PuzzleDataProvider";
 
-function GameWonModal({ open, submittedGuesses }) {
+function GameWonModal({ open, submittedGuesses, mode = "daily", puzzleLabel }) {
   const { gameData } = React.useContext(PuzzleDataContext);
 
+  const title =
+    mode === "archive"
+      ? `Apsveicam! Tu atminēji Saistības ${puzzleLabel ?? ""}!`
+      : "Apsveicam! Tu atminēji šodienas Saistības!";
+
+  const message =
+    mode === "archive"
+      ? <p>Lielisks veikums! Vari uzspēlēt {" "}
+  <span
+  className="underline cursor-pointer"
+  onClick={() => {
+    onClose?.(); // aizver GameWon (caur Game.js state)
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("open-archive"));
+    }, 0);
+  }}
+>
+  citu arhīva spēli
+  </span>{" "}
+    vai doties uz šodienas spēli.
+    <p> Apskaties rezultātus zemāk:</p>
+</p>
+  : <p>
+  Lielisks veikums! Gaidot vari uzspēlēt {" "}
+  <span
+    className="underline cursor-pointer"
+onClick={() => {
+  onClose?.();
+  window.dispatchEvent(new CustomEvent("open-archive"));
+}}
+  >
+    kādu arhīva spēli.
+  </span>{" "}
+    <p> Apskaties rezultātus zemāk:</p>
+</p>;
   return (
     <BaseModal
-      title="Apsveicam! Tu atminēji šodienas Saistības!"
+      title={title}
       initiallyOpen={open}
       footerElements={<ShareScoreButton />}
       showActionButton={false}
     >
-      <p>{"Lielisks veikums! Dalies ar saviem rezultātiem!"}</p>
+      <p>{message}</p>
       <div className="justify-center">
-        {/* the whitespace: pre style makes the emoji grid appear with new lines character */}
         <span className="text-center whitespace-pre">
           {"\n"}
           {generateEmojiGrid(gameData, submittedGuesses)}
         </span>
-        <CountdownToNextPuzzle />
+
+        {/* Šis ir tikai šodienas spēlei, arhīvā nav jēgas skaitīt līdz “nākamajai” */}
+        {mode !== "archive" && <CountdownToNextPuzzle />}
       </div>
     </BaseModal>
   );

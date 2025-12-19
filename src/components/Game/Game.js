@@ -15,6 +15,17 @@ import GameControlButtonsPanel from "../GameControlButtonsPanel";
 import ViewResultsModal from "../modals/ViewResultsModal";
 
 function Game() {
+  const searchParams = new URLSearchParams(window.location.search);
+  const archiveDate = searchParams.get("d");
+  const isArchiveGame = Boolean(archiveDate);
+
+  const archiveIndex = localStorage.getItem("archiveGameIndex");
+
+  const puzzleLabel =
+    isArchiveGame && archiveIndex
+      ? `#${archiveIndex}`
+      : null;
+
   const { gameData, categorySize, numCategories } =
     React.useContext(PuzzleDataContext);
   const { submittedGuesses, solvedGameData, isGameOver, isGameWon } =
@@ -23,7 +34,7 @@ function Game() {
   const [shuffledRows, setShuffledRows] = React.useState(
     shuffleGameData({ gameData })
   );
-  const [isEndGameModalOpen, setisEndGameModalOpen] = React.useState(false);
+  const [isEndGameModalOpen, setIsEndGameModalOpen] = React.useState(false);
   const [gridShake, setGridShake] = React.useState(false);
   const [showConfetti, setShowConfetti] = React.useState(false);
 
@@ -48,7 +59,7 @@ function Game() {
     // extra delay for game won to allow confetti to show
     const modalDelay = isGameWon ? 2000 : 250;
     const delayModalOpen = window.setTimeout(() => {
-      setisEndGameModalOpen(true);
+      setIsEndGameModalOpen(true);
       //unmount confetti after modal opens
       setShowConfetti(false);
     }, modalDelay);
@@ -67,15 +78,21 @@ function Game() {
       </h3>
 
       <div className={`game-wrapper`}>
-        {isGameOver && isGameWon ? (
+{isGameOver && isGameWon ? (
           <GameWonModal
             open={isEndGameModalOpen}
+            onClose={() => setIsEndGameModalOpen(false)}
             submittedGuesses={submittedGuesses}
-          />
-        ) : (
+            mode={isArchiveGame ? "archive" : "daily"}
+            puzzleLabel={puzzleLabel}
+  />
+) : (
           <GameLostModal
             open={isEndGameModalOpen}
+            onClose={() => setIsEndGameModalOpen(false)}
             submittedGuesses={submittedGuesses}
+            mode={isArchiveGame ? "archive" : "daily"}
+            puzzleLabel={puzzleLabel}
           />
         )}
         <GameGrid
