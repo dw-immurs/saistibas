@@ -6,7 +6,7 @@ import ShareScoreButton from "../../ShareScoreButton";
 import CountdownToNextPuzzle from "../../CountdownToNextPuzzle";
 import { PuzzleDataContext } from "../../../providers/PuzzleDataProvider";
 
-function GameWonModal({ open, submittedGuesses, mode = "daily", puzzleLabel }) {
+function GameWonModal({ open, onClose, submittedGuesses, mode = "daily", puzzleLabel }) {
   const { gameData } = React.useContext(PuzzleDataContext);
 
   const title =
@@ -16,7 +16,9 @@ function GameWonModal({ open, submittedGuesses, mode = "daily", puzzleLabel }) {
 
   const message =
     mode === "archive"
-      ? <p>Lielisks veikums! Vari uzspēlēt {" "}
+      ? (
+      <>
+      <p>Lielisks veikums! Vari uzspēlēt {" "}
   <span
   className="underline cursor-pointer"
   onClick={() => {
@@ -28,22 +30,26 @@ function GameWonModal({ open, submittedGuesses, mode = "daily", puzzleLabel }) {
 >
   citu arhīva spēli
   </span>{" "}
-    vai doties uz šodienas spēli.
-    <p> Apskaties rezultātus zemāk:</p>
-</p>
-  : <p>
-  Lielisks veikums! Gaidot vari uzspēlēt {" "}
-  <span
-    className="underline cursor-pointer"
-onClick={() => {
-  onClose?.();
-  window.dispatchEvent(new CustomEvent("open-archive"));
-}}
-  >
-    kādu arhīva spēli.
-  </span>{" "}
-    <p> Apskaties rezultātus zemāk:</p>
-</p>;
+    vai doties uz šodienas spēli.</p>
+  <p> Apskaties rezultātus zemāk:</p>
+</>
+)
+: (
+  <>
+    <p>
+      Lielisks veikums! Gaidot vari uzspēlēt {" "}
+      <span
+        className="underline cursor-pointer"
+    onClick={() => {
+      onClose?.();
+      window.dispatchEvent(new CustomEvent("open-archive"));
+    }}
+      >
+        kādu arhīva spēli.
+      </span>{" "}</p>
+      <p> Apskaties rezultātus zemāk:</p>
+    </>
+    );
   return (
     <BaseModal
       title={title}
@@ -51,7 +57,7 @@ onClick={() => {
       footerElements={<ShareScoreButton />}
       showActionButton={false}
     >
-      <p>{message}</p>
+      {message}
       <div className="justify-center">
         <span className="text-center whitespace-pre">
           {"\n"}

@@ -18,23 +18,29 @@ function GameLostModal({   open, onClose,
 
   const message =
     mode === "archive"
-      ? <p>
-  Nekas — vari uzspēlēt {" "}
-  <span
-  className="underline cursor-pointer"
-  onClick={() => {
-    onClose?.(); // aizver GameLost (caur Game.js state)
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent("open-archive"));
-    }, 0);
-  }}
->
-  citu arhīva spēli
-  </span>{" "}
-    vai doties uz šodienas spēli.
-    <p> Apskaties rezultātus zemāk:</p>
-</p>
-      : <p>
+     ? (
+  <>
+    <p>
+      Nekas — vari uzspēlēt{" "}
+      <span
+        className="underline cursor-pointer"
+        onClick={() => {
+          onClose?.();
+          setTimeout(() => {
+            window.dispatchEvent(new CustomEvent("open-archive"));
+          }, 0);
+        }}
+      >
+        citu arhīva spēli
+      </span>{" "}
+      vai doties uz šodienas spēli.
+    </p>
+    <p>Apskaties rezultātus zemāk:</p>
+  </>
+)
+: (
+  <>
+    <p>
   Nekas — gaidot vari uzspēlēt {" "}
   <span
     className="underline cursor-pointer"
@@ -44,9 +50,10 @@ onClick={() => {
 }}
   >
     kādu arhīva spēli.
-  </span>{" "}
+  </span>{" "} </p>
     <p> Apskaties rezultātus zemāk:</p>
-</p>;
+  </>
+);
   return (
     <BaseModal
       title={title}
@@ -54,7 +61,7 @@ onClick={() => {
       footerElements={<ShareScoreButton />}
       showActionButton={false}
     >
-      <p>{message}</p>
+      {message}
       <div className="justify-center">
         <span className="text-center whitespace-pre">
           {"\n"}

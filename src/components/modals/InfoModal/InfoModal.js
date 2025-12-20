@@ -20,8 +20,8 @@ function InfoModal() {
     >
       <Tabs defaultValue="how-to-play">
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="how-to-play">Noteikumi</TabsTrigger>
-          <TabsTrigger value="about">Par</TabsTrigger>
+          <TabsTrigger value="how-to-play"><strong>Noteikumi</strong></TabsTrigger>
+          <TabsTrigger value="about"><strong>Par Saistībām</strong></TabsTrigger>
         </TabsList>
 
         <TabsContent value="how-to-play">
@@ -55,12 +55,12 @@ function InfoModal() {
 
         <TabsContent value="about">
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="about-1">
+            {/* <AccordionItem value="about-1">
               <AccordionTrigger>Par spēli</AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent> */}
                 <div className="space-y-4 leading-relaxed">
                   <p>
-                    Saistības ir vārdu loģikas spēle, iedvesmota no{" "}
+                    <strong>Saistības</strong> ir vārdu loģikas spēle, iedvesmota no{" "}
                     <em>The New York Times</em> spēles{" "}
                     <a
                       href="https://www.nytimes.com/games/connections"
@@ -89,7 +89,7 @@ function InfoModal() {
                       rel="noreferrer"
                       className="underline"
                     >
-                      @dw_immurs
+                      <strong>@dw_immurs </strong>
                     </a>
                   </p>
 
@@ -120,8 +120,8 @@ function InfoModal() {
                         
                   <p>Veiksmi meklējot saistības!</p>
                 </div>
-              </AccordionContent>
-            </AccordionItem>
+              {/* </AccordionContent>
+            </AccordionItem> */}
           </Accordion>
         </TabsContent>
       </Tabs>

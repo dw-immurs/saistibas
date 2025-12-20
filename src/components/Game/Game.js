@@ -52,13 +52,34 @@ function Game() {
   }, [solvedGameData]);
 
   // Handle End Game!
-  React.useEffect(() => {
-    if (!isGameOver) {
-      return;
-    }
-    // extra delay for game won to allow confetti to show
-    const modalDelay = isGameWon ? 2000 : 250;
-    const delayModalOpen = window.setTimeout(() => {
+React.useEffect(() => {
+  if (!isGameOver) {
+    return;
+  }
+  
+  // Saglabā spēles statusu localStorage
+  const searchParams = new URLSearchParams(window.location.search);
+  const archiveDate = searchParams.get("d");
+  const archiveIndex = localStorage.getItem("archiveGameIndex");
+  
+  let gameIndex;
+  if (archiveDate && archiveIndex) {
+    gameIndex = parseInt(archiveIndex);
+  } else {
+    const { getIndex, getToday } = require("../../lib/time-utils");
+    gameIndex = getIndex(getToday());
+  }
+  
+  console.log("Saving game - gameIndex:", gameIndex, "isGameWon:", isGameWon);
+
+  // Saglabā, ka spēle ir izspēlēta
+  localStorage.setItem(`game_${gameIndex}_completed`, "true");
+  localStorage.setItem(`game_${gameIndex}_won`, isGameWon ? "true" : "false");
+
+// Paziņo ArchiveModal, ka spēle ir pabeigta
+window.dispatchEvent(new Event('gameCompleted'));
+  const modalDelay = isGameWon ? 2000 : 250;
+  const delayModalOpen = window.setTimeout(() => {
       setIsEndGameModalOpen(true);
       //unmount confetti after modal opens
       setShowConfetti(false);
