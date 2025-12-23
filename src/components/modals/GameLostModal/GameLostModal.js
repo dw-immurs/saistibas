@@ -14,7 +14,8 @@ function GameLostModal({   open, onClose,
   const title =
     mode === "archive"
       ? `Diemžēl netiki galā ar Saistībām ${puzzleLabel ?? ""}...`
-      : "Diemžēl Saistības bija pārāk lielas...";
+ //     : "Diemžēl Saistības bija pārāk lielas...";
+    : "☃️ Diemžēl dāvanā būs žagari...";
 
   const message =
     mode === "archive"
@@ -41,7 +42,8 @@ function GameLostModal({   open, onClose,
 : (
   <>
     <p>
-  Nekas — gaidot vari uzspēlēt {" "}
+  {/* Nekas — gaidot vari uzspēlēt {" "} */}
+    Lai priecīgi svētki! Gaidot nākamās Saistības, vari uzspēlēt {" "}
   <span
     className="underline cursor-pointer"
 onClick={() => {

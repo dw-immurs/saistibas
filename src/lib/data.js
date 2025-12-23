@@ -66,6 +66,28 @@ export const CONNECTION_GAMES = [
     },
   ],
   [
+  {
+    category: "TRADICIONĀLI EGLĪŠU ROTĀJUMI",
+    words: ["ĀBOLI", "BUMBIŅAS", "PIPARKŪKAS", "PUZURI"],
+    difficulty: 1,
+  },
+  {
+    category: "KUR KAR LAMPIŅU VIRTUVĒS",
+    words: ["KOKOS", "DZEGA", "MARGĀM", "LOGI"],
+    difficulty: 2,
+  },
+  {
+    category: "NEGRIBĒTĀKĀS DĀVANAS",
+    words: ["DEKORI", "FOTORĀMIS", "KALENDĀRS", "ŠAMPŪNS"],
+    difficulty: 3,
+  },
+  {
+    category: "OTRAIS VĀRDS ZIEMASSVĒTKU DZIESMU NOSAUKUMĀ",
+    words: ["TU", "MEŽĀ", "SKAISTU", "SNIEDZIŅŠ"],
+    difficulty: 4,
+  },
+],
+  [
     {
       category: "TENISA LAUKUMA ELEMENTI",
       words: ["LĪNIJAS", "TĪKLS", "KORTS", "BUMBIŅA"],

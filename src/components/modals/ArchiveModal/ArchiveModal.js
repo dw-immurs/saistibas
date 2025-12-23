@@ -190,7 +190,7 @@ function ArchiveModal() {
                   )}
                   {game.isToday && (
                     <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
-                      Šodien
+                      Jaunums!
                     </span>
                   )}
                 </div>

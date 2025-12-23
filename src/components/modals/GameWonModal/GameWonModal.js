@@ -12,7 +12,8 @@ function GameWonModal({ open, onClose, submittedGuesses, mode = "daily", puzzleL
   const title =
     mode === "archive"
       ? `Apsveicam! Tu atminēji Saistības ${puzzleLabel ?? ""}!`
-      : "Apsveicam! Tu atminēji šodienas Saistības!";
+      : "🎄🎄🎄 Ziemasvētku Saistības atrisinātas!"
+      //: "Apsveicam! Tu atminēji šodienas Saistības!";
 
   const message =
     mode === "archive"
@@ -37,7 +38,8 @@ function GameWonModal({ open, onClose, submittedGuesses, mode = "daily", puzzleL
 : (
   <>
     <p>
-      Lielisks veikums! Gaidot vari uzspēlēt {" "}
+      {/* Lielisks veikums! Gaidot vari uzspēlēt {" "} */}
+      Lai priecīgi svētki! Gaidot nākamās Saistības, vari uzspēlēt {" "}
       <span
         className="underline cursor-pointer"
     onClick={() => {
