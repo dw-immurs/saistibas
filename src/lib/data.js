@@ -72,7 +72,7 @@ export const CONNECTION_GAMES = [
     difficulty: 1,
   },
   {
-    category: "KUR KAR LAMPIŅU VIRTENĒS",
+    category: "KUR IEKAR LAMPIŅU VIRTENES",
     words: ["KOKOS", "DZEGA", "MARGĀM", "LOGI"],
     difficulty: 2,
   },
