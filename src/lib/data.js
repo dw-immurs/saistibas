@@ -89,28 +89,6 @@ export const CONNECTION_GAMES = [
 ],
   [
     {
-      category: "TENISA LAUKUMA ELEMENTI",
-      words: ["LĪNIJAS", "TĪKLS", "KORTS", "BUMBIŅA"],
-      difficulty: 1,
-    },
-    {
-      category: "PĀRSLAS",
-      words: ["SNIEGS", "PAPĪRA", "AUZAS", "BROKASTIS"],
-      difficulty: 3,
-    },
-    {
-      category: "PIRMAIS VĀRDS ERUDĪCIJAS SPĒĻU NOSAUKUMĀ",
-      words: ["ZINI", "GRIBI", "PRĀTA", "GUDRS"],
-      difficulty: 2,
-    },
-    {
-      category: "SVĀRKU VEIDI VAI STILI",
-      words: ["MINI", "ĀDA", "ZVANA", "VOLĀNS"],
-      difficulty: 4,
-    },
-  ],
-  [
-    {
       category: "'TAUTUMEITAS'",
       words: ["AURĒLIJA", "LAURA", "KATE", "GABRIĒLA"],
       difficulty: 1,
@@ -196,5 +174,27 @@ export const CONNECTION_GAMES = [
       words: ["KVARTETA", "ZĒVELES", "PUTNU", "VAGONA"],
       difficulty: 4,
     },
-  ]
+  ],
+    [
+    {
+      category: "TENISA LAUKUMA ELEMENTI",
+      words: ["LĪNIJAS", "TĪKLS", "KORTS", "BUMBIŅA"],
+      difficulty: 1,
+    },
+    {
+      category: "PĀRSLAS",
+      words: ["SNIEGS", "PAPĪRA", "AUZAS", "BROKASTIS"],
+      difficulty: 3,
+    },
+    {
+      category: "PIRMAIS VĀRDS ERUDĪCIJAS SPĒĻU NOSAUKUMĀ",
+      words: ["ZINI", "GRIBI", "PRĀTA", "GUDRS"],
+      difficulty: 2,
+    },
+    {
+      category: "SVĀRKU VEIDI VAI STILI",
+      words: ["MINI", "ĀDA", "ZVANA", "VOLĀNS"],
+      difficulty: 4,
+    },
+  ],
 ];

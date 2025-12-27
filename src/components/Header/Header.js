@@ -1,8 +1,8 @@
 import React from "react";
 import InfoModal from "../modals/InfoModal";
 import ArchiveModal from "../modals/ArchiveModal";
-// import logo from "../../../public/favicon_medium.png"; //parastais logo
-import logo from "../../../public/christmas_favicon_medium.png"; //Ziemassvētku logo
+import logo from "../../../public/favicon_medium.png"; //parastais logo
+// import logo from "../../../public/christmas_favicon_medium.png"; //Ziemassvētku logo
 
 function Header() {
   return (
@@ -16,7 +16,7 @@ function Header() {
       </div>
       
       <h1 className="font-space-mono absolute left-1/2 -translate-x-1/2">
-        Saistības🎄
+        Saistības
       </h1>
       
       <div className="flex items-center gap-2">
