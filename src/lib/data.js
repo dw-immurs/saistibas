@@ -110,27 +110,49 @@ export const CONNECTION_GAMES = [
     },
   ],
   [
-    {
-      category: "MĒRVIENĪBAS DAUDZSKAITLĪ",
-      words: ["PĒDAS", "KUBI", "ARKLI", "GRĀDI"],
-      difficulty: 1,
-    },
-    {
-      category: "IELAS LĪMEŅA ADRESĀCIJAS SUGAS VĀRDI",
-      words: ["STŪRIS", "SĒTA", "LĪNIJA", "LAUKUMS"],
-      difficulty: 4,
-    },
-    {
-      category: "SILA …",
-      words: ["CIEMS", "STRAZDS", "KROGS", "VIRSIS"],
-      difficulty: 3,
-    },
-    {
-      category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM",
-      words: ["KĀJAS", "DEGUNS", "KĀJAS", "ACIS"],
-      difficulty: 2,
-    },
-  ],
+  {
+    category: "KOMERCIĀLS DARĪJUMS",
+    words: ["VEIKALS", "BIZNESS", "TIRGUS", "ANDELE"],
+    difficulty: 1,
+  },
+  {
+    category: "ATRODAS ESPLANĀDĒ",
+    words: ["BAZNĪCA", "AKADĒMIJA", "RAINIS", "MUZEJS"],
+    difficulty: 2,
+  },
+  {
+    category: "LATVIJAS …",
+    words: ["UNIVERSITĀTE", "BANKA", "KUĢNIECĪBA", "TEKSTILS"],
+    difficulty: 3,
+  },
+  {
+    category: "VĀRDS CĒLIES NO APDZĪVOTAS VIETAS",
+    words: ["TARIFS", "MOKA", "HERESS", "DENIMS"],
+    difficulty: 4,
+  },
+],
+  // [
+  //   {
+  //     category: "MĒRVIENĪBAS DAUDZSKAITLĪ",
+  //     words: ["PĒDAS", "KUBI", "ARKLI", "GRĀDI"],
+  //     difficulty: 1,
+  //   },
+  //   {
+  //     category: "IELAS LĪMEŅA ADRESĀCIJAS SUGAS VĀRDI",
+  //     words: ["STŪRIS", "SĒTA", "LĪNIJA", "LAUKUMS"],
+  //     difficulty: 4,
+  //   },
+  //   {
+  //     category: "SILA …",
+  //     words: ["CIEMS", "STRAZDS", "KROGS", "VIRSIS"],
+  //     difficulty: 3,
+  //   },
+  //   {
+  //     category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM",
+  //     words: ["KĀJAS", "DEGUNS", "KĀJAS", "ACIS"],
+  //     difficulty: 2,
+  //   },
+  // ],
   // [
   //   {
   //     category: "SALDAIS …",
@@ -193,7 +215,7 @@ export const CONNECTION_GAMES = [
     },
     {
       category: "SVĀRKU VEIDI VAI STILI",
-      words: ["MINI", "ĀDA", "ZVANA", "VOLĀNS"],
+      words: ["MINI", "ĀDAS", "ZVANA", "VOLĀNS"],
       difficulty: 4,
     },
   ],
