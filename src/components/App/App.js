@@ -5,6 +5,8 @@ import Game from "../Game";
 import { Toaster } from "../ui/toaster";
 import PuzzleDataProvider from "../../providers/PuzzleDataProvider";
 import GameStatusProvider from "../../providers/GameStatusProvider";
+import Footer from "../Footer";
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Toaster />
           <Header />
           <Game />
+          <Footer />
         </div>
       </GameStatusProvider>
     </PuzzleDataProvider>
