@@ -4,11 +4,13 @@ import { addDays, format, isSameDay } from "date-fns";
 import { lv } from "date-fns/locale";
 import BaseModal from "../BaseModal";
 import { firstGameDate, periodInDays, getIndex, getToday, setGameDate } from "../../../lib/time-utils";
+import { getGameStats, calculateDifficulty } from "../../../lib/firebase";
 
 function ArchiveModal() {
   const [completedGames, setCompletedGames] = React.useState(new Set());
   const [isOpen, setIsOpen] = React.useState(false);
-  const [refreshKey, setRefreshKey] = React.useState(0); // Jauns state trigger
+  const [refreshKey, setRefreshKey] = React.useState(0);
+  const [gameDifficulties, setGameDifficulties] = React.useState({}); // Jauns state trigger
 
   // Funkcija, kas ielādē izspēlētās spēles no localStorage
   const loadCompletedGames = React.useCallback(() => {
@@ -33,6 +35,24 @@ function ArchiveModal() {
   React.useEffect(() => {
     if (isOpen) {
       loadCompletedGames();
+      
+      // Ielādē grūtības pakāpes visām spēlēm
+      const loadDifficulties = async () => {
+        const today = getToday();
+        const maxIndex = getIndex(today);
+        const difficulties = {};
+        
+        for (let i = 1; i <= maxIndex; i++) {
+          const stats = await getGameStats(i);
+          if (stats && stats.totalPlayers > 0) {
+            difficulties[i] = calculateDifficulty(stats.results);
+          }
+        }
+        
+        setGameDifficulties(difficulties);
+      };
+      
+      loadDifficulties();
     }
   }, [isOpen, loadCompletedGames]);
 
@@ -190,13 +210,20 @@ function ArchiveModal() {
                   )}
                   {game.isToday && (
                     <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
-                      Jaunums!
+                      Šodien
                     </span>
                   )}
                 </div>
-                <span className="text-sm text-gray-600">
-                  {game.dateString}
-                </span>
+                <div className="flex items-center gap-3">
+                  {gameDifficulties[game.index] && (
+                    <span className="text-sm font-semibold text-gray-700" title="Grūtības pakāpe">
+                      {gameDifficulties[game.index].toFixed(1)}
+                    </span>
+                  )}
+                  <span className="text-sm text-gray-600">
+                    {game.dateString}
+                  </span>
+                </div>
               </div>
             </div>
           ))}

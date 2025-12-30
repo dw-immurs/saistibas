@@ -4,6 +4,7 @@ import GameGrid from "../GameGrid";
 import NumberOfMistakesDisplay from "../NumberOfMistakesDisplay";
 import GameLostModal from "../modals/GameLostModal";
 import GameWonModal from "../modals/GameWonModal";
+import { submitGameResult } from "../../lib/firebase";
 
 import { Separator } from "../ui/separator";
 import ConfettiExplosion from "react-confetti-explosion";
@@ -75,6 +76,10 @@ React.useEffect(() => {
   // Saglabā, ka spēle ir izspēlēta
   localStorage.setItem(`game_${gameIndex}_completed`, "true");
   localStorage.setItem(`game_${gameIndex}_won`, isGameWon ? "true" : "false");
+
+  // Saglabā Firebase statistiku
+  const attempts = submittedGuesses.length;
+  submitGameResult(gameIndex, attempts, isGameWon);
 
 // Paziņo ArchiveModal, ka spēle ir pabeigta
 window.dispatchEvent(new Event('gameCompleted'));
