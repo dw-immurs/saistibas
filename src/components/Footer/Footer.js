@@ -8,7 +8,7 @@ const Footer = () => {
         Saistības. Saturs un latviskošana: © {startYear}
         {currentYear > startYear && `—${currentYear}`}{" "}
         <a
-          href="https://dw-https://x.com/dw_immurs"
+          href="https://x.com/dw_immurs"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.link}

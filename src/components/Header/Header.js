@@ -7,7 +7,7 @@ import logo from "../../../public/favicon_medium.png"; //parastais logo
 function Header() {
   return (
     <header className="flex justify-between items-center">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 pl-[15px]">
         <img 
           src={logo}
           alt="Saistības logo" 
