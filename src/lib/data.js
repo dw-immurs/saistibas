@@ -131,29 +131,34 @@ export const CONNECTION_GAMES = [
     difficulty: 4,
   },
 ],
+  [
+    {
+      category: "MĒRVIENĪBAS DAUDZSKAITLĪ",
+      words: ["PĒDAS", "KUBI", "ARKLI", "GRĀDI"],
+      difficulty: 2,
+    },
+    {
+      category: "MATEMĀTIKAS PALĪGLĪDZEKĻI",
+      words: ["PIRKSTI", "KAULIŅI", "KALKULATORS", "PAPĪRS"],
+      difficulty: 1,
+    },
+    {
+      category: "IELAS LĪMEŅA ADRESĀCIJAS SUGAS VĀRDI",
+      words: ["STŪRIS", "SĒTA", "LĪNIJA", "LAUKUMS"],
+      difficulty: 4,
+    },
+    {
+      category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM",
+      words: ["KĀJAS", "DEGUNS", "KĀJAS", "ACIS"],
+      difficulty: 3,
+    },
+  ],
   // [
-  //   {
-  //     category: "MĒRVIENĪBAS DAUDZSKAITLĪ",
-  //     words: ["PĒDAS", "KUBI", "ARKLI", "GRĀDI"],
-  //     difficulty: 1,
-  //   },
-  //   {
-  //     category: "IELAS LĪMEŅA ADRESĀCIJAS SUGAS VĀRDI",
-  //     words: ["STŪRIS", "SĒTA", "LĪNIJA", "LAUKUMS"],
-  //     difficulty: 4,
-  //   },
-  //   {
+    //   {
   //     category: "SILA …",
   //     words: ["CIEMS", "STRAZDS", "KROGS", "VIRSIS"],
   //     difficulty: 3,
   //   },
-  //   {
-  //     category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM",
-  //     words: ["KĀJAS", "DEGUNS", "KĀJAS", "ACIS"],
-  //     difficulty: 2,
-  //   },
-  // ],
-  // [
   //   {
   //     category: "SALDAIS …",
   //     words: ["PĀRĪTIS", "KRĒJUMS", "ĒDIENS", "VĪNS"],
