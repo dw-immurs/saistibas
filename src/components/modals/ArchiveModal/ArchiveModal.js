@@ -51,7 +51,7 @@ function ArchiveModal() {
         
         setGameDifficulties(difficulties);
       };
-      
+  console.log("[ArchiveModal] isOpen -> true, loading difficulties");
       loadDifficulties();
     }
   }, [isOpen, loadCompletedGames]);
@@ -158,16 +158,25 @@ function ArchiveModal() {
 
   return (
     <BaseModal
+  open={isOpen}
+  onOpenChange={(open) => {
+    console.log("[ArchiveModal] onOpenChange:", open);
+    setIsOpen(open);
+  }}
       title="Spēļu arhīvs"
-      trigger={
-        <span data-archive-trigger>
-          <Calendar className="mr-4" />
-        </span>
-      }
+  trigger={
+    <span
+      data-archive-trigger
+      onClick={() => {
+        console.log("[ArchiveModal] trigger clicked");
+        setIsOpen(true);
+    }}
+  >
+      <Calendar className="mr-4" />
+  </span>
+}
       initiallyOpen={false}
-      actionButtonText="Aizvērt"
-      onOpenChange={setIsOpen}
-    >
+      actionButtonText="Aizvērt"   >
       <div className="space-y-2">
         <div className="text-sm text-gray-600 mb-4 space-y-1">
           <div>Kopā pieejamas {maxIndex} spēles</div>

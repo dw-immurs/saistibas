@@ -12,7 +12,7 @@ import ConfettiExplosion from "react-confetti-explosion";
 import { PuzzleDataContext } from "../../providers/PuzzleDataProvider";
 import { GameStatusContext } from "../../providers/GameStatusProvider";
 import GameControlButtonsPanel from "../GameControlButtonsPanel";
-
+import { MAX_MISTAKES } from "../../lib/constants";
 import ViewResultsModal from "../modals/ViewResultsModal";
 
 function Game() {
@@ -29,7 +29,7 @@ function Game() {
 
   const { gameData, categorySize, numCategories } =
     React.useContext(PuzzleDataContext);
-  const { submittedGuesses, solvedGameData, isGameOver, isGameWon } =
+const { submittedGuesses, solvedGameData, isGameOver, isGameWon, numMistakesUsed } = 
     React.useContext(GameStatusContext);
 
   const [shuffledRows, setShuffledRows] = React.useState(
@@ -71,17 +71,31 @@ React.useEffect(() => {
     gameIndex = getIndex(getToday());
   }
   
-  console.log("Saving game - gameIndex:", gameIndex, "isGameWon:", isGameWon);
+  console.log("Saving game - gameIndex:", gameIndex, "isGameWon:", isGameWon, "mistakes:", numMistakesUsed);
 
+    // Pārbaudi, vai rezultāts jau ir saglabāts
+  const alreadySubmitted = localStorage.getItem(`game_${gameIndex}_submitted_to_firebase`);
+  
   // Saglabā, ka spēle ir izspēlēta
   localStorage.setItem(`game_${gameIndex}_completed`, "true");
   localStorage.setItem(`game_${gameIndex}_won`, isGameWon ? "true" : "false");
 
   // Saglabā Firebase statistiku
-  const attempts = submittedGuesses.length;
-  submitGameResult(gameIndex, attempts, isGameWon);
+   if (!alreadySubmitted) {
+    submitGameResult(gameIndex, numMistakesUsed, isGameWon).then((success) => {
+      if (success) {
+        // Atzīmē, ka rezultāts ir nosūtīts
+        localStorage.setItem(`game_${gameIndex}_submitted_to_firebase`, "true");
+      }
+    });
+      } else {
+    console.log(`ℹ️ Spēles #${gameIndex} rezultāts jau ir nosūtīts uz Firebase`);
+  }
+  
+  // Paziņo ArchiveModal, ka spēle ir pabeigta
+  window.dispatchEvent(new Event('gameCompleted'));
 
-// Paziņo ArchiveModal, ka spēle ir pabeigta
+
 window.dispatchEvent(new Event('gameCompleted'));
   const modalDelay = isGameWon ? 2000 : 250;
   const delayModalOpen = window.setTimeout(() => {
