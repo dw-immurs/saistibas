@@ -138,7 +138,7 @@ export const CONNECTION_GAMES = [
       difficulty: 2,
     },
     {
-      category: "MATEMĀTIKAS PALĪGLĪDZEKĻI",
+      category: "RĒĶINĀŠANAS PALĪGLĪDZEKĻI",
       words: ["PIRKSTI", "KAULIŅI", "KALKULATORS", "PAPĪRS"],
       difficulty: 1,
     },
@@ -149,7 +149,7 @@ export const CONNECTION_GAMES = [
     },
     {
       category: "ĶERMEŅA DAĻAS TEICIENOS PAR MELIEM",
-      words: ["KĀJAS", "DEGUNS", "KĀJAS", "ACIS"],
+      words: ["KĀJAS", "DEGUNS", "AUSIS", "ACIS"],
       difficulty: 3,
     },
   ],
@@ -165,11 +165,6 @@ export const CONNECTION_GAMES = [
   //     difficulty: 1,
   //   },
   //   {
-  //     category: "MATEMĀTIKAS PALĪGLĪDZEKĻI",
-  //     words: ["PIRKSTI", "KAULIŅI", "KALKULATORS", "PAPĪRS"],
-  //     difficulty: 2,
-  //   },
-  //   {
   //     category: "DIVDABJI",
   //     words: ["SVIESTS", "PROTAMS", "METAMS", "ZINOŠI"],
   //     difficulty: 3,
@@ -180,6 +175,50 @@ export const CONNECTION_GAMES = [
   //     difficulty: 4,
   //   },
   // ],
+  [
+  {
+    category: "VAINAGS",
+    words: ["LAURU", "ADVENTA", "BĒRU", "KOKA"],
+    difficulty: 1,
+  },
+  {
+    category: "ZELTA MIKROFONA BALVAS KATEGORIJAS",
+    words: ["BĒRNIEM", "DEBIJA", "KLASISKĀS", "TAUTAS"],
+    difficulty: 2,
+  },
+  {
+    category: "SENĀKU BAZNĪCU ARHITEKTŪRAS ELEMENTI",
+    words: ["NAVA", "TRANSEPTS", "KOLONNA", "KORIS"],
+    difficulty: 3,
+  },
+  {
+    category: "BIJUŠĀS EIROZONAS VALŪTAS BEZ VIENA BURTA",
+    words: ["MARA", "FANKS", "EVA", "IRA"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "NOSLĒGUMS",
+    words: ["PUNKTS", "FINIŠS", "GALS", "BEIGAS"],
+    difficulty: 1,
+  },
+  {
+    category: "VĀCIJAS KANCLERI",
+    words: ["MERCS", "KOLS", "ŠMITS", "ŠRĒDERS"],
+    difficulty: 2,
+  },
+  {
+    category: "SPORTA OBJEKTI",
+    words: ["TREKS", "TRASE", "OVĀLS", "HALLE"],
+    difficulty: 3,
+  },
+  {
+    category: "PUTNU ALTERNATĪVIE NOSAUKUMI",
+    words: ["GANDRS", "ŠNEPS", "RAUDAVA", "TETERIS"],
+    difficulty: 4,
+  },
+],
   [
     {
       category: "NAUDAS APZĪMĒJUMI ĢENITĪVĀ",
