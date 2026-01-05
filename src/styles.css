@@ -74,7 +74,7 @@ h1 {
   padding-right: var(--game-spacing);
   margin: 0 auto;
   min-width: max(300px, 55vh, 40%);
-  max-width: min(500px, 58vh, 100%);
+  max-width: min(900px, 90vh, 95%);
 }
 
 .banner {
