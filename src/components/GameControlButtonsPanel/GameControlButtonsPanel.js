@@ -90,7 +90,7 @@ function GameControlButtonsPanel({
   }
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-2 w-full overflow-x-hidden">
       <Button
         disabled={isGameOver}
         variant="secondary"

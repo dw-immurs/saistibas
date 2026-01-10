@@ -68,13 +68,10 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: var(--game-spacing);
-  padding-top: 16px;
-  padding-bottom: var(--game-spacing);
-  padding-left: var(--game-spacing);
-  padding-right: var(--game-spacing);
+  padding: 16px 8px;
   margin: 0 auto;
-  min-width: max(300px, 55vh, 40%);
-  max-width: min(900px, 90vh, 95%);
+  width: 100%;
+  max-width: 900px;  /* Vienkārši - fiksēts max platums */
 }
 
 .banner {

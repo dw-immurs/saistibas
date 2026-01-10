@@ -197,25 +197,47 @@ export const CONNECTION_GAMES = [
     difficulty: 4,
   },
 ],
+// [
+//   {
+//     category: "NOSLĒGUMS",
+//     words: ["PUNKTS", "FINIŠS", "GALS", "BEIGAS"],
+//     difficulty: 1,
+//   },
+//   {
+//     category: "VĀCIJAS KANCLERI",
+//     words: ["MERCS", "KOLS", "ŠMITS", "ŠRĒDERS"],
+//     difficulty: 2,
+//   },
+//   {
+//     category: "SPORTA OBJEKTI",
+//     words: ["TREKS", "TRASE", "OVĀLS", "HALLE"],
+//     difficulty: 3,
+//   },
+//   {
+//     category: "PUTNU ALTERNATĪVIE NOSAUKUMI",
+//     words: ["GANDRS", "ŠŅEPS", "RAUDAVA", "TETERIS"],
+//     difficulty: 4,
+//   },
+// ],
 [
   {
-    category: "NOSLĒGUMS",
-    words: ["PUNKTS", "FINIŠS", "GALS", "BEIGAS"],
+    category: "R. PAULA DARBAVIETAS",
+    words: ["LATVIJAS RADIO", "SAEIMA", "KONSERVATORIJA", "FILHARMONIJA"],
     difficulty: 1,
   },
   {
-    category: "VĀCIJAS KANCLERI",
-    words: ["MERCS", "KOLS", "ŠMITS", "ŠRĒDERS"],
+    category: "INICIĒJIS VAI IZVEIDOJIS R. PAULS",
+    words: ["LATVJU ZIŅĢE", "LIELĀ MŪZIKAS BALVA", "\"JŪRMALA\"", "MODO"],
     difficulty: 2,
   },
   {
-    category: "SPORTA OBJEKTI",
-    words: ["TREKS", "TRASE", "OVĀLS", "HALLE"],
+    category: "KAM VELTĪTAS R. PAULA KOMPOZĪCIJAS",
+    words: ["HIROSIMAS TRAĢĒDIJA", "LATGALE", "SIEVA", "DZIESMU SVĒTKI"],
     difficulty: 3,
   },
   {
-    category: "PUTNU ALTERNATĪVIE NOSAUKUMI",
-    words: ["GANDRS", "ŠNEPS", "RAUDAVA", "TETERIS"],
+    category: "RĪMES R. PAULA DZIESMU TEKSTU AUTORU UZVĀRDIEM",
+    words: ["SPRIEDIS", "SETERS", "MAČS", "JŪKLIS"],
     difficulty: 4,
   },
 ],
@@ -241,6 +263,28 @@ export const CONNECTION_GAMES = [
       difficulty: 4,
     },
   ],
+  [
+  {
+    category: "SPORTA LĪGU KOMANDU DALĪJUMS",
+    words: ["DIVĪZIJA", "KONFERENCE", "GRUPA", "ZONA"],
+    difficulty: 1,
+  },
+  {
+    category: "STĀV",
+    words: ["VIETA", "VADS", "PARKS", "KRASTS"],
+    difficulty: 2,
+  },
+  {
+    category: "APZĪMĒ LIELU CILVĒKU DAUDZUMU",
+    words: ["PULKS", "BARS", "MASAS", "JŪRA"],
+    difficulty: 3,
+  },
+  {
+    category: "VĀRDA DIENU GAVIĻNIEKI JANVĀRĪ",
+    words: ["ROTA", "ALNIS", "EGLE", "VIOLETA"],
+    difficulty: 4,
+  },
+],
     [
     {
       category: "TENISA LAUKUMA ELEMENTI",
