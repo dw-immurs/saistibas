@@ -13,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-WYVL18JZ9B"
 };
 
-// Inicializē Firebase
+/ Inicializē Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
@@ -52,11 +52,83 @@ export const submitGameResult = async (gameIndex, mistakes, won) => {
       return current;
     });
     
+    // Saglabā dienas statistiku ar detalizētu info
+    await saveDailyStats(gameIndex, mistakes, won);
+    
     console.log(`✅ Statistika saglabāta: Spēle #${gameIndex}, ${mistakes} kļūdas`);
     return true;
   } catch (error) {
     console.error('❌ Kļūda saglabājot statistiku:', error);
     return false;
+  }
+};
+
+/**
+ * Saglabā dienas statistiku (cik spēļu izspēlētas šodien)
+ * @param {number} gameIndex - Spēles numurs
+ * @param {number} mistakes - Kļūdu skaits
+ * @param {boolean} won - Vai uzvarēja
+ */
+const saveDailyStats = async (gameIndex, mistakes, won) => {
+  try {
+    const today = new Date().toISOString().split('T')[0];
+    const dailyStatsRef = ref(database, `daily_stats/${today}`);
+    
+    await runTransaction(dailyStatsRef, (current) => {
+      console.log("🔍 Transaction START - current:", current);
+      
+      if (!current) {
+        current = {
+          totalGamesPlayed: 0,
+          uniqueGames: [],
+          gameStats: {},
+          timestamp: Date.now()
+        };
+      }
+      
+      current.totalGamesPlayed = (current.totalGamesPlayed || 0) + 1;
+      
+      // Pievieno spēles numuru, ja vēl nav
+      if (!current.uniqueGames) current.uniqueGames = [];
+      if (!current.uniqueGames.includes(gameIndex)) {
+        current.uniqueGames.push(gameIndex);
+      }
+      
+      // Saglabā detalizētu statistiku par katru spēli
+      if (!current.gameStats) current.gameStats = {};
+      if (!current.gameStats[gameIndex]) {
+        current.gameStats[gameIndex] = {
+          playCount: 0,
+          totalMistakes: 0,
+          wins: 0,
+          losses: 0,
+          mistakeDistribution: { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0 }
+        };
+      }
+      
+      const gameStat = current.gameStats[gameIndex];
+      gameStat.playCount++;
+      gameStat.totalMistakes += mistakes;
+      
+      if (won) {
+        gameStat.wins++;
+      } else {
+        gameStat.losses++;
+      }
+      
+      gameStat.mistakeDistribution[mistakes] = 
+        (gameStat.mistakeDistribution[mistakes] || 0) + 1;
+      
+      // Aprēķina vidējo kļūdu skaitu
+      gameStat.avgMistakes = gameStat.totalMistakes / gameStat.playCount;
+      
+      console.log("🔍 Transaction END - returning:", JSON.stringify(current, null, 2));
+      return current;
+    });
+    
+    console.log("✅ Daily stats saved successfully");
+  } catch (error) {
+    console.error('❌ Kļūda saglabājot dienas statistiku:', error);
   }
 };
 
@@ -110,4 +182,59 @@ export const calculateDifficulty = (results) => {
   // 3 kļūdas → 4.0
   // 4 kļūdas → 5.0
   return Math.min(5.0, Math.max(1.0, avgMistakes + 1));
+};
+
+/**
+ * Iegūst dienas statistiku
+ * @param {string} date - Datums formātā "2026-01-14" (optional, default šodiena)
+ * @returns {Promise<Object|null>}
+ */
+export const getDailyStats = async (date) => {
+  try {
+    const targetDate = date || new Date().toISOString().split('T')[0];
+    const dailyStatsRef = ref(database, `daily_stats/${targetDate}`);
+    const snapshot = await get(dailyStatsRef);
+    
+    if (snapshot.exists()) {
+      return snapshot.val();
+    } else {
+      return {
+        totalGamesPlayed: 0,
+        uniqueGames: [],
+        timestamp: Date.now()
+      };
+    }
+  } catch (error) {
+    console.error('❌ Kļūda iegūstot dienas statistiku:', error);
+    return null;
+  }
+};
+
+/**
+ * Iegūst statistiku vairākām dienām
+ * @param {number} days - Cik dienas atpakaļ skatīties (default 7)
+ * @returns {Promise<Array>} Masīvs ar dienu statistiku
+ */
+export const getHistoricalStats = async (days = 7) => {
+  try {
+    const stats = [];
+    const today = new Date();
+    
+    for (let i = 0; i < days; i++) {
+      const date = new Date(today);
+      date.setDate(date.getDate() - i);
+      const dateString = date.toISOString().split('T')[0];
+      
+      const dayStats = await getDailyStats(dateString);
+      stats.push({
+        date: dateString,
+        ...dayStats
+      });
+    }
+    
+    return stats.reverse(); // Vecākās dienas pirmās
+  } catch (error) {
+    console.error('❌ Kļūda iegūstot vēsturisko statistiku:', error);
+    return [];
+  }
 };

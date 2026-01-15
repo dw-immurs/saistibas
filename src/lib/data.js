@@ -197,28 +197,28 @@ export const CONNECTION_GAMES = [
     difficulty: 4,
   },
 ],
-// [
-//   {
-//     category: "NOSLĒGUMS",
-//     words: ["PUNKTS", "FINIŠS", "GALS", "BEIGAS"],
-//     difficulty: 1,
-//   },
-//   {
-//     category: "VĀCIJAS KANCLERI",
-//     words: ["MERCS", "KOLS", "ŠMITS", "ŠRĒDERS"],
-//     difficulty: 2,
-//   },
-//   {
-//     category: "SPORTA OBJEKTI",
-//     words: ["TREKS", "TRASE", "OVĀLS", "HALLE"],
-//     difficulty: 3,
-//   },
-//   {
-//     category: "PUTNU ALTERNATĪVIE NOSAUKUMI",
-//     words: ["GANDRS", "ŠŅEPS", "RAUDAVA", "TETERIS"],
-//     difficulty: 4,
-//   },
-// ],
+[
+  {
+    category: "NOSLĒGUMS",
+    words: ["PUNKTS", "FINIŠS", "GALS", "BEIGAS"],
+    difficulty: 1,
+  },
+  {
+    category: "VĀCIJAS KANCLERI",
+    words: ["MERCS", "KOLS", "ŠMITS", "ŠRĒDERS"],
+    difficulty: 2,
+  },
+  {
+    category: "SPORTA OBJEKTI",
+    words: ["TREKS", "TRASE", "OVĀLS", "HALLE"],
+    difficulty: 3,
+  },
+  {
+    category: "PUTNU ALTERNATĪVIE NOSAUKUMI",
+    words: ["GANDRS", "ŠŅEPS", "RAUDAVA", "TETERIS"],
+    difficulty: 4,
+  },
+],
 [
   {
     category: "R. PAULA DARBAVIETAS",
