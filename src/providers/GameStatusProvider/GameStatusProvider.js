@@ -16,11 +16,11 @@ function GameStatusProvider({ children }) {
   const [submittedGuesses, setSubmittedGuesses] = React.useState([]);
   const [solvedGameData, setSolvedGameData] = React.useState(() => {
     const loadedState = loadGameStateFromLocalStorage();
-    console.log("checking game state!", {
-      loadedState: loadedState,
-      gd1: gameData,
-      gd2: loadedState?.gameData,
-    });
+    // console.log("checking game state!", {
+    //   loadedState: loadedState,
+    //   gd1: gameData,
+    //   gd2: loadedState?.gameData,
+    // });
     if (!isGameDataEquivalent({ gd1: gameData, gd2: loadedState?.gameData })) {
       return [];
     }
