@@ -51,7 +51,7 @@ function ArchiveModal() {
         
         setGameDifficulties(difficulties);
       };
-  console.log("[ArchiveModal] isOpen -> true, loading difficulties");
+      
       loadDifficulties();
     }
   }, [isOpen, loadCompletedGames]);
@@ -111,14 +111,24 @@ function ArchiveModal() {
   }
 
   const handleGameSelect = (game) => {
-    // Ja šodienas spēle jau izspēlēta, neļauj to atvērt no jauna
-    if (game.isToday && game.isCompleted) {
-      alert("Šodienas spēle jau ir izspēlēta! Jauna spēle būs pieejama pēc 3 dienām.");
+    // Pārbauda, vai tā ir jaunākā pieejamā spēle
+    const isLatestGame = game.index === maxIndex;
+    
+    // Ja jaunākā spēle jau izspēlēta, neļauj to atvērt no jauna
+    if (isLatestGame && game.isCompleted) {
+      alert("Jaunākā spēle jau ir izspēlēta! Jauna spēle būs pieejama pēc 3 dienām.");
+      return;
+    }
+
+    // Ja tā ir jaunākā spēle, aizved uz sākumskatu
+    if (isLatestGame) {
+      localStorage.removeItem("archiveGameIndex");
+      window.location.href = "/";
       return;
     }
 
     // Ja vecāka spēle jau izspēlēta, brīdini lietotāju
-    if (game.isCompleted && !game.isToday) {
+    if (game.isCompleted) {
       const confirm = window.confirm(
         `Spēle #${game.index} jau ir izspēlēta. Vai tiešām vēlies spēlēt vēlreiz? Progress tiks dzēsts.`
       );
@@ -128,6 +138,7 @@ function ArchiveModal() {
       localStorage.removeItem(`game_${game.index}_completed`);
       localStorage.removeItem(`game_${game.index}_won`);
       localStorage.removeItem(`game_${game.index}_state`);
+      localStorage.removeItem(`game_${game.index}_submitted_to_firebase`);
       localStorage.removeItem('gameState'); // Dzēš globālo stāvokli
       
       // Atjauno stāvokli
@@ -158,25 +169,16 @@ function ArchiveModal() {
 
   return (
     <BaseModal
-  open={isOpen}
-  onOpenChange={(open) => {
-    console.log("[ArchiveModal] onOpenChange:", open);
-    setIsOpen(open);
-  }}
       title="Spēļu arhīvs"
-  trigger={
-    <span
-      data-archive-trigger
-      onClick={() => {
-        console.log("[ArchiveModal] trigger clicked");
-        setIsOpen(true);
-    }}
-  >
-      <Calendar className="mr-4" />
-  </span>
-}
+      trigger={
+        <span data-archive-trigger>
+          <Calendar className="mr-4" />
+        </span>
+      }
       initiallyOpen={false}
-      actionButtonText="Aizvērt"   >
+      actionButtonText="Aizvērt"
+      onOpenChange={setIsOpen}
+    >
       <div className="space-y-2">
         <div className="text-sm text-gray-600 mb-4 space-y-1">
           <div>Kopā pieejamas {maxIndex} spēles</div>
