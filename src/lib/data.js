@@ -267,21 +267,43 @@ export const CONNECTION_GAMES = [
   {
     category: "SPORTA LĪGU KOMANDU DALĪJUMS",
     words: ["DIVĪZIJA", "KONFERENCE", "GRUPA", "ZONA"],
-    difficulty: 1,
+    difficulty: 3,
   },
   {
-    category: "STĀV",
+    category: "STĀV-",
     words: ["VIETA", "VADS", "PARKS", "KRASTS"],
     difficulty: 2,
   },
   {
     category: "APZĪMĒ LIELU CILVĒKU DAUDZUMU",
     words: ["PULKS", "BARS", "MASAS", "JŪRA"],
-    difficulty: 3,
+    difficulty: 1,
   },
   {
     category: "VĀRDA DIENU GAVIĻNIEKI JANVĀRĪ",
     words: ["ROTA", "ALNIS", "EGLE", "VIOLETA"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "SARKANZILS",
+    words: ["PURPURS", "MADŽENTA", "LILLĀ", "VIOLETS"],
+    difficulty: 1,
+  },
+  {
+    category: "TO VĀRDĀ NOSAUKTAS REVOLŪCIJAS",
+    words: ["1905", "ROZES", "ORANŽS", "SAMTS"],
+    difficulty: 2,
+  },
+  {
+    category: "SAISTĪTS AR BRĪVĪBAS PIEMINEKLI",
+    words: ["1935", "TRAVERTĪNS", "KĀRLIS", "ZVAIGZNES"],
+    difficulty: 3,
+  },
+  {
+    category: "2019. GADA LATVIJAS FILMAS",
+    words: ["OĻEGS", "1906", "PROJĀM", "BLAKUS"],
     difficulty: 4,
   },
 ],
@@ -294,15 +316,15 @@ export const CONNECTION_GAMES = [
     {
       category: "PĀRSLAS",
       words: ["SNIEGS", "PAPĪRA", "AUZAS", "BROKASTIS"],
-      difficulty: 3,
+      difficulty: 2,
     },
     {
       category: "PIRMAIS VĀRDS ERUDĪCIJAS SPĒĻU NOSAUKUMĀ",
       words: ["ZINI", "GRIBI", "PRĀTA", "GUDRS"],
-      difficulty: 2,
+      difficulty: 3,
     },
     {
-      category: "SVĀRKU VEIDI VAI STILI",
+      category: "SAISTĪTS AR SVĀRKIEM",
       words: ["MINI", "ĀDAS", "ZVANA", "VOLĀNS"],
       difficulty: 4,
     },
