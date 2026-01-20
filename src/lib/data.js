@@ -292,7 +292,7 @@ export const CONNECTION_GAMES = [
     difficulty: 1,
   },
   {
-    category: "TO VĀRDĀ NOSAUKTAS REVOLŪCIJAS",
+    category: "TĀ NOSAUKTAS REVOLŪCIJAS",
     words: ["1905", "ROZES", "ORANŽS", "SAMTS"],
     difficulty: 2,
   },

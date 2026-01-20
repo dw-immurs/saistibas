@@ -10,7 +10,7 @@ function ArchiveModal() {
   const [completedGames, setCompletedGames] = React.useState(new Set());
   const [isOpen, setIsOpen] = React.useState(false);
   const [refreshKey, setRefreshKey] = React.useState(0);
-  const [gameDifficulties, setGameDifficulties] = React.useState({}); // Jauns state trigger
+  const [gameDifficulties, setGameDifficulties] = React.useState({});
 
   // Funkcija, kas ielādē izspēlētās spēles no localStorage
   const loadCompletedGames = React.useCallback(() => {
@@ -23,7 +23,7 @@ function ArchiveModal() {
       }
     }
     setCompletedGames(completed);
-    setRefreshKey(prev => prev + 1); // Forso re-render
+    setRefreshKey(prev => prev + 1);
   }, []);
 
   // Ielādē sākumā
@@ -51,7 +51,7 @@ function ArchiveModal() {
         
         setGameDifficulties(difficulties);
       };
-      
+      console.log("[ArchiveModal] isOpen -> true, loading difficulties");
       loadDifficulties();
     }
   }, [isOpen, loadCompletedGames]);
@@ -59,7 +59,6 @@ function ArchiveModal() {
   // Klausās uz spēles pabeigšanas eventu
   React.useEffect(() => {
     const handleGameComplete = () => {
-      // Neliela aizkave, lai localStorage noteikti būtu atjaunots
       setTimeout(() => {
         loadCompletedGames();
       }, 100);
@@ -99,6 +98,7 @@ function ArchiveModal() {
     const gameDate = addDays(firstGameDate, (i - 1) * periodInDays);
     const { isCompleted, isWon } = getGameStatus(i);
     const isToday = isSameDay(gameDate, today);
+    const isLatestGame = i === maxIndex; // Jaunākā pieejamā spēle
     
     games.push({ 
       index: i, 
@@ -106,29 +106,20 @@ function ArchiveModal() {
       dateString: format(gameDate, 'd.M.yyyy'),
       isCompleted,
       isWon,
-      isToday
+      isToday,
+      isLatestGame
     });
   }
 
   const handleGameSelect = (game) => {
-    // Pārbauda, vai tā ir jaunākā pieejamā spēle
-    const isLatestGame = game.index === maxIndex;
-    
     // Ja jaunākā spēle jau izspēlēta, neļauj to atvērt no jauna
-    if (isLatestGame && game.isCompleted) {
+    if (game.isLatestGame && game.isCompleted) {
       alert("Jaunākā spēle jau ir izspēlēta! Jauna spēle būs pieejama pēc 3 dienām.");
       return;
     }
 
-    // Ja tā ir jaunākā spēle, aizved uz sākumskatu
-    if (isLatestGame) {
-      localStorage.removeItem("archiveGameIndex");
-      window.location.href = "/";
-      return;
-    }
-
     // Ja vecāka spēle jau izspēlēta, brīdini lietotāju
-    if (game.isCompleted) {
+    if (game.isCompleted && !game.isLatestGame) {
       const confirm = window.confirm(
         `Spēle #${game.index} jau ir izspēlēta. Vai tiešām vēlies spēlēt vēlreiz? Progress tiks dzēsts.`
       );
@@ -138,8 +129,7 @@ function ArchiveModal() {
       localStorage.removeItem(`game_${game.index}_completed`);
       localStorage.removeItem(`game_${game.index}_won`);
       localStorage.removeItem(`game_${game.index}_state`);
-      localStorage.removeItem(`game_${game.index}_submitted_to_firebase`);
-      localStorage.removeItem('gameState'); // Dzēš globālo stāvokli
+      localStorage.removeItem('gameState');
       
       // Atjauno stāvokli
       setCompletedGames(prev => {
@@ -152,15 +142,31 @@ function ArchiveModal() {
     // Dzēš globālo gameState pirms jaunas spēles sākšanas
     localStorage.removeItem('gameState');
     
-    // Saglabā index
-    localStorage.setItem("archiveGameIndex", String(game.index));
-
-    // Uzliek URL parametru
-    const iso = format(game.date, "yyyy-MM-dd");
-    window.history.replaceState(null, "", `?d=${iso}`);
-
-    // Iestata spēles datumu
-    setGameDate(game.date);
+    // JA ŠĪ IR JAUNĀKĀ SPĒLE (maxIndex) → aizved uz sākumskatu
+    if (game.isLatestGame) {
+      // Noņem URL parametru
+      window.history.replaceState(null, "", window.location.pathname);
+      
+      // Noņem arhīva indexu
+      localStorage.removeItem("archiveGameIndex");
+      
+      // Iestata spēles datumu (bet bez URL parametra)
+      setGameDate(game.date);
+      
+      // Pārlādē lapu, lai aizvestu uz sākumskatu
+      window.location.reload();
+    } else {
+      // VECĀKAS SPĒLES → arhīva režīms ar ?d=
+      localStorage.setItem("archiveGameIndex", String(game.index));
+      
+      const iso = format(game.date, "yyyy-MM-dd");
+      window.history.replaceState(null, "", `?d=${iso}`);
+      
+      setGameDate(game.date);
+      
+      // Pārlādē lapu
+      window.location.reload();
+    }
   };
 
   const completedCount = games.filter(g => g.isCompleted).length;
@@ -169,15 +175,25 @@ function ArchiveModal() {
 
   return (
     <BaseModal
+      open={isOpen}
+      onOpenChange={(open) => {
+        console.log("[ArchiveModal] onOpenChange:", open);
+        setIsOpen(open);
+      }}
       title="Spēļu arhīvs"
       trigger={
-        <span data-archive-trigger>
+        <span
+          data-archive-trigger
+          onClick={() => {
+            console.log("[ArchiveModal] trigger clicked");
+            setIsOpen(true);
+          }}
+        >
           <Calendar className="mr-4" />
         </span>
       }
       initiallyOpen={false}
       actionButtonText="Aizvērt"
-      onOpenChange={setIsOpen}
     >
       <div className="space-y-2">
         <div className="text-sm text-gray-600 mb-4 space-y-1">
@@ -194,7 +210,7 @@ function ArchiveModal() {
           {games.reverse().map(game => (
             <div
               key={game.index}
-              onClick={() => !game.isToday || !game.isCompleted ? handleGameSelect(game) : null}
+              onClick={() => !game.isLatestGame || !game.isCompleted ? handleGameSelect(game) : null}
               className={`w-full text-left px-4 py-3 rounded-lg border transition-colors
                 ${game.isCompleted && game.isWon
                   ? 'bg-green-50 border-green-300 hover:border-green-400' 
@@ -202,7 +218,7 @@ function ArchiveModal() {
                   ? 'bg-red-50 border-red-300 hover:border-red-400'
                   : 'border-gray-200 hover:border-gray-400 hover:bg-gray-50'
                 }
-                ${game.isToday && game.isCompleted 
+                ${game.isLatestGame && game.isCompleted 
                   ? 'opacity-50 cursor-not-allowed' 
                   : 'cursor-pointer'
                 }
@@ -219,9 +235,9 @@ function ArchiveModal() {
                   {game.isCompleted && !game.isWon && (
                     <span className="text-red-600 text-sm">✗</span>
                   )}
-                  {game.isToday && (
+                  {game.isLatestGame && (
                     <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
-                      Šodien
+                      Jaunākā
                     </span>
                   )}
                 </div>
