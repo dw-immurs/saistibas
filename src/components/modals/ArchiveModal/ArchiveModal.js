@@ -111,62 +111,66 @@ function ArchiveModal() {
     });
   }
 
-  const handleGameSelect = (game) => {
-    // Ja jaunākā spēle jau izspēlēta, neļauj to atvērt no jauna
-    if (game.isLatestGame && game.isCompleted) {
-      alert("Jaunākā spēle jau ir izspēlēta! Jauna spēle būs pieejama pēc 3 dienām.");
+ const handleGameSelect = (game) => {
+    const storedArchiveIndex = localStorage.getItem("archiveGameIndex");
+    const currentActiveIndex = storedArchiveIndex ? parseInt(storedArchiveIndex) : maxIndex;
+
+    const isCurrentGame = storedArchiveIndex 
+      ? parseInt(storedArchiveIndex) === game.index 
+      : game.isLatestGame;
+    
+    if (isCurrentGame) {
+      setIsOpen(false);
       return;
     }
 
-    // Ja vecāka spēle jau izspēlēta, brīdini lietotāju
-    if (game.isCompleted && !game.isLatestGame) {
-      const confirm = window.confirm(
-        `Spēle #${game.index} jau ir izspēlēta. Vai tiešām vēlies spēlēt vēlreiz? Progress tiks dzēsts.`
-      );
-      if (!confirm) return;
-      
-      // Dzēš veco progresu
-      localStorage.removeItem(`game_${game.index}_completed`);
-      localStorage.removeItem(`game_${game.index}_won`);
-      localStorage.removeItem(`game_${game.index}_state`);
-      localStorage.removeItem('gameState');
-      
-      // Atjauno stāvokli
-      setCompletedGames(prev => {
-        const newSet = new Set(prev);
-        newSet.delete(game.index);
-        return newSet;
-      });
+    // --- PROGRESA PĀRBAUDE ---
+    let stateString = localStorage.getItem(`game_${currentActiveIndex}_state`);
+    if (!stateString) {
+      stateString = localStorage.getItem('gameState');
     }
 
-    // Dzēš globālo gameState pirms jaunas spēles sākšanas
+    if (stateString) {
+      try {
+        const state = JSON.parse(stateString);
+        
+        // Pārbaudām gan 'guesses', gan tavu minēto 'submittedGuesses'
+        const guesses = state.submittedGuesses || state.guesses || [];
+        const hasGuesses = guesses.length > 0;
+        
+        // Pārbaudām, vai spēle jau nav beigusies
+        const isEnded = state.gameStatus === 'WON' || state.gameStatus === 'LOST' || state.success === true;
+
+        if (hasGuesses && !isEnded) {
+          const confirm = window.confirm(
+            "Aktīvā spēle tiks aizvērta un progress tiks dzēsts. Vai tiešām vēlies to aizvērt?"
+          );
+          if (!confirm) return; // Ja nospiež 'Atcelt', nekas nenotiek
+        }
+      } catch (e) {
+        console.error("Kļūda nolasot spēles stāvokli:", e);
+      }
+    }
+    // --- PĀRBAUDES BEIGAS ---
+
+    // Tālāk seko tava esošā loģika par spēles ielādi...
+    if (game.isLatestGame && game.isCompleted) {
+      const confirm = window.confirm("Jaunākā spēle jau ir izspēlēta! Vai tiešām vēlies spēlēt vēlreiz?");
+      if (!confirm) return;
+      // ... (tavs dzēšanas kods)
+    }
+
+    // Pārējā ielādes daļa
     localStorage.removeItem('gameState');
-    
-    // JA ŠĪ IR JAUNĀKĀ SPĒLE (maxIndex) → aizved uz sākumskatu
     if (game.isLatestGame) {
-      // Noņem URL parametru
       window.history.replaceState(null, "", window.location.pathname);
-      
-      // Noņem arhīva indexu
       localStorage.removeItem("archiveGameIndex");
-      
-      // Iestata spēles datumu (bet bez URL parametra)
-      setGameDate(game.date);
-      
-      // Pārlādē lapu, lai aizvestu uz sākumskatu
-      window.location.reload();
     } else {
-      // VECĀKAS SPĒLES → arhīva režīms ar ?d=
       localStorage.setItem("archiveGameIndex", String(game.index));
-      
       const iso = format(game.date, "yyyy-MM-dd");
       window.history.replaceState(null, "", `?d=${iso}`);
-      
-      setGameDate(game.date);
-      
-      // Pārlādē lapu
-      window.location.reload();
     }
+    window.location.reload();
   };
 
   const completedCount = games.filter(g => g.isCompleted).length;
@@ -207,23 +211,27 @@ function ArchiveModal() {
         </div>
         
         <div className="max-h-96 overflow-y-auto space-y-2">
-          {games.reverse().map(game => (
-            <div
-              key={game.index}
-              onClick={() => !game.isLatestGame || !game.isCompleted ? handleGameSelect(game) : null}
-              className={`w-full text-left px-4 py-3 rounded-lg border transition-colors
-                ${game.isCompleted && game.isWon
-                  ? 'bg-green-50 border-green-300 hover:border-green-400' 
-                  : game.isCompleted && !game.isWon
-                  ? 'bg-red-50 border-red-300 hover:border-red-400'
-                  : 'border-gray-200 hover:border-gray-400 hover:bg-gray-50'
-                }
-                ${game.isLatestGame && game.isCompleted 
-                  ? 'opacity-50 cursor-not-allowed' 
-                  : 'cursor-pointer'
-                }
-              `}
-            >
+          {games.reverse().map(game => {
+            // Pārbauda, vai šī spēle ir pašlaik aktīvā
+            const currentArchiveIndex = localStorage.getItem("archiveGameIndex");
+            const isCurrentGame = currentArchiveIndex 
+              ? parseInt(currentArchiveIndex) === game.index 
+              : game.isLatestGame;
+            
+            return (
+              <div
+                key={game.index}
+                onClick={() => handleGameSelect(game)}
+                className={`w-full text-left px-4 py-3 rounded-lg border transition-colors cursor-pointer
+                  ${game.isCompleted && game.isWon
+                    ? 'bg-green-50 border-green-300 hover:border-green-400' 
+                    : game.isCompleted && !game.isWon
+                    ? 'bg-red-50 border-red-300 hover:border-red-400'
+                    : 'border-gray-200 hover:border-gray-400 hover:bg-gray-50'
+                  }
+                  ${isCurrentGame ? 'ring-2 ring-blue-400' : ''}
+                `}
+              >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold">
@@ -253,7 +261,8 @@ function ArchiveModal() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </BaseModal>

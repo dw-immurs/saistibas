@@ -309,14 +309,14 @@ export const CONNECTION_GAMES = [
 ],
     [
     {
-      category: "TENISA LAUKUMA ELEMENTI",
-      words: ["LĪNIJAS", "TĪKLS", "KORTS", "BUMBIŅA"],
-      difficulty: 1,
+      category: "TENISA LAUKUMA PASTĀVĪGIE ELEMENTI",
+      words: ["LĪNIJAS", "TĪKLS", "BANTE", "BALSTI"],
+      difficulty: 2,
     },
     {
-      category: "PĀRSLAS",
-      words: ["SNIEGS", "PAPĪRA", "AUZAS", "BROKASTIS"],
-      difficulty: 2,
+      category: "... PĀRSLAS",
+      words: ["SNIEGA", "PLASTMASAS", "AUZU", "KUKURŪZAS"],
+      difficulty: 1,
     },
     {
       category: "PIRMAIS VĀRDS ERUDĪCIJAS SPĒĻU NOSAUKUMĀ",
@@ -324,9 +324,31 @@ export const CONNECTION_GAMES = [
       difficulty: 3,
     },
     {
-      category: "SAISTĪTS AR SVĀRKIEM",
-      words: ["MINI", "ĀDAS", "ZVANA", "VOLĀNS"],
+      category: "SAISTĪTI AR SVĀRKIEM",
+      words: ["MINI", "GOFRĒJUMS", "ZVANA", "VOLĀNS"],
       difficulty: 4,
     },
   ],
+  [
+  {
+    category: "ALKOHOLA LIETOŠANA",
+    words: ["PLOSTS", "UZDZĪVE", "KODIENS", "ŽŪPOŠANA"],
+    difficulty: 2,
+  },
+  {
+    category: "LATVIJAS TEĀTRI",
+    words: ["NACIONĀLAIS", "GODA", "LEĻĻU", "KABATA"],
+    difficulty: 3,
+  },
+  {
+    category: "ŪDENSTECES",
+    words: ["UPE", "KANĀLS", "URGA", "TĒRCE"],
+    difficulty: 1,
+  },
+  {
+    category: "SARUNVALODAS ANGLICISMI — LITERĀRU VĀRDU HOMONĪMI/HOMOFORMAS",
+    words: ["LAIVĀ", "POSTS", "TIPS", "LAIKS"],
+    difficulty: 4,
+  },
+]
 ];
