@@ -14,7 +14,7 @@ const toggleVariants = cva(
           "border-solid border border-input bg-transparent lg:hover:bg-accent lg:hover:text-accent-foreground",
       },
       size: {
-        default: "h-10 px-3",
+        default: "px",
         sm: "h-9 px-2.5",
         lg: "h-11 px-5",
       },
