@@ -1,4 +1,5 @@
 import React from "react";
+import {hyphenateSync as hyphenate} from "hyphen/lv";
 import * as styles from "./WordButton.module.css";
 import { Toggle } from "../ui/toggle";
 
@@ -52,6 +53,9 @@ function WordButton({ word, fullCandidateSize }) {
       return null;
     }
   }
+
+  word = hyphenate(word);
+
   // word = "washingtonian";
   return (
     <Toggle
@@ -62,7 +66,7 @@ function WordButton({ word, fullCandidateSize }) {
     >
       <p
         style={{ fontSize: getFontSize(word) }}
-        className={`font-space-mono uppercase sm:text-xs md:text-xs ${getFontSize(word) ? null : 'break-all'}`}
+        className={`font-space-mono uppercase sm:text-xs md:text-xs hyphens-manual`}
       >
         {word}
       </p>
