@@ -1,8 +1,8 @@
 import React from "react";
 import InfoModal from "../modals/InfoModal";
 import ArchiveModal from "../modals/ArchiveModal";
-import logo from "../../../public/favicon_medium.png"; //parastais logo
-// import logo from "../../../public/christmas_favicon_medium.png"; //Ziemassvētku logo
+import logo from "url:../../assets/favicon_medium.png"; // Note the "url:" prefix
+// import logo from "url:../../assets/christmas_favicon_medium.png";
 
 function Header() {
   return (
@@ -26,5 +26,4 @@ function Header() {
     </header>
   );
 }
-
 export default Header;
