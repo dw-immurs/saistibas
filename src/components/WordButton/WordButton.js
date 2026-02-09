@@ -1,4 +1,5 @@
 import React from "react";
+import {hyphenateSync as hyphenate} from "hyphen/lv";
 import * as styles from "./WordButton.module.css";
 import { Toggle } from "../ui/toggle";
 
@@ -40,29 +41,32 @@ function WordButton({ word, fullCandidateSize }) {
   //const fontSizeByWordLength = 9characters works with 0.6rem
 
   function getFontSize(word) {
-    const baseLength = 7;
+    const baseLength = 9;
     const wordLength = word.length;
     let fontSize = 1;
     if (wordLength > baseLength) {
       const numExtraChars = wordLength - baseLength;
       fontSize = fontSize - numExtraChars * 0.1;
       fontSize = Math.max(0.5, fontSize);
-      return `${fontSize}em`;
+      return fontSize >= 0.8 ? `${fontSize}em` : null;
     } else {
       return null;
     }
   }
+
+  word = hyphenate(word);
+
   // word = "washingtonian";
   return (
     <Toggle
-      className={`${styles.growShrink} select-none`}
+      className={`${styles.growShrink} min-h-[2.5rem] select-none`}
       variant="outline"
       pressed={isSelected}
       onClick={flipSelection}
     >
       <p
         style={{ fontSize: getFontSize(word) }}
-        className="font-space-mono uppercase sm:text-xs md:text-xs"
+        className={`font-space-mono uppercase sm:text-xs md:text-xs hyphens-manual`}
       >
         {word}
       </p>
