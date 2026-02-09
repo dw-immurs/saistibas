@@ -350,5 +350,93 @@ export const CONNECTION_GAMES = [
     words: ["LAIVĀ", "POSTS", "TIPS", "LAIKS"],
     difficulty: 4,
   },
+],
+[
+  {
+    category: "NE UZREIZ",
+    words: ["SOLI PA SOLIM", "PAKĀPENISKI", "NESTEIDZĪGI", "PAMAZĀM"],
+    difficulty: 1,
+  },
+  {
+    category: "VAR BŪT AR GREDZENU",
+    words: ["LAULĀTIE", "PUTNI", "KOKS", "DZEJA"],
+    difficulty: 3,
+  },
+  {
+    category: "MUĻĶĪGI IZTULKOTAS POKERA KOMBINĀCIJAS",
+    words: ["HETEROSEKSUĀLS", "PILNA MĀJA", "PIETVĪKUMS", "PĀRĪTIS"],
+    difficulty: 2,
+  },
+  {
+    category: "SAĪSINA AR P",
+    words: ["KLUSI", "PULSS", "STĀVVIETA", "SPIEDIENS"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "FORMULĒTA PĀRLIECĪBA",
+    words: ["MOTO", "DEVĪZE", "PRINCIPS", "CREDO"],
+    difficulty: 1,
+  },
+  {
+    category: "JAUNVĀRDU PIEDĀVĀJUMI \"DRONAM\"",
+    words: ["DŪKNIS", "LIDLŪKS", "TRANS", "LIDACIS"],
+    difficulty: 2,
+  },
+  {
+    category: "ĪPAŠVĀRDI NO MATRIX",
+    words: ["NEO", "NEBUKADNECARS", "CIONA", "TANKS"],
+    difficulty: 3,
+  },
+  {
+    category: "\"+KRĀTIJA\" — VARAS FORMAS",
+    words: ["TEO", "AUTO", "PLUTO", "DEMO"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "KOKA DAĻAS",
+    words: ["SAKNES", "GALOTNE", "CELMS", "STUMBRS"],
+    difficulty: 1,
+  },
+  {
+    category: "2026. GADA DABAS SIMBOLI DAUDZSKAITLĪ",
+    words: ["DOBUMI", "LĒCASTES", "DZELKSNĪTES", "CIRCENĪŠI"],
+    difficulty: 2,
+  },
+  {
+    category: "NOSAUKTI SKVĒRI RĪGĀ",
+    words: ["VIŠĶI", "BRASAS TILTS", "BRĀĻI IRBĪTES", "ALEKSIS"],
+    difficulty: 3,
+  },
+  {
+    category: "BEIDZAS AR APSTĀKĻVĀRDU, KAS RAKSTURO ĀTRUMU",
+    words: ["BRĀĻI RAITI", "NĀTRI", "LAŠI", "PREFIKSI"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "SLĒPOŠANAS FRĪSTAILA VEIDI",
+    words: ["KROSS", "AKROBĀTIKA", "RAMPA", "MOGULS"],
+    difficulty: 1,
+  },
+  {
+    category: "HOKEJA IZLASES TRENERU UZVĀRDI AR CITU GALOTNI",
+    words: ["OZOLS", "IRBĪTE", "DĀRZNIEKS", "VĪTOLS"],
+    difficulty: 2,
+  },
+  {
+    category: "21. GADSIMTA ZIEMAS OLIMPISKO SPĒĻU TALISMANI",
+    words: ["SERMUĻI", "PANDA", "TĪĢERIS", "SNIEGA CILVĒKS"],
+    difficulty: 3,
+  },
+  {
+    category: "KAMANU BRAUCĒJU APRĪKOJUMS",
+    words: ["PINGVĪNI", "APTECĒTĀJS", "KARABĪNE", "RAGI"],
+    difficulty: 4,
+  },
 ]
 ];
