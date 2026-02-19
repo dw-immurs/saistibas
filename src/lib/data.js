@@ -438,5 +438,93 @@ export const CONNECTION_GAMES = [
     words: ["PINGVĪNI", "APTECĒTĀJS", "KARABĪNE", "RAGI"],
     difficulty: 4,
   },
+],
+[
+  {
+    category: "PRĀTA MEŽĢI",
+    words: ["MĪKLA", "CIETAIS RIEKSTS", "ANAGRAMMA", "RĒBUSS"],
+    difficulty: 1,
+  },
+  {
+    category: "APAĻĀS DIAGRAMMAS NOSAUKUMI",
+    words: ["SEKTORS", "RIŅĶIS", "PĪRĀGS", "APĻVEIDS"],
+    difficulty: 2,
+  },
+  {
+    category: "EDUARDA PĀVULA KINOLOMAS",
+    words: ["ĒRMANIS", "OSKARS", "CEPLIS", "RIČARDS"],
+    difficulty: 3,
+  },
+  {
+    category: "LATVIJAS \"ZELTA\" APBALVOJUMI",
+    words: ["ANANASS", "ĀBELE", "MIKROFONS", "PILDSPALVA"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "AR SIRDSFORMAS LAPĀM",
+    words: ["MONSTERA", "ANTŪRIJA", "KATALPA", "LIEPA"],
+    difficulty: 1,
+  },
+  {
+    category: "“SIRDS—“",
+    words: ["ĀĶĪTIS", "APZIŅA", "ĒSTI", "DĀMA"],
+    difficulty: 2,
+  },
+  {
+    category: "BIJUŠO IEPAZĪŠANĀS/ATTIECĪBU ŠOVU PIRMAIS VĀRDS",
+    words: ["PRECĒTIE", "PĀRIS", "LAIMES", "TREŠAIS"],
+    difficulty: 3,
+  },
+  {
+    category: "APZĪMĒTĀJI SIRDS SASTĀVDAĻĀM",
+    words: ["PUSMĒNESS", "PLAUŠU", "KREISAIS", "VIRU"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "PĀRNESUMKĀRBĀ",
+    words: ["ĀTRUMI", "ROBI", "GAŅĢI", "PĀRNESUMI"],
+    difficulty: 1,
+  },
+  {
+    category: "AEROSOLI (NO FIZIKAS PERSPEKTĪVAS)",
+    words: ["MIGLA", "PUTEKĻU MĀKONIS", "DŪMI", "MATU LAKA"],
+    difficulty: 2,
+  },
+  {
+    category: "RELJEFA APZĪMĒJUMI ORIENTĒŠANĀS SPORTA LEĢENDĀ",
+    words: ["DEGUNS", "TERASE", "SEDLI", "IZSKALOJUMS"],
+    difficulty: 3,
+  },
+  {
+    category: "NBA KOMANDU NOSAUKUMI LATVISKI",
+    words: ["PIEŠI", "TVEICE", "VIRZUĻI", "AIDINIEKI"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "GRAFIKAS TEHNIKAS",
+    words: ["LITOGRĀFIJA", "LINOGRIEZUMS", "OFORTS", "GRAVĪRA"],
+    difficulty: 1,
+  },
+  {
+    category: "IEGŪST NO DZĪVNIEKIEM",
+    words: ["PĒRLES", "PIENS", "MEDUS", "KOLAGĒNS"],
+    difficulty: 2,
+  },
+  {
+    category: "VAR KALPOT KĀ PAKAIŠI",
+    words: ["SALMI", "SOJAS ŠĶIEDRA", "SMILTIS", "KOKA GRANULAS"],
+    difficulty: 3,
+  },
+  {
+    category: "KOK-",
+    words: ["OGLES", "VARDES", "MATERIĀLI", "TĒLNIECĪBA"],
+    difficulty: 4,
+  },
 ]
 ];

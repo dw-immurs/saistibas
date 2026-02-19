@@ -5,7 +5,7 @@ export const PuzzleDataContext = React.createContext();
 
 function PuzzleDataProvider({ children }) {
   const [gameData, setGameData] = React.useState(puzzleAnswers);
-  const categorySize = gameData[0].words.length;
+  const categorySize = gameData?.[0]?.words?.length || 0;
   const numCategories = gameData.length;
   return (
     <PuzzleDataContext.Provider
