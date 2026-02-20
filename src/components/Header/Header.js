@@ -19,7 +19,7 @@ function Header() {
         Saistības
       </h1>
       
-      <div className="flex items-center gap-2 justify-end">
+      <div className="flex items-center gap-6 justify-end">
         <ArchiveModal />
         <InfoModal />
       </div>

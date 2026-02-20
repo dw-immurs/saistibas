@@ -14,7 +14,7 @@ function InfoModal() {
   return (
     <BaseModal
       title=""
-      trigger={<Info className="mr-4" />}
+      trigger={<Info />}
       initiallyOpen={false}
       actionButtonText="Sapratu!"
     >

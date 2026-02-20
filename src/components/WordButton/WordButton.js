@@ -18,11 +18,11 @@ function WordButton({ word, fullCandidateSize }) {
     setIsSelected(!!guessCandidate.includes(word));
   }, [guessCandidate]);
 
-  function flipSelection() {
+  function flipSelection(nativeWord) {
     if (isSelected) {
       // remove from candidateGuess
       const updatedGuessCandidate = guessCandidate.filter((w) => {
-        return w !== word;
+        return w !== nativeWord;
       });
       setGuessCandidate(updatedGuessCandidate);
       // set state to *not* selected
@@ -31,30 +31,14 @@ function WordButton({ word, fullCandidateSize }) {
       // check if the candidate array is full
       if (!isCandidateListFull) {
         // add to candidateGuess array
-        setGuessCandidate([...guessCandidate, word]);
+        setGuessCandidate([...guessCandidate, nativeWord]);
         // set state to *selected*
         setIsSelected(true);
       }
     }
   }
 
-  //const fontSizeByWordLength = 9characters works with 0.6rem
-
-  function getFontSize(word) {
-    const baseLength = 9;
-    const wordLength = word.length;
-    let fontSize = 1;
-    if (wordLength > baseLength) {
-      const numExtraChars = wordLength - baseLength;
-      fontSize = fontSize - numExtraChars * 0.1;
-      fontSize = Math.max(0.5, fontSize);
-      return fontSize >= 0.8 ? `${fontSize}em` : null;
-    } else {
-      return null;
-    }
-  }
-
-  word = hyphenate(word);
+  const hyphenatedWord = hyphenate(word);
 
   // word = "washingtonian";
   return (
@@ -62,13 +46,12 @@ function WordButton({ word, fullCandidateSize }) {
       className={`${styles.growShrink} min-h-[2.5rem] select-none`}
       variant="outline"
       pressed={isSelected}
-      onClick={flipSelection}
+      onClick={() => flipSelection(word)}
     >
       <p
-        style={{ fontSize: getFontSize(word) }}
-        className={`font-space-mono uppercase sm:text-xs md:text-xs hyphens-manual`}
+        className={`font-space-mono uppercase hyphens-manual leading-4 px-1`}
       >
-        {word}
+        {hyphenatedWord}
       </p>
     </Toggle>
   );

@@ -199,7 +199,7 @@ React.useEffect(() => {
             setIsOpen(true);
           }}
         >
-          <Calendar className="mr-4" />
+          <Calendar />
         </span>
       }
       initiallyOpen={false}
@@ -216,7 +216,7 @@ React.useEffect(() => {
           )}
         </div>
         
-        <div className="max-h-96 overflow-y-auto space-y-2">
+        <div className="max-h-96 overflow-y-auto space-y-2 px-2">
   {/* Izveidojam kopiju pirms reverse, lai nesabojātu games masīvu */}
   {[...games].reverse().map(game => {
     // Pārbauda, vai šī spēle ir pašlaik aktīvā, izmantojot state
