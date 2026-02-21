@@ -526,5 +526,27 @@ export const CONNECTION_GAMES = [
     words: ["OGLES", "VARDES", "MATERIĀLI", "TĒLNIECĪBA"],
     difficulty: 4,
   },
+],
+[
+  {
+    category: "ĀDAS SLIMĪBAS",
+    words: ["ROZE", "KAŠĶIS", "ĒDE", "NĀTRENE"],
+    difficulty: 1,
+  },
+  {
+    category: "LABPRĀT MĪT ŪDENĪ",
+    words: ["LAUCIS", "TRITONS", "MELNALKSNIS", "KALMES"],
+    difficulty: 2,
+  },
+  {
+    category: "VALSTS INFORMĀCIJAS SISTĒMAS",
+    words: ["OZOLS", "AVIS", "VIRSIS", "TULPE"],
+    difficulty: 3,
+  },
+  {
+    category: "INSTITŪTI AR LIEKU BEIGU BURTU",
+    words: ["MIIT", "SILAVAI", "OSIS", "EDIS"],
+    difficulty: 4,
+  },
 ]
 ];
