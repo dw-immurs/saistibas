@@ -548,5 +548,27 @@ export const CONNECTION_GAMES = [
     words: ["MIIT", "SILAVAI", "OSIS", "EDIS"],
     difficulty: 4,
   },
+],
+[
+  {
+    category: "NOVECOJUŠI PROFESIJU APZĪMĒJUMI",
+    words: ["SKRĪVERI", "MĀLDERI", "MELDERI", "BEĶERI"],
+    difficulty: 1,
+  },
+  {
+    category: "VIDZEMES REĢIONĀLIE LAIKRAKSTI",
+    words: ["DRUVA", "LIESMA", "AUSEKLIS", "STARS"],
+    difficulty: 2,
+  },
+  {
+    category: "\"RĪGAS SATIKSME\" PRIEKŠTEČI",
+    words: ["TĀLAVA", "IMANTA", "TTT", "TTP"],
+    difficulty: 3,
+  },
+  {
+    category: "KĀDREIZĒJIE \"KARŪNA\" BATONIŅI BEZ VIENA BURTA",
+    words: ["TIO", "REGATA", "ANIJA", "BIGO"],
+    difficulty: 4,
+  },
 ]
 ];
