@@ -10,11 +10,7 @@ function ArchiveModal() {
   const [completedGames, setCompletedGames] = React.useState(new Set());
   const [isOpen, setIsOpen] = React.useState(false);
   const [refreshKey, setRefreshKey] = React.useState(0);
-  const [gameDifficulties, setGameDifficulties] = React.useState({});
-  const [activeGameIndex, setActiveGameIndex] = React.useState(null);
-
-  const today = getToday();
-  const maxIndex = getIndex(today);
+  const [gameDifficulties, setGameDifficulties] = React.useState({}); // Jauns state trigger
 
   // Funkcija, kas ielādē izspēlētās spēles no localStorage
   const loadCompletedGames = React.useCallback(() => {
@@ -27,7 +23,7 @@ function ArchiveModal() {
       }
     }
     setCompletedGames(completed);
-    setRefreshKey(prev => prev + 1);
+    setRefreshKey(prev => prev + 1); // Forso re-render
   }, []);
 
   // Ielādē sākumā
@@ -36,14 +32,9 @@ function ArchiveModal() {
   }, [loadCompletedGames]);
 
   // Atjauno, kad modālis atveras
-React.useEffect(() => {
+  React.useEffect(() => {
     if (isOpen) {
       loadCompletedGames();
-      
-      // Iegūstam aktuālo indeksu no localStorage
-      const stored = localStorage.getItem("archiveGameIndex");
-      // Ja stored nav, tad aktīvā ir maxIndex (jaunākā)
-      setActiveGameIndex(stored ? parseInt(stored) : maxIndex);
       
       // Ielādē grūtības pakāpes visām spēlēm
       const loadDifficulties = async () => {
@@ -60,14 +51,15 @@ React.useEffect(() => {
         
         setGameDifficulties(difficulties);
       };
-      console.log("[ArchiveModal] isOpen -> true, loading difficulties");
+      
       loadDifficulties();
     }
-  }, [isOpen, loadCompletedGames, maxIndex]);
+  }, [isOpen, loadCompletedGames]);
 
   // Klausās uz spēles pabeigšanas eventu
   React.useEffect(() => {
     const handleGameComplete = () => {
+      // Neliela aizkave, lai localStorage noteikti būtu atjaunots
       setTimeout(() => {
         loadCompletedGames();
       }, 100);
@@ -85,6 +77,43 @@ React.useEffect(() => {
     window.addEventListener("open-archive", handler);
     return () => window.removeEventListener("open-archive", handler);
   }, []);
+
+  const today = getToday();
+  const maxIndex = getIndex(today);
+  
+  // Iegūst pašreizējo aktīvo spēli no URL
+  const getActiveGameIndex = () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const dateParam = searchParams.get('d');
+    
+    if (!dateParam) {
+      // Nav datuma URL → jaunākā spēle
+      return maxIndex;
+    }
+    
+    // Ir datums → aprēķina spēles numuru no datuma
+    const gameDate = new Date(dateParam);
+    return getIndex(gameDate);
+  };
+  
+  const currentGameIndex = getActiveGameIndex();
+  
+  // Iegūst pašreizējo aktīvo spēli no URL
+  const getCurrentGameIndex = () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const dateParam = searchParams.get('d');
+    
+    if (!dateParam) {
+      // Nav datuma URL → jaunākā spēle
+      return maxIndex;
+    }
+    
+    // Ir datums → aprēķina spēles numuru no datuma
+    const gameDate = new Date(dateParam);
+    return getIndex(gameDate);
+  };
+  
+  const currentGameIndex = getCurrentGameIndex();
   
   // Funkcija, kas pārbauda, vai spēle ir izspēlēta un vai tā uzvarēta
   const getGameStatus = (gameIndex) => {
@@ -103,8 +132,7 @@ React.useEffect(() => {
   for (let i = 1; i <= maxIndex; i++) {
     const gameDate = addDays(firstGameDate, (i - 1) * periodInDays);
     const { isCompleted, isWon } = getGameStatus(i);
-    const isToday = isSameDay(gameDate, today);
-    const isLatestGame = i === maxIndex; // Jaunākā pieejamā spēle
+    const isActive = i === currentGameIndex; // Vienkārši!
     
     games.push({ 
       index: i, 
@@ -112,71 +140,61 @@ React.useEffect(() => {
       dateString: format(gameDate, 'd.M.yyyy'),
       isCompleted,
       isWon,
-      isToday,
-      isLatestGame
+      isActive
     });
   }
 
- const handleGameSelect = (game) => {
-    const storedArchiveIndex = localStorage.getItem("archiveGameIndex");
-    const currentActiveIndex = storedArchiveIndex ? parseInt(storedArchiveIndex) : maxIndex;
-
-    const isCurrentGame = storedArchiveIndex 
-      ? parseInt(storedArchiveIndex) === game.index 
-      : game.isLatestGame;
+  const handleGameSelect = (game) => {
+    // Pārbauda, vai tā ir jaunākā pieejamā spēle
+    const isLatestGame = game.index === maxIndex;
     
-    if (isCurrentGame) {
-      setIsOpen(false);
+    // Ja jaunākā spēle jau izspēlēta, neļauj to atvērt no jauna
+    if (isLatestGame && game.isCompleted) {
+      alert("Jaunākā spēle jau ir izspēlēta! Jauna spēle būs pieejama pēc 3 dienām.");
       return;
     }
 
-    // --- PROGRESA PĀRBAUDE ---
-    let stateString = localStorage.getItem(`game_${currentActiveIndex}_state`);
-    if (!stateString) {
-      stateString = localStorage.getItem('gameState');
-    }
-
-    if (stateString) {
-      try {
-        const state = JSON.parse(stateString);
-        
-        // Pārbaudām gan 'guesses', gan tavu minēto 'submittedGuesses'
-        const guesses = state.submittedGuesses || state.guesses || [];
-        const hasGuesses = guesses.length > 0;
-        
-        // Pārbaudām, vai spēle jau nav beigusies
-        const isEnded = state.gameStatus === 'WON' || state.gameStatus === 'LOST' || state.success === true;
-
-        if (hasGuesses && !isEnded) {
-          const confirm = window.confirm(
-            "Aktīvā spēle tiks aizvērta un progress tiks dzēsts. Vai tiešām vēlies to aizvērt?"
-          );
-          if (!confirm) return; // Ja nospiež 'Atcelt', nekas nenotiek
-        }
-      } catch (e) {
-        console.error("Kļūda nolasot spēles stāvokli:", e);
-      }
-    }
-    // --- PĀRBAUDES BEIGAS ---
-
-    // Tālāk seko tava esošā loģika par spēles ielādi...
-    if (game.isLatestGame && game.isCompleted) {
-      const confirm = window.confirm("Jaunākā spēle jau ir izspēlēta! Vai tiešām vēlies spēlēt vēlreiz?");
-      if (!confirm) return;
-      // ... (tavs dzēšanas kods)
-    }
-
-    // Pārējā ielādes daļa
-    localStorage.removeItem('gameState');
-    if (game.isLatestGame) {
-      window.history.replaceState(null, "", window.location.pathname);
+    // Ja tā ir jaunākā spēle, aizved uz sākumskatu
+    if (isLatestGame) {
       localStorage.removeItem("archiveGameIndex");
-    } else {
-      localStorage.setItem("archiveGameIndex", String(game.index));
-      const iso = format(game.date, "yyyy-MM-dd");
-      window.history.replaceState(null, "", `?d=${iso}`);
+      window.location.href = "/";
+      return;
     }
-    window.location.reload();
+
+    // Ja vecāka spēle jau izspēlēta, brīdini lietotāju
+    if (game.isCompleted) {
+      const confirm = window.confirm(
+        `Spēle #${game.index} jau ir izspēlēta. Vai tiešām vēlies spēlēt vēlreiz? Progress tiks dzēsts.`
+      );
+      if (!confirm) return;
+      
+      // Dzēš veco progresu
+      localStorage.removeItem(`game_${game.index}_completed`);
+      localStorage.removeItem(`game_${game.index}_won`);
+      localStorage.removeItem(`game_${game.index}_state`);
+      localStorage.removeItem(`game_${game.index}_submitted_to_firebase`);
+      localStorage.removeItem('gameState'); // Dzēš globālo stāvokli
+      
+      // Atjauno stāvokli
+      setCompletedGames(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(game.index);
+        return newSet;
+      });
+    }
+
+    // Dzēš globālo gameState pirms jaunas spēles sākšanas
+    localStorage.removeItem('gameState');
+    
+    // Saglabā index
+    localStorage.setItem("archiveGameIndex", String(game.index));
+
+    // Uzliek URL parametru
+    const iso = format(game.date, "yyyy-MM-dd");
+    window.history.replaceState(null, "", `?d=${iso}`);
+
+    // Iestata spēles datumu
+    setGameDate(game.date);
   };
 
   const completedCount = games.filter(g => g.isCompleted).length;
@@ -185,25 +203,15 @@ React.useEffect(() => {
 
   return (
     <BaseModal
-      open={isOpen}
-      onOpenChange={(open) => {
-        console.log("[ArchiveModal] onOpenChange:", open);
-        setIsOpen(open);
-      }}
       title="Spēļu arhīvs"
       trigger={
-        <span
-          data-archive-trigger
-          onClick={() => {
-            console.log("[ArchiveModal] trigger clicked");
-            setIsOpen(true);
-          }}
-        >
-          <Calendar />
+        <span data-archive-trigger>
+          <Calendar className="mr-4" />
         </span>
       }
       initiallyOpen={false}
       actionButtonText="Aizvērt"
+      onOpenChange={setIsOpen}
     >
       <div className="space-y-2">
         <div className="text-sm text-gray-600 mb-4 space-y-1">
@@ -216,26 +224,23 @@ React.useEffect(() => {
           )}
         </div>
         
-        <div className="max-h-96 overflow-y-auto space-y-2 px-2 py-2">
-  {/* Izveidojam kopiju pirms reverse, lai nesabojātu games masīvu */}
-  {[...games].reverse().map(game => {
-    // Pārbauda, vai šī spēle ir pašlaik aktīvā, izmantojot state
-    const isCurrentGame = activeGameIndex === game.index;
-    
-    return (
-      <div
-        key={game.index}
-        onClick={() => handleGameSelect(game)}
-        className={`w-full text-left px-4 py-3 rounded-lg border transition-colors cursor-pointer
-          ${game.isCompleted && game.isWon
-            ? 'bg-green-50 border-green-300 hover:border-green-400' 
-            : game.isCompleted && !game.isWon
-            ? 'bg-red-50 border-red-300 hover:border-red-400'
-            : 'border-gray-200 hover:border-gray-400 hover:bg-gray-50'
-          }
-          ${isCurrentGame ? 'ring-2 ring-blue-400 border-blue-400' : ''}
-        `}
-      >
+        <div className="max-h-96 overflow-y-auto space-y-2">
+          {games.reverse().map(game => (
+            <div
+              key={game.index}
+              onClick={() => handleGameSelect(game)}
+              className={`w-full text-left px-4 py-3 rounded-lg border transition-colors
+                ${game.isActive
+                  ? 'border-blue-400 bg-blue-50'
+                  : game.isCompleted && game.isWon
+                  ? 'bg-green-50 border-green-300 hover:border-green-400' 
+                  : game.isCompleted && !game.isWon
+                  ? 'bg-red-50 border-red-300 hover:border-red-400'
+                  : 'border-gray-200 hover:border-gray-400 hover:bg-gray-50'
+                }
+                cursor-pointer
+              `}
+            >
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold">
@@ -247,9 +252,9 @@ React.useEffect(() => {
                   {game.isCompleted && !game.isWon && (
                     <span className="text-red-600 text-sm">✗</span>
                   )}
-                  {game.isLatestGame && (
+                  {game.isActive && (
                     <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
-                      Jaunākā
+                      Aktīvā
                     </span>
                   )}
                 </div>
@@ -265,8 +270,7 @@ React.useEffect(() => {
                 </div>
               </div>
             </div>
-            );
-          })}
+          ))}
         </div>
       </div>
     </BaseModal>
