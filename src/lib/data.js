@@ -570,5 +570,115 @@ export const CONNECTION_GAMES = [
     words: ["TIO", "REGATA", "ANIJA", "BIGO"],
     difficulty: 4,
   },
+],
+[
+  {
+    category: "MEDAĻAS",
+    words: ["ZELTS", "SUDRABS", "BRONZA", "KOKS"],
+    difficulty: 1,
+  },
+  {
+    category: "JŪRMALAS PILSĒTAS DAĻAS VIENSKAITLĪ",
+    words: ["ASARIS", "DZINTARS", "MAJORS", "VALTERS"],
+    difficulty: 2,
+  },
+  {
+    category: "\"IR\" ŽURNĀLI",
+    words: ["LASIS", "NAUDA", "BRĪVDIENAS", "IR"],
+    difficulty: 3,
+  },
+  {
+    category: "BIJUŠIE TEĀTRU DIREKTORI",
+    words: ["LĪNIS", "VIMBA", "RUBENIS", "PIZIČS"],
+    difficulty: 4,
+  },
+],
+[
+  {
+    category: "POPULĀRU \"SALDO\" PAMATS",
+    words: ["MANNA", "RĪSI", "AUZU PĀRSLAS", "RUPJMAIZE"],
+    difficulty: 1,
+  },
+  {
+    category: "AR KODOLU",
+    words: ["ZEME", "ZĪMULIS", "ŠŪNA", "RIEKSTI"],
+    difficulty: 2,
+  },
+  {
+    category: "NĀK NO DIENVIDAMERIKAS",
+    words: ["KAPIBARA", "KINVA", "MESI", "SAMBA"],
+    difficulty: 3,
+  },
+  {
+    category: "TĒLI ROZENTĀLA SLAVENĀKAJĀS GLEZNĀS",
+    words: ["BAZNĪCA", "PĒRTIĶIS", "KAILA SIEVIETE", "NĀVE"],
+    difficulty: 4,
+  },
+],
+[
+{
+  category: "DAŽĀDAS \"VEDĪBAS\"",
+  words: ["GRĀMATA", "LIETAS", "ZĪMOLS", "RAKSTI"],
+  difficulty: 1,
+},
+{
+  category: "KREDĪT-",
+  words: ["KARTE", "LĪNIJA", "SAISTĪBAS", "LIMITS"],
+  difficulty: 2,
+},
+{
+  category: "GRIEĶU MITOLOĢIJAS TĒLS",
+  words: ["ATLANTS", "EIROPA", "ANDROMEDA", "HĒLIJS"],
+  difficulty: 3,
+},
+{
+  category: "PARASTI BALSTĀS UZ VIENAS KĀJAS",
+  words: ["GLOBUSS", "VĪNA GLĀZE", "FLAMINGS", "GAILENE"],
+  difficulty: 4,
+},
+],
+[
+{
+  category: "IEROBEŽOJUMI",
+  words: ["SLIEKSNIS", "KVOTA", "LIMITS", "GRIESTI"],
+  difficulty: 1,
+},
+{
+  category: "SIENAS \"PĀRKLĀJUMI\"",
+  words: ["TAPETE", "PANELIS", "KRĀSA", "PAKLĀJS"],
+  difficulty: 2,
+},
+{
+  category: "KĀDREIZĒJĀS VIRSLĪGAS FUTBOLA KOMANDAS",
+  words: ["JAUNĪBA", "OLIMPS", "BLĀZMA", "TRANZĪTS"],
+  difficulty: 3,
+},
+{
+  category: "PERSIEŠU IZCELSMES SVEŠVĀRDI",
+  words: ["KARAVĀNA", "ČEMODĀNS", "DĪVĀNS", "PIDŽAMA"],
+  difficulty: 4,
+},
+],
+[
+{
+  category: "SPORTA VEIDU GRUPU PAMATINVENTĀRS",
+  words: ["DĒLIS", "RAKETE", "NŪJA", "BUMBA"],
+  difficulty: 1,
+},
+{
+  category: "BŪTISKS IR TĪKLS",
+  words: ["BADMINTONS", "ZVEJNIECĪBA", "INTERNETS", "TAURIŅU ĶERŠANA"],
+  difficulty: 2,
+},
+{
+  category: "VĀRDS SĀKAS AR \"2\"",
+  words: ["BIATLONS", "DUELIS", "DIVUPE", "DIHOTOMIJA"],
+  difficulty: 3,
+},
+{
+  category: "AKTIVITĀTES, KAM IZBŪVĒTA INFRASTRUKTŪRA MEŽAPARKĀ",
+  words: ["BMX", "DISKGOLFS", "KORDZIEDĀŠANA", "MEŽAKAĶIS"],
+  difficulty: 4,
+},
 ]
 ];
