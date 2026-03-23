@@ -671,13 +671,100 @@ export const CONNECTION_GAMES = [
   difficulty: 2,
 },
 {
-  category: "VĀRDS SĀKAS AR \"2\"",
-  words: ["BIATLONS", "DUELIS", "DIVUPE", "DIHOTOMIJA"],
+  category: "VĀRDS SĀKAS AR 2",
+  words: ["BIATLONS", "DUELIS", "DIVCĪŅA", "DIHOTOMIJA"],
   difficulty: 3,
 },
 {
   category: "AKTIVITĀTES, KAM IZBŪVĒTA INFRASTRUKTŪRA MEŽAPARKĀ",
   words: ["BMX", "DISKGOLFS", "KORDZIEDĀŠANA", "MEŽAKAĶIS"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "DIVDABJI",
+  words: ["CELTA", "PROTAMS", "VELTA", "POSTS"],
+  difficulty: 1,
+},
+{
+  category: "FARMĀCIJAS UZŅĒMUMI",
+  words: ["BAYER", "RFF", "KRKA", "TEVA"],
+  difficulty: 2,
+},
+{
+  category: "21. GADSIMTA WTA RANGA LĪDERES",
+  words: ["IGA", "ANA", "KIMA", "NAOMI"],
+  difficulty: 3,
+},
+{
+  category: "LATĪŅU CILMES PRIEDĒKĻI",
+  words: ["INTER", "POST", "TRANS", "VICE"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "ĀRĒJAIS APVEIDS",
+  words: ["FIGŪRA", "FORMA", "SILUETS", "APRISE"],
+  difficulty: 1,
+},
+{
+  category: "CEĻU KRUSTOŠANĀS VEIDI",
+  words: ["KRUSTS", "T", "PĀRVADS", "APLIS"],
+  difficulty: 2,
+},
+{
+  category: "AR KAKLU",
+  words: ["SAKNES", "PUDELE", "DZEMDE", "ŽIRAFE"],
+  difficulty: 3,
+},
+{
+  category: "\"AKTS\" NOZĪMES",
+  words: ["RĪCĪBA", "DZIMUMSAKARS", "LIKUMS", "PLIKNIS"],
+  difficulty: 4,
+},
+],
+[{
+  category: "RADOŠU DARBU KOPUMS",
+  words: ["DAIĻRADE", "DISKOGRĀFIJA", "KATALOGS", "KOPOTIE RAKSTI"],
+  difficulty: 1,
+},
+{
+  category: "VIRZIENS",
+  words: ["KURSS", "VEKTORS", "AZIMUTS", "ORIENTĀCIJA"],
+  difficulty: 2,
+},
+{
+  category: "KVALITĀTES KATEGORIJA",
+  words: ["KLASE", "LĪMENIS", "PAKĀPE", "ŠĶIRA"],
+  difficulty: 3,
+},
+{
+  category: "DEBESS ĶERMEŅU NOSAUKUMI",
+  words: ["ZELTA SIETIŅŠ", "AUSEKLIS", "VASKS", "MĒNESS"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "GLABĀTUVES",
+  words: ["BIBLIOTĒKA", "PAGRABS", "KLĒTS", "KRĀTUVE"],
+  difficulty: 1,
+},
+{
+  category: "ANIMĀCIJAS FILMU STUDIJAS",
+  words: ["DAUKA", "KOKLES", "RIJA", "TRITONE"],
+  difficulty: 2,
+},
+{
+  category: "GRĀMATU SĒRIJAS",
+  words: ["ZELTA KLASIKA", "APVĀRSNIS", "BRĪNUMZEME", "ES ESMU"],
+  difficulty: 3,
+},
+{
+  category: "LATVISKI IZTULKOTAS RAMMSTEIN DZIESMAS",
+  words: ["SAULE", "EŅĢELIS", "SĀRTROZĪTE", "TEV IR"],
   difficulty: 4,
 },
 ]
