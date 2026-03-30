@@ -767,5 +767,49 @@ export const CONNECTION_GAMES = [
   words: ["SAULE", "EŅĢELIS", "SĀRTROZĪTE", "TEV IR"],
   difficulty: 4,
 },
+],
+[
+  {
+  category: "KAUT KAS MELNS VAI TUMŠS",
+  words: ["NAKTS", "PIĶIS", "KRAUKLIS", "OGLES"],
+  difficulty: 1,
+},
+{
+  category: "ZVAIGZNĀJI, KAS SĀKAS AR \"MAZAIS\"",
+  words: ["ZIRGS", "LAUVA", "SUNS", "LĀCIS"],
+  difficulty: 2,
+},
+{
+  category: "DZĪVO KLOSTERĪ",
+  words: ["BRĀĻI", "ABATS", "PRIORE", "IGUMENS"],
+  difficulty: 3,
+},
+{
+  category: "FACEBOOK PAMATSADAĻAS LATVIEŠU VALODAS VERSIJĀ",
+  words: ["SĀKUMS", "VIDEOSPĒLES", "VIDEO", "GRUPAS"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "BĒRNU ROTAĻU SPĒLES",
+  words: ["SUNĪŠI", "PASLĒPES", "KARIŅŠ", "KLASĪTES"],
+  difficulty: 1,
+},
+{
+  category: "BASKETBOLA GROZA ELEMENTI",
+  words: ["VAIROGS", "STĪPA", "TĪKLIŅŠ", "ATBALSTS"],
+  difficulty: 2,
+},
+{
+  category: "SAULES-",
+  words: ["ZAĶĪTIS", "SARGS", "PUĶE", "SVECE"],
+  difficulty: 3,
+},
+{
+  category: "SIGULDĀ, PIE VIDZEMES ŠOSEJAS",
+  words: ["KAĶĪŠI", "ŠOKOLĀDE", "VIRŠI", "NESTE"],
+  difficulty: 4,
+},
 ]
 ];
