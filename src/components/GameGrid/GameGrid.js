@@ -30,6 +30,8 @@ export function SolvedWordRow({ ...props }) {
   };
 
   const color = `${DIFFICULTY_COLOR_MAP[props.difficulty]}`;
+  const textColor = props.difficulty === 4 ? "white" : "inherit"; // JAUNS
+
 
   const [hasBeenClicked, setHasBeenClicked] = React.useState(false);
 
@@ -49,7 +51,7 @@ export function SolvedWordRow({ ...props }) {
   return (
     <animated.div style={springProps}>
       {!isImageAvailable ? (
-        <div style={{ backgroundColor: color, borderRadius: 8 }}>
+        <div style={{ backgroundColor: color, borderRadius: 8, color: textColor }}>
           <p className="font-bold pt-2 pl-4">{props.category}</p>
           <p className="font-thin pb-2 pl-4">{props.words.join(", ")}</p>
         </div>

@@ -811,5 +811,137 @@ export const CONNECTION_GAMES = [
   words: ["KAĶĪŠI", "ŠOKOLĀDE", "VIRŠI", "NESTE"],
   difficulty: 4,
 },
-]
+],
+[
+  {
+  category: "POPULĀRĀKIE UZVĀRDI LATVIJĀ",
+  words: ["IVANOVS", "OZOLIŅŠ", "KALNIŅŠ", "BĒRZIŅŠ"],
+  difficulty: 1,
+},
+{
+  category: "ZOBĀRSTNIECĪBAS TERMINI",
+  words: ["KRONIS", "TILTS", "TAPA", "KAKLIŅŠ"],
+  difficulty: 2,
+},
+{
+  category: "LATVIEŠU REPERI",
+  words: ["SKUTELIS", "NĀTRE", "FAKTS", "MISTERS"],
+  difficulty: 3,
+},
+{
+  category: "CIEMI ROPAŽU NOVADĀ VIENSKAITLĪ",
+  words: ["BĀLIŅŠ", "BAJĀRS", "SUNĪTIS", "LĪCIS"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "VALDNIEKA TITULI",
+  words: ["KARALIS", "ŠAHS", "CARS", "BANS"],
+  difficulty: 1,
+},
+{
+  category: "MAZSVARĪGAS PERSONAS APZĪMĒJUMS",
+  words: ["BANDINIEKS", "STATISTS", "SKRŪVĪTE", "SĪKA ZIVS"],
+  difficulty: 2,
+},
+{
+  category: "DAĻA NO FRAZEOLOĢISMIEM, KAS SAISTĪTI AR PLĀNUMU",
+  words: ["LEDUS", "GALDIŅA URBĒJS", "MAKS", "DŪŠA"],
+  difficulty: 3,
+},
+{
+  category: "POPULĀRI VEIDI SĀKAS AR ĀZIJAS GALVASPILSĒTU",
+  words: ["TORNIS", "PĪLE", "ZOBENS", "APLOKSNE"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "KŪST RELATĪVI ZEMĀ TEMPERATŪRĀ",
+  words: ["ŠOKOLĀDE", "SNIEGS", "VASKS", "SVIESTS"],
+  difficulty: 1,
+},
+{
+  category: "LIETUVIEŠU PERSONVĀRDI",
+  words: ["ŽIDRŪNS", "EGLE", "JONS", "DAĻA"],
+  difficulty: 2,
+},
+{
+  category: "TO VĀRDĀ NOSAUKTI \"KALNI\" AP BALDONI",
+  words: ["ATOMS", "RIEKSTI", "MORISONS", "VANAGS"],
+  difficulty: 3,
+},
+{
+  category: "BEIDZAS AR PERSONAS VIETNIEKVĀRDU",
+  words: ["GANDARĪJUMS", "PAKAVIŅŠ", "SPIDERMAN", "VĒSTULES"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "NOVĒLĒJUMI SASKANDINOT",
+  words: ["PROZIT", "PRIEKĀ", "UZ VESELĪBU", "SALUT"],
+  difficulty: 1,
+},
+{
+  category: "-MĀJA",
+  words: ["PRIEKA", "VEĻAS", "MAZ", "SAVRUP"],
+  difficulty: 2,
+},
+{
+  category: "MAJONĒZES ZĪMOLI",
+  words: ["MĀLPILS", "FRANCIS", "SPILVA", "SVEIKS"],
+  difficulty: 3,
+},
+{
+  category: "KANĒLI SATUROŠI KONDITOREJAS IZSTRĀDĀJUMI BEZ DEMINUTĪVA",
+  words: ["RULLIS", "STANGA", "BULKA", "MAIZE"],
+  difficulty: 4,
+},
+],
+  [
+{
+  category: "CENTRĀLĀ DAĻA",
+  words: ["KODOLS", "ASS", "SERDE", "HORDA"],
+  difficulty: 1,
+},
+{
+  category: "IEKAVU VEIDI",
+  words: ["FIGŪRA", "KVADRĀTS", "APAĻŠ", "LEŅĶIS"],
+  difficulty: 2,
+},
+{
+  category: "SODS PAR NEPAKLAUSĪBU",
+  words: ["SUKAS", "ŽAGARI", "KAKTS", "SIKSNA"],
+  difficulty: 3,
+},
+{
+  category: "NĀK NO GULBENES NOVADA",
+  words: ["KOKARI", "DIMDIŅI", "TRANZĪTS", "BUKI"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "DARBOJAS AR ADATU",
+  words: ["TETOVĒTĀJS", "ĶIRURGS", "AKUPUNKTŪRISTS", "ADĪTĀJA"],
+  difficulty: 1,
+},
+{
+  category: "BIEŽI IESAISTĪTS KĀZU NORISĒ",
+  words: ["ROTKALIS", "FLORISTS", "VEDĒJS", "MĀCĪTĀJS"],
+  difficulty: 2,
+},
+{
+  category: "KUKAIŅI",
+  words: ["TINĒJS", "URBĒJS", "JĀTNIECIŅŠ", "MŪĶENE"],
+  difficulty: 3,
+},
+{
+  category: "VAROŅA TĒVA PROFESIJAS DZIESMĀ \"MELNĀ PANTERA\"",
+  words: ["ŠVEICARS", "DĀRZNIEKS", "KALĒJS", "GALDNIEKS"],
+  difficulty: 4,
+},
+  ],
 ];
