@@ -20,6 +20,7 @@ function BaseModal({
   children,
   actionButtonText = "Turpināt",
   showActionButton = true,
+  triggerWrapperClass = "",
 }) {
   const [isOpen, setIsOpen] = React.useState(initiallyOpen);
 
@@ -33,7 +34,7 @@ function BaseModal({
 
   return (
     <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-      {!!trigger && <AlertDialogTrigger className="w-[32px] h-[32px] rounded-full flex items-center justify-center">{trigger}</AlertDialogTrigger>}
+      {!!trigger && <AlertDialogTrigger className={`w-[32px] h-[32px] rounded-full flex items-center justify-center ${triggerWrapperClass}`}>{trigger}</AlertDialogTrigger>}
       <AlertDialogContent
         handleMouseDownOnOverlay={handleCloseEvent}
         onEscapeKeyDown={handleCloseEvent}

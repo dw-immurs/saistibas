@@ -15,9 +15,8 @@ function ViewResultsModal() {
   return (
     <BaseModal
       title=""
-      trigger={
-        <Button variant="submit" className="w-full" children={"Skatīt rezultātus!"} />
-      }
+      trigger={<span className="text-white inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border-solid bg-neutral-800 basis-1/2 hover:bg-neutral-800/80 h-10 px-4 py-2 w-full">Skatīt rezultātus!</span>}
+      triggerWrapperClass="w-full"
       initiallyOpen={false}
       showActionButton={false}
       footerElements={<ShareScoreButton buttonText={"Dalies ar rezultātiem!"} />}
