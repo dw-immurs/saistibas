@@ -944,4 +944,26 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
   ],
+  [
+    {
+  category: "VIJUMI/PINUMI",
+  words: ["BIZE", "KLIŅĢERIS", "VIRVE", "VAINAGS"],
+  difficulty: 1,
+},
+{
+  category: "METĀLA (TIPISKI) KONSTRUKCIJAS",
+  words: ["STALAŽA", "MARGA", "FERMA", "KONSOLE"],
+  difficulty: 2,
+},
+{
+  category: "VĀRDI, KAS SAISTĪTI AR ZOLĪTI",
+  words: ["PASĒ", "ACIS", "LIELAIS", "GALDS"],
+  difficulty: 3,
+},
+{
+  category: "LATVISKOTU ŅUJORKAS IESAUKU PĒDĒJAIS VĀRDS",
+  words: ["ĀBOLS", "KATLS", "PILSĒTA", "NEGUĻ"],
+  difficulty: 4,
+},
+  ],
 ];
