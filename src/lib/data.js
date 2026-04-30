@@ -966,4 +966,92 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
   ],
+  [
+    {
+  category: "MALA",
+  words: ["DZEGA", "KANTE", "KRASTS", "ŠĶAUTNE"],
+  difficulty: 1,
+},
+{
+  category: "KAUT KAS SLĪPS",
+  words: ["NOGĀZE", "DIAGONĀLE", "SLIPS", "PANDUSS"],
+  difficulty: 2,
+},
+{
+  category: "ZĪMĪGI \"PIEKTĀ/PIEKTAIS\"",
+  words: ["AVĒNIJA", "ELEMENTS", "PANTS", "KOLONNA"],
+  difficulty: 3,
+},
+{
+  category: "VĀRDA \"ASS\" NOZĪMES",
+  words: ["PIKANTS", "NENOAPAĻOTS", "TAISNE", "LIETPRATĒJS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "DAŽĀDU KUKAIŅU MĪTNES",
+  words: ["LIGZDA", "PŪZNIS", "MĀJA", "STROPS"],
+  difficulty: 1,
+},
+{
+  category: "SLIKTĀ STĀVOKLĪ ESOŠS AUTO",
+  words: ["LAMATA", "ŠROTS", "MISKASTE", "LŪZNIS"],
+  difficulty: 2,
+},
+{
+  category: "KARTES PAMATELEMENTI",
+  words: ["BULTA", "TĪKLS", "LEĢENDA", "NOSAUKUMS"],
+  difficulty: 3,
+},
+{
+  category: "GALVENIE SUGASVĀRDI ARMANDA PUČES GRĀMATU NOSAUKUMOS",
+  words: ["SLAZDS", "KLIENTS", "BRĀLIS", "MŪRIS"],
+  difficulty: 4,
+},
+  ],
+  [
+{
+  category: "KLASISKAS KŪKAS",
+  words: ["VECRĪGA", "MEDUS", "NAPOLEONS", "PAVLOVA"],
+  difficulty: 1,
+},
+{
+  category: "TĀ NOSAUKTAS JŪRAS",
+  words: ["BISMARKS", "SKOTIJA", "BALTIJA", "DZELTENS"],
+  difficulty: 2,
+},
+{
+  category: "BEIDZAS AR IEROBEŽOJUMA VEIDU",
+  words: ["VECPILSĒTA", "AIZSARGMŪRIS", "DZĪVŽOGS", "ATBALSTSIENA"],
+  difficulty: 3,
+},
+{
+  category: "DAĻA NO \"VIRŠU\" MĀRKETINGA",
+  words: ["DARĪTĀJI", "KAFIJA", "DAUDZIŅŠ", "ZAĻŠ"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "APĻVEIDA/ELIPTISKAS BŪVES",
+  words: ["CIRKS", "ROTONDA", "ARĒNA", "SILOSS"],
+  difficulty: 1,
+},
+{
+  category: "ŪDENSOBJEKTU RAKSTURLIELUMI",
+  words: ["BASEINS", "DZIĻUMS", "DZIDRUMS", "SPOGULIS"],
+  difficulty: 3,
+},
+{
+  category: "ĀTRAIS/ĀTRĀ ____",
+  words: ["PALĪDZĪBA", "ĒDINĀŠANA", "KREDĪTS", "TESTS"],
+  difficulty: 2,
+},
+{
+  category: "PĒC KĀ NOSAKA UZVARĒTĀJU VIEGLATLĒTIKĀ",
+  words: ["ATTĀLUMS", "AUGSTUMS", "PUNKTI", "LAIKS"],
+  difficulty: 4,
+},
+  ]
 ];
