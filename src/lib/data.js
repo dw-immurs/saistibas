@@ -1033,6 +1033,28 @@ export const CONNECTION_GAMES = [
 },
   ],
   [
+{
+  category: "SAVIESĪGS PASĀKUMS",
+  words: ["SVĒTKI", "VAKARS", "BALLE", "RAUTS"],
+  difficulty: 1,
+},
+{
+  category: "NEPAREIZIE SVĒTKU/ATCERES DIENU NOSAUKUMI LATVIJĀ",
+  words: ["GALDAUTA", "LĪGO", "UZVARAS", "NEATKARĪBAS"],
+  difficulty: 2,
+},
+{
+  category: "JUMPRAVAS DZIESMAS",
+  words: ["BALTĀ", "VĒLREIZ", "BRĀLIS", "PILSĒTA"],
+  difficulty: 3,
+},
+{
+  category: "PIEKTAIS KĀDĀ SARAKSTĀ",
+  words: ["MAIJS", "PIEKTDIENA", "JŪRMALA", "MONRO"],
+  difficulty: 4,
+},
+  ],
+  [
     {
   category: "APĻVEIDA/ELIPTISKAS BŪVES",
   words: ["CIRKS", "ROTONDA", "ARĒNA", "SILOSS"],
