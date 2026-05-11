@@ -1041,16 +1041,16 @@ export const CONNECTION_GAMES = [
 {
   category: "NEPAREIZIE SVĒTKU/ATCERES DIENU NOSAUKUMI LATVIJĀ",
   words: ["GALDAUTA", "LĪGO", "UZVARAS", "NEATKARĪBAS"],
-  difficulty: 2,
-},
-{
-  category: "JUMPRAVAS DZIESMAS",
-  words: ["BALTĀ", "VĒLREIZ", "BRĀLIS", "PILSĒTA"],
   difficulty: 3,
 },
 {
-  category: "PIEKTAIS KĀDĀ SARAKSTĀ",
-  words: ["MAIJS", "PIEKTDIENA", "JŪRMALA", "MONRO"],
+  category: "MIKROFONA APTAUJAS UZVARĒTĀJDZIESMAS",
+  words: ["BALTĀ", "LŪGUMS", "PELDĒTĀJS", "PIE LAIKA"],
+  difficulty: 2,
+},
+{
+  category: "PIEKTAIS/PIEKTĀ KĀDĀ SARAKSTĀ",
+  words: ["MAIJS", "PIEKTDIENA", "DZIESMA PAR LAIMI", "MONRO"],
   difficulty: 4,
 },
   ],
@@ -1073,6 +1073,94 @@ export const CONNECTION_GAMES = [
 {
   category: "PĒC KĀ NOSAKA UZVARĒTĀJU VIEGLATLĒTIKĀ",
   words: ["ATTĀLUMS", "AUGSTUMS", "PUNKTI", "LAIKS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "ORGANIZĀCIJAS/INSTITŪCIJAS PĀRSTĀVIS",
+  words: ["BRĀLIS", "BIEDRS", "LOCEKLIS", "KOMPANJONS"],
+  difficulty: 1,
+},
+{
+  category: "ILGS LAIKA PERIODS",
+  words: ["MŪŽĪBA", "EPOHA", "LAIKMETS", "ĒRA"],
+  difficulty: 2,
+},
+{
+  category: "JĒZUS TĀ NOSAUC SEVI JĀŅA EVAŅĢĒLIJĀ",
+  words: ["PATIESĪBA", "CEĻŠ", "DZĪVĪBA", "DĒLS"],
+  difficulty: 4,
+},
+{
+  category: "BEIDZAS AR ĒKU LAUKOS",
+  words: ["TRAJEKTORIJA", "SAMEKLĒTS", "AKŪTS", "SPIRTS"],
+  difficulty: 3,
+},
+  ],
+  [
+    {
+  category: "MITRU VIETU AUGI",
+  words: ["ĪRISS", "KALME", "MĒTRA", "MELDRS"],
+  difficulty: 1,
+},
+{
+  category: "TIEK PIEDĀVĀTS/-I DAŽĀDOS SALONOS",
+  words: ["ZĪLĒŠANA", "ZIEDI", "AUTO", "MASĀŽA"],
+  difficulty: 2,
+},
+{
+  category: "LABIEŠA MELNĀS SAIMES ALUS",
+  words: ["PĒTERIS APINIS", "KAPRACIS", "ZINTNIEKS", "LEDENE"],
+  difficulty: 3,
+},
+{
+  category: "49. SAISTĪBU TĒMAS",
+  words: ["JĒZUS", "PĀRSTĀVIS", "PERIODS", "ĒKAS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "UZSKAITĪJUMS",
+  words: ["SARAKSTS", "LISTE", "TABULA", "REĢISTRS"],
+  difficulty: 1,
+},
+{
+  category: "SŪTA PA PASTU",
+  words: ["ATKLĀTNES", "BANDROLE", "KARTĪTE", "PAKAS"],
+  difficulty: 2,
+},
+{
+  category: "VALSTS INFORMĀCIJAS RISINĀJUMI, KAS SĀKAS AR \"E\"",
+  words: ["PARAKSTS", "LIETA", "VESELĪBA", "ADRESE"],
+  difficulty: 3,
+},
+{
+  category: "PĒDĒJAIS VĀRDS LATVIEŠU DETEKTĪVSERIĀLU NOSAUKUMOS",
+  words: ["GAMBĪTS", "GRAUDS", "SPĒLES", "VIESI"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "JOMAS IZCILNIEKS",
+  words: ["ASS", "GRANDS", "KORIFEJS", "MEISTARS"],
+  difficulty: 1,
+},
+{
+  category: "EKSTRA/ĪPAŠAIS",
+  words: ["NAGLA", "ROZĪNĪTE", "ĶIRSĪTIS", "NUMURS"],
+  difficulty: 2,
+},
+{
+  category: "RĪGAS SIMBOLI",
+  words: ["ATSLĒGAS", "LAUVA", "SILUETS", "GAILIS"],
+  difficulty: 3,
+},
+{
+  category: "AUTO MODEĻU IESAUKAS",
+  words: ["CIGĀRS", "ŽURKA", "ZEFĪRS", "HULIGĀNS"],
   difficulty: 4,
 },
   ]
