@@ -1163,5 +1163,247 @@ export const CONNECTION_GAMES = [
   words: ["CIGĀRS", "ŽURKA", "ZEFĪRS", "HULIGĀNS"],
   difficulty: 4,
 },
-  ]
+  ],
+  [
+    {
+  category: "SAJAUKUMS",
+  words: ["KOKTEILIS", "EMULSIJA", "HAOSS", "KIŠ-MIŠ"],
+  difficulty: 1,
+},
+{
+  category: "DAŽĀDAS ATVERES",
+  words: ["NĀSIS", "LŪKA", "CAURUMS", "LIGZDA"],
+  difficulty: 2,
+},
+{
+  category: "STRUP-",
+  words: ["ASTE", "CEĻŠ", "DEGUNIS", "AUSIS"],
+  difficulty: 3,
+},
+{
+  category: "NĀK NO SMILTENES NOVADA",
+  words: ["METALSHOW.LV", "PIENA SPĒKS", "APVEDCEĻŠ", "JĀNIS CIMZE"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "VILTĪGS PAŅĒMIENS",
+  words: ["ĀĶIS", "VILTĪBA", "MAHINĀCIJA", "SLAZDS"],
+  difficulty: 1,
+},
+{
+  category: "GUĻAM-",
+  words: ["ISTABA", "MAISS", "TĪKLS", "RAJONS"],
+  difficulty: 2,
+},
+{
+  category: "PADOMJU OKUPĀCIJAS LAIKA LAIKRAKSTI",
+  words: ["CĪŅA", "LIESMA", "ZVAIGZNE", "AVOTS"],
+  difficulty: 3,
+},
+{
+  category: "SAISTĀS AR SPILGTIEM LATVIJAS HOKEJISTIEM",
+  words: ["PAUZE", "PIRUETE", "GAĻA", "MŪRIS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "NEGAIDĪTS GADĪJUMS",
+  words: ["SAKRITĪBA", "VEIKSME", "CŪCENE", "LAIME"],
+  difficulty: 1,
+},
+{
+  category: "VAR LIKT RAUDĀT",
+  words: ["SĪPOLI", "PRIEKS", "BĒDAS", "SMIEKLI"],
+  difficulty: 2,
+},
+{
+  category: "DAĻA NO VĀRDŠĶIRU NOSAUKUMIEM",
+  words: ["ĪPAŠĪBA", "LIETA", "APSTĀKLIS", "SKAITLIS"],
+  difficulty: 3,
+},
+{
+  category: "THE DARK SIDE OF THE MOON DZIESMAS LATVISKI",
+  words: ["NAUDA", "LAIKS", "ELPO", "APTUMSUMS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "PARAUGS",
+  words: ["PIEGRIEZTNE", "ETALONS", "IDEĀLS", "ŠABLONS"],
+  difficulty: 1,
+},
+{
+  category: "AR ADATU",
+  words: ["KOMPOSTIERIS", "ŠUJMAŠĪNA", "PATAFONS", "ŠĻIRCE"],
+  difficulty: 2,
+},
+{
+  category: "VAR BŪT NEPIECIEŠAMS IEEJAI PASĀKUMĀ",
+  words: ["BIĻETE", "IELŪGUMS", "SMOKINGS", "ID"],
+  difficulty: 3,
+},
+{
+  category: "VAR BŪT APZĪMĒTS AR A1",
+  words: ["MOTOCIKLS", "PAPĪRS", "AUTOCEĻŠ", "ZINĀŠANAS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "PERSONAS NEĪSTAIS VĀRDS",
+  words: ["ALIAS", "NIKS", "PSEIDONĪMS", "PALAMA"],
+  difficulty: 1,
+},
+{
+  category: "VĪRIETIS",
+  words: ["ČALIS", "DŽEKS", "KEKSS", "BREKSIS"],
+  difficulty: 2,
+},
+{
+  category: "ŠOKOLĀDES BATONIŅI",
+  words: ["BINGO", "MIKS", "MARZIPAN", "TUPLA"],
+  difficulty: 3,
+},
+{
+  category: "NĀK NO JAPĀNAS",
+  words: ["KATANA", "SANTOKU", "RAMEN", "ANIME"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "POZITĪVAS RELJEFA FORMAS",
+  words: ["UZBĒRUMI", "PAUGURI", "PAMPAKI", "OSI"],
+  difficulty: 1,
+},
+{
+  category: "TO NORĀDA AR CEĻU HORIZONTĀLAJIEM APZĪMĒJUMIEM",
+  words: ["STĀVVIETA", "JOSLAS", "TRAJEKTORIJA", "PĀREJA"],
+  difficulty: 2,
+},
+{
+  category: "CIEMI DRABEŠU PAGASTĀ",
+  words: ["KĀRĻI", "AGRA", "LĪVI", "BILLE"],
+  difficulty: 3,
+},
+{
+  category: "ANAGRAMMAS VĀRDAM \"ANDRIS\"",
+  words: ["DRAINS", "INDRAS", "RINDAS", "SANDRI"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "FRIZŪRAS",
+  words: ["EZĪTIS", "NULLĪTE", "MOHAUKS", "BĻODIŅA"],
+  difficulty: 1,
+},
+{
+  category: "VAJADZĪGS DIRIĢENTAM",
+  words: ["PULTS", "PODESTS", "ZIZLIS", "PARTITŪRA"],
+  difficulty: 2,
+},
+{
+  category: "SASTOPAMI TOŅI",
+  words: ["ETIĶETE", "KRĀSAS", "SIRDSDARBĪBA", "RUNA"],
+  difficulty: 3,
+},
+{
+  category: "VĀRDU SAVIENOJUMOS AR \"BALTAIS/BALTS\"",
+  words: ["LAPA", "CILVĒKS", "SKAUDĪBA", "ZVIRBULIS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "ĻOTI SAREŽĢĪTS",
+  words: ["RAĶEŠU ZINĀTNE", "ĶĪNIEŠU ĀBECE", "MĪKLA", "KOSMOSS"],
+  difficulty: 1,
+},
+{
+  category: "MODERNĀS PIECCĪŅAS DISCIPLĪNAS",
+  words: ["SKRIEŠANA", "PAUKOŠANA", "PELDĒŠANA", "ŠAUŠANA"],
+  difficulty: 2,
+},
+{
+  category: "UZ TĀ VAR UZKĀPT",
+  words: ["SKATUVE", "KLĀJS", "KORĶIS", "GRĀBEKLIS"],
+  difficulty: 3,
+},
+{
+  category: "AR TIPISKĀM PAREIZRAKSTĪBAS KĻŪDĀM",
+  words: ["FOTOGRĀFĒŠANA", "TĀLLEKŠANA", "ATVILKNE", "BAUDAM"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "KODI",
+  words: ["PIN", "DĀVANU", "VALSTS", "ZIP"],
+  difficulty: 1,
+},
+{
+  category: "VĀRTU ATVĒRŠANAS IEROSINĀTĀJS",
+  words: ["ATSLĒGA", "PULTS", "SENSORS", "ZVANS"],
+  difficulty: 2,
+},
+{
+  category: "SATIKSMES MIERINĀTĀJI",
+  words: ["BARJERA", "SALIŅA", "STABIŅŠ", "PUĶUPODS"],
+  difficulty: 3,
+},
+{
+  category: "VĀRDI ITĀĻU VALODĀ",
+  words: ["VITA", "PAROLE", "NOTA", "SANTA"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "FITNESA ZĀLES INVENTĀRS",
+  words: ["RIPA", "STEPS", "RULLIS", "STIENIS"],
+  difficulty: 1,
+},
+{
+  category: "NOZĪMĪGI OBJEKTI LĪGATNĒ",
+  words: ["PĀRCELTUVE", "PANSIONĀTS", "PAGRABI", "DABAS TAKAS"],
+  difficulty: 2,
+},
+{
+  category: "NEĻĶU DZIMTAS AUGI",
+  words: ["VIRZA", "KOKALIS", "PLAUKŠĶENE", "RADZENE"],
+  difficulty: 3,
+},
+{
+  category: "BIJA ATTĒLOTI LATA BANKNOŠU AVERSĀ",
+  words: ["OZOLS", "BARONS", "BURINIEKS", "LAUKU SĒTA"],
+  difficulty: 4,
+},
+  ],
+  [
+{
+  category: "KATEGORIJA",
+  words: ["PLAUKTS", "RAUDZE", "PROVE", "EŠELONS"],
+  difficulty: 1,
+},
+{
+  category: "ĢEOLOĢIJAS TERMINI",
+  words: ["PALIKSNIS", "DEPRESIJA", "KARSTS", "MASĪVS"],
+  difficulty: 2,
+},
+{
+  category: "FON STRICKA VILLAS APKĀRTNĒ",
+  words: ["SKAPIS", "DEPO", "PIGA", "RIMI"],
+  difficulty: 3,
+},
+{
+  category: "EIRO-",
+  words: ["PALETE", "PADOME", "KRĀTS", "MAIDANS"],
+  difficulty: 4,
+},
+  ],
 ];
