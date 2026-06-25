@@ -80,7 +80,7 @@ export const getGameDate = () => {
   try {
     const d = startOfDay(parseISO(parsed.d?.toString()));
     if (d >= getToday() || d < firstGameDate) {
-      setGameDate(getToday());
+      return getToday();
     }
     return d;
   } catch (e) {
