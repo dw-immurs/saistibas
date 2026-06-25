@@ -1,23 +1,23 @@
 export const CONNECTION_GAMES = [
   [
     {
-      category: "ĪPAŠĪBAS VĀRDI SIEVIEŠU DZIMTĒ",
-      words: ["KAILA", "GARDA", "BRANGA", "SKAISTA"],
+      category: "JUBILĀRES DZĪVESVIETAS",
+      words: ["JAUNOLAINE", "CENTRS", "TEIKA", "IMANTA"],
       difficulty: 1,
     },
     {
-      category: "KONDITOREJAS/BEĶEREJAS RĪGĀ",
-      words: ["KŪRE", "DRUSTI", "MĪKLA", "SALA"],
-      difficulty: 2,
-    },
-    {
-      category: "UPES AR DZĪVNIEKIEM NOSAUKUMĀ",
-      words: ["STIRNA", "VĒRŠĀDA", "NEVĒŽA", "BRIEDE"],
+      category: "SASTOPAMS GANU IELASPAGALMĀ",
+      words: ["ROBOTS", "PEONIJAS", "ROBIS", "TŪJAS"],
       difficulty: 3,
     },
     {
-      category: "LIETVĀRDI, KAS MĒDZ BUT ARĪ IZSAUKSMES VĀRDI",
-      words: ["DIEVIŅŠ", "SVIESTS", "NELAIME", "NERAŽA"],
+      category: "IEVAS SKOLAS LAIKA HOBIJI",
+      words: ["TEĀTRIS", "TONIKA", "BALETS", "RAIBULIS"],
+      difficulty: 2,
+    },
+    {
+      category: "VĀRDI IEVAS FACEBOOK PROFILA GALVIŅĀ",
+      words: ["AUKSTAS", "PRASĪBAS", "AUGAM", "RĪGA"],
       difficulty: 4,
     },
   ],

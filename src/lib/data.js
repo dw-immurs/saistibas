@@ -1406,4 +1406,48 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
   ],
+    [
+{
+  category: "JĀŅUZĀLES",
+  words: ["MADARA", "PAPARDE", "JĀNĪTIS", "LAIMIŅŠ"],
+  difficulty: 2,
+},
+{
+  category: "JĀŅU SIERA SASTĀVDAĻAS",
+  words: ["ĶIMENES", "BIEZPIENS", "PIENS", "OLAS"],
+  difficulty: 1,
+},
+{
+  category: "LATVIEŠU DIRIĢENTI JĀŅI",
+  words: ["ZIRNIS", "BALTIŅŠ", "OZOLS", "LIEPIŅŠ"],
+  difficulty: 3,
+},
+{
+  category: "VAR IZVAIRĪTIES, JA SEKO JĀŅU TRADĪCIJĀM",
+  words: ["STRĪDI", "NELAIME", "GULĒŠANA", "ODI"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "DEGVĪNS",
+  words: ["ČARKA", "BRANDVĪNS", "SĪVAIS", "ŠŅAPSTS"],
+  difficulty: 1,
+},
+{
+  category: "DAŽĀDI LĀČPLĒŠI",
+  words: ["KOLHOZS", "ALUS", "ROKOPERA", "EPOSS"],
+  difficulty: 3,
+},
+{
+  category: "MUTVĀRDU FOLKLORAS ŽANRS",
+  words: ["PASAKA", "TICĒJUMS", "TEIKA", "MĪKLA"],
+  difficulty: 2,
+},
+{
+  category: "ANTHROPIC MODEĻI LATVISKI",
+  words: ["FABULA", "HAIKA", "OPUSS", "SONETS"],
+  difficulty: 4,
+},
+  ]
 ];

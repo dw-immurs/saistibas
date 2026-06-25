@@ -1,0 +1,108 @@
+import {
+  addDays,
+  differenceInDays,
+  formatISO,
+  parseISO,
+  startOfDay,
+  startOfToday,
+  startOfYesterday,
+} from "date-fns";
+
+import queryString from "query-string";
+
+import { CONNECTION_GAMES } from "./data2"; // ← VIENĪGĀ ATŠĶIRĪBA
+
+export const getToday = () => startOfToday();
+export const getYesterday = () => startOfYesterday();
+
+export const firstGameDate = new Date(2026, 5, 18);
+export const periodInDays = 3;
+
+export const getLastGameDate = (today) => {
+  const t = startOfDay(today);
+  let daysSinceLastGame = differenceInDays(t, firstGameDate) % periodInDays;
+  return addDays(t, -daysSinceLastGame);
+};
+
+export const getNextGameDate = (today) => {
+  return addDays(getLastGameDate(today), periodInDays);
+};
+
+export const isValidGameDate = (date) => {
+  if (date < firstGameDate || date > getToday()) {
+    return false;
+  }
+
+  return differenceInDays(firstGameDate, date) % periodInDays === 0;
+};
+
+export const getIndex = (gameDate) => {
+  let start = firstGameDate;
+  let index = 0;
+  console.log(firstGameDate);
+  do {
+    index++;
+    start = addDays(start, periodInDays);
+  } while (start <= gameDate);
+
+  return index;
+};
+
+export const getPuzzleOfDay = (index) => {
+  if (index < 1) {
+    throw new Error("Invalid index");
+  }
+
+  return CONNECTION_GAMES[(index - 1) % CONNECTION_GAMES.length];
+};
+
+export const getSolution = (gameDate) => {
+  const nextGameDate = getNextGameDate(gameDate);
+  const index = getIndex(gameDate);
+  const puzzleOfTheDay = getPuzzleOfDay(index);
+  console.log("index for today: ", index);
+  return {
+    puzzleAnswers: puzzleOfTheDay,
+    puzzleGameDate: gameDate,
+    puzzleIndex: index,
+    dateOfNextPuzzle: nextGameDate.valueOf(),
+  };
+};
+
+export const getGameDate = () => {
+  if (getIsLatestGame()) {
+    return getToday();
+  }
+
+  const parsed = queryString.parse(window.location.search);
+  try {
+    const d = startOfDay(parseISO(parsed.d?.toString()));
+    if (d >= getToday() || d < firstGameDate) {
+      setGameDate(getToday());
+    }
+    return d;
+  } catch (e) {
+    console.log(e);
+    return getToday();
+  }
+};
+
+export const setGameDate = (d) => {
+  try {
+    if (d < getToday()) {
+      window.location.href = "/special?d=" + formatISO(d, { representation: "date" });
+      return;
+    }
+  } catch (e) {
+    console.log(e);
+  }
+  window.location.href = "/special";
+};
+
+export const getIsLatestGame = () => {
+  const parsed = queryString.parse(window.location.search);
+  return parsed === null || !("d" in parsed);
+};
+
+export const { puzzleAnswers, puzzleGameDate, puzzleIndex, dateOfNextPuzzle } =
+  getSolution(getGameDate());

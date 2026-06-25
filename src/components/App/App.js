@@ -7,11 +7,13 @@ import PuzzleDataProvider from "../../providers/PuzzleDataProvider";
 import GameStatusProvider from "../../providers/GameStatusProvider";
 import Footer from "../Footer";
 
-
 function App() {
+  // Pārbaudiet, vai ir special versija
+  const isSpecialVersion = window.location.pathname.includes('/special');
+
   return (
-    <PuzzleDataProvider>
-      <GameStatusProvider>
+    <PuzzleDataProvider isSpecialVersion={isSpecialVersion}>
+      <GameStatusProvider isSpecialVersion={isSpecialVersion}>
         <div className="wrapper">
           <Toaster />
           <Header />

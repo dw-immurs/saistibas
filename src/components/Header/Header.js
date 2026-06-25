@@ -5,6 +5,8 @@ import logo from "url:../../assets/favicon_medium.png"; // Note the "url:" prefi
 // import logo from "url:../../assets/christmas_favicon_medium.png";
 
 function Header() {
+  const isSpecialVersion = window.location.pathname.includes('/special');
+
   return (
     <header className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 py-2">
       <div className="flex items-center gap-2">
@@ -20,7 +22,7 @@ function Header() {
       </h1>
       
       <div className="flex items-center gap-6 justify-end">
-        <ArchiveModal />
+        {!isSpecialVersion && <ArchiveModal />}
         <InfoModal />
       </div>
     </header>
