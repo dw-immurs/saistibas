@@ -1449,5 +1449,93 @@ export const CONNECTION_GAMES = [
   words: ["FABULA", "HAIKA", "OPUSS", "SONETS"],
   difficulty: 4,
 },
+  ],
+  [
+    {
+  category: "AICINĀJUMI IZVĀKTIES",
+  words: ["TINIES", "LASIES", "PROM", "ĀRĀ"],
+  difficulty: 1,
+},
+{
+  category: "SPORTA BALVU NOSAUKUMU APZĪMĒTĀJI",
+  words: ["ZELTA", "GRAND", "KRISTĀLA", "ČEMPIONU"],
+  difficulty: 2,
+},
+{
+  category: "—MĒRS",
+  words: ["VICE", "IZ", "BĪD", "APKĀRT"],
+  difficulty: 3,
+},
+{
+  category: "PUBLICISTIKĀ TIPISKI IESPRAUDUMI IEKAVĀS",
+  words: ["SMEJAS", "SIC", "PIEZ", "RED"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "ZEMĀKAIS LĪMENIS",
+  words: ["PAGRABS", "BEDRE", "PURVS", "APAKŠA"],
+  difficulty: 1,
+},
+{
+  category: "KAM PAREDZĒTI KRĒMI",
+  words: ["APAVI", "SEJA", "ROKAS", "KŪKA"],
+  difficulty: 2,
+},
+{
+  category: "DZĪVNIEKU ...",
+  words: ["KAPSĒTA", "PATVERSME", "POLICIJA", "LABTURĪBA"],
+  difficulty: 3,
+},
+{
+  category: "FIGURĒ VĀRDU SAVIENOJUMOS, KUROS IEKĻAUTS MAISS",
+  words: ["KAĶIS", "GALS", "PELAVAS", "NAUDA"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "ATKLĀTAS VIETAS",
+  words: ["NORAS", "ĀRES", "KLAJUMI", "LAUKI"],
+  difficulty: 1,
+},
+{
+  category: "FIGURĒ ZAĻĀS KRĀSAS TOŅU NOSAUKUMOS",
+  words: ["SALĀTI", "SŪNAS", "LAIMS", "OLĪVAS"],
+  difficulty: 2,
+},
+{
+  category: "ĀRIJAS ELKSNES NOSAUKTĀS DABAS VĒRTĪBAS DZEJOLĪ \"LŪGUMS\"",
+  words: ["SALA", "SILI", "OZOLI", "SILA PURENES"],
+  difficulty: 3,
+},
+{
+  category: "CĒSU DŽONA GARŠAS (TAGAD UN KĀDREIZ) LATVISKI",
+  words: ["SAFARI", "GREIPFRŪTS", "ZILAIS LEDUS", "ZIEMAS PUNŠS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "AUGSTĀKAIS PUNKTS",
+  words: ["KLIMAKSS", "VIRSOTNE", "KULMINĀCIJA", "APOGEJS"],
+  difficulty: 1,
+},
+{
+  category: "POPULĀRAS KALPOŠANAS BAZNĪCĀ",
+  words: ["MISIJA", "SLAVĒŠANA", "SVĒTDIENAS SKOLA", "DIAKONIJA"],
+  difficulty: 2,
+},
+{
+  category: "AR SAITĒM",
+  words: ["INTERNETS", "CEĻGALS", "ĢIMENE", "ĶĪMIJA"],
+  difficulty: 3,
+},
+{
+  category: "SAISTĀS AR \"XXX\"",
+  words: ["MAXIMA", "PORNOGRĀFIJA", "VIETTURIS", "ROMIEŠU SKAITĻI"],
+  difficulty: 4,
+},
   ]
 ];
