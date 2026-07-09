@@ -1537,5 +1537,27 @@ export const CONNECTION_GAMES = [
   words: ["MAXIMA", "PORNOGRĀFIJA", "VIETTURIS", "ROMIEŠU SKAITĻI"],
   difficulty: 4,
 },
+  ],
+  [
+    {
+  category: "KATEGORIJA [MĀKSLĀ]",
+  words: ["ŽANRS", "VEIDS", "STILS", "VIRZIENS"],
+  difficulty: 1,
+},
+{
+  category: "NOSAUKTI NAŽI",
+  words: ["ŠVEICE", "SIERS", "GALDS", "PAVĀRS"],
+  difficulty: 2,
+},
+{
+  category: "UZTAPA PIRMS 70 GADIEM",
+  words: ["MAROKA", "AKMENS TILTS", "SLAKTERIS", "GIBSONS"],
+  difficulty: 3,
+},
+{
+  category: "VĀRDA \"SUITE\" NOZĪMES ANGLISKI",
+  words: ["SKAŅDARBS", "KOMPLEKTS", "LUKSUSA NUMURS", "PAVADOŅI"],
+  difficulty: 4,
+},
   ]
 ];
