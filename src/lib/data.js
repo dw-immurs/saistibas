@@ -1559,5 +1559,159 @@ export const CONNECTION_GAMES = [
   words: ["SKAŅDARBS", "KOMPLEKTS", "LUKSUSA NUMURS", "PAVADOŅI"],
   difficulty: 4,
 },
-  ]
+  ],
+  [
+    {
+  category: "RASOLA PAMATSASTĀVDAĻAS",
+  words: ["KARTUPEĻI", "BURKĀNI", "OLAS", "DESA"],
+  difficulty: 1,
+},
+{
+  category: "PASTA TRANSPORTLĪDZEKĻI",
+  words: ["BALODIS", "ZIRGS", "VELOSIPĒDS", "LIDMAŠĪNA"],
+  difficulty: 2,
+},
+{
+  category: "ORGANISKO SKĀBJU NOSAUKUMĀ",
+  words: ["SKUDRA", "SKĀBENES", "CITRONS", "VĪNS"],
+  difficulty: 3,
+},
+{
+  category: "MĀRI POLITIKĀ",
+  words: ["GAILIS", "GULBIS", "RIEKSTIŅŠ", "PURGAILIS"],
+  difficulty: 4,
+},
+  ],
+  [
+{
+  category: "ZIVIS",
+  words: ["SIĻĶES", "LUCĪŠI", "KAZRAGI", "RAUDAS"],
+  difficulty: 1,
+},
+{
+  category: "ORANŽI",
+  words: ["BURKĀNI", "APELSĪNS", "NĪDERLANDE", "BASKETBOLA BUMBA"],
+  difficulty: 2,
+},
+{
+  category: "TĒVI UN DĒLI LATVIJAS SPORTĀ",
+  words: ["ĀBOLI", "LŪŠI", "VALTERI", "DUKURI"],
+  difficulty: 3,
+},
+{
+  category: "\"-CIEMI\" BIJUŠAJĀ BABĪTES NOVADĀ",
+  words: ["SĪPOLI", "EGLES", "GĀTE", "DZILNAS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "FUTBOLISTU POZĪCIJAS",
+  words: ["SPĀRNS", "ZEMUZBRUCĒJS", "VĀRTSARGS", "AIZSARGS"],
+  difficulty: 1,
+},
+{
+  category: "FUTBOLA ŽARGONS",
+  words: ["AUTOBUSS", "ŠĶĒRĪTE", "SIENIŅA", "DZELTENĀ"],
+  difficulty: 3,
+},
+{
+  category: "PK 2026 TOP4 IESAUKAS",
+  words: ["FŪRIJA", "LAUVAS", "ZILIE", "BALTDEBESZILIE"],
+  difficulty: 2,
+},
+{
+  category: "KOMENTĒ PASAULES KAUSU",
+  words: ["PAKALNS", "TOĻIKS", "ARKĀDIJS", "LIETUVIETIS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "ŪDENSGUVES VIETAS",
+  words: ["AKAS", "AVOTI", "PUMPJI", "KRĀNI"],
+  difficulty: 1,
+},
+{
+  category: "LIVONIJAS INDRIĶA HRONIKĀ MINĒTIE LĪBIEŠI",
+  words: ["IMANTA", "ANNO", "AKO", "KAUPO"],
+  difficulty: 2,
+},
+{
+  category: "RĪGAS IZGLĪTĪBAS IESTĀŽU IESAUKAS",
+  words: ["DĀRZIŅI", "ZVIEDRI", "LIETIŠĶIE", "ROŽI"],
+  difficulty: 3,
+},
+{
+  category: "SAISTĀS AR DŽORDANU",
+  words: ["BUĻĻI", "GOLFS", "BEISBOLS", "APAVI"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "SABIEDRISKĀ TRANSPORTA DARBINIEKI",
+  words: ["KONDUKTORS", "KONTROLIERIS", "VADĪTĀJS", "DISPEČERS"],
+  difficulty: 1,
+},
+{
+  category: "DAŽĀDAS KRĪZES",
+  words: ["PUSVADĪTĀJS", "NAFTA", "FINANSES", "PUSMŪŽS"],
+  difficulty: 2,
+},
+{
+  category: "AR KONTAKTIEM",
+  words: ["TELEFONGRĀMATA", "RELEJS", "PAGARINĀTĀJS", "BATERIJA"],
+  difficulty: 3,
+},
+{
+  category: "SIRMIE",
+  words: ["DIRIĢENTS", "SPORTISTI", "PAVĀRS", "DZIEDĀTĀJS"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "KAFIJAS FORMAS AUTOMĀTIEM",
+  words: ["SPILVENTIŅŠ", "KAPSULA", "TABLETE", "PUPIŅAS"],
+  difficulty: 1,
+},
+{
+  category: "VAR ATKLĀT",
+  words: ["SEZONA", "KĀRTIS", "PASĀKUMS", "NOSLĒPUMS"],
+  difficulty: 2,
+},
+{
+  category: "PUSSALU NOSAUKUMOS",
+  words: ["LABRADORS", "KURZEME", "KOLA", "MANGAĻI"],
+  difficulty: 3,
+},
+{
+  category: "LIKA BESONA PRODUCĒTĀS FILMAS",
+  words: ["VASABI", "REVOLVERIS", "TAKSIS", "KURJERS"],
+  difficulty: 4,
+},
+  ],
+  [
+{
+  category: "TERITORIJA",
+  words: ["ZONA", "AREĀLS", "PUSE", "LAUKUMS"],
+  difficulty: 1,
+},
+{
+  category: "ATBALSTS",
+  words: ["JUMTS", "AIZMUGURE", "PLECS", "ATSPAIDS"],
+  difficulty: 2,
+},
+{
+  category: "PIE VELOSIPĒDA STŪRES",
+  words: ["IZNESUMS", "RAGI", "LENTE", "ROKTURIS"],
+  difficulty: 3,
+},
+{
+  category: "BEIDZAS AR SIEVIETES VĀRDU JŪLIJA KALENDĀRĀ",
+  words: ["MANTRA", "VANNA", "STRUTA", "KŅADA"],
+  difficulty: 4,
+},
+  ],
 ];
