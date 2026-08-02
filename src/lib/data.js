@@ -1714,4 +1714,26 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
   ],
+  [
+    {
+  category: "ĀRĒJAIS APVALKS",
+  words: ["MEMBRĀNA", "ĀDA", "ČAULA", "GAROZA"],
+  difficulty: 1,
+},
+{
+  category: "FOTOKAMERAS PARAMETRI",
+  words: ["FOKUSS", "PIETUVINĀJUMS", "DIAFRAGMA", "ISO"],
+  difficulty: 2,
+},
+{
+  category: "VIENLAIKUS ĪPAŠĪBAS VĀRDI UN LIETVĀRDI",
+  words: ["OBJEKTĪVS", "STĪVS", "PASĪVS", "AKTĪVS"],
+  difficulty: 3,
+},
+{
+  category: "KASPARA GORKŠA DARBAVIETAS",
+  words: ["KAMERA", "KLUBS", "ASOCIĀCIJA", "FEDERĀCIJA"],
+  difficulty: 4,
+},
+  ]
 ];
