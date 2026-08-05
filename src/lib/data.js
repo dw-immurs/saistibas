@@ -1728,11 +1728,33 @@ export const CONNECTION_GAMES = [
 {
   category: "VIENLAIKUS ĪPAŠĪBAS VĀRDI UN LIETVĀRDI",
   words: ["OBJEKTĪVS", "STĪVS", "PASĪVS", "AKTĪVS"],
+  difficulty: 4,
+},
+{
+  category: "BARO-",
+  words: ["KAMERA", "KĀLS", "TAVA", "SKOPS"],
+  difficulty: 3,
+},
+  ],
+  [
+    {
+  category: "IZMANTO VĒRTĒŠANĀ",
+  words: ["IESKAITĪTS", "BALLE", "ATZĪME", "PUNKTS"],
+  difficulty: 1,
+},
+{
+  category: "TO VAR NOSIST",
+  words: ["TEMPERATŪRA", "ODS", "APETĪTE", "LAIKS"],
+  difficulty: 2,
+},
+{
+  category: "APZĪMĒ AR V",
+  words: ["5", "UZVARA", "MIERS", "TILPUMS"],
   difficulty: 3,
 },
 {
-  category: "KASPARA GORKŠA DARBAVIETAS",
-  words: ["KAMERA", "KLUBS", "ASOCIĀCIJA", "FEDERĀCIJA"],
+  category: "AUSTRAS BALVAI 2026 NOMINĒTIE ALBUMI",
+  words: ["GATAVS", "TULKOJUMI", "AR LABUNAKTI", "222"],
   difficulty: 4,
 },
   ]
