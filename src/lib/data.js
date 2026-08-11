@@ -1757,5 +1757,49 @@ export const CONNECTION_GAMES = [
   words: ["GATAVS", "TULKOJUMI", "AR LABUNAKTI", "222"],
   difficulty: 4,
 },
-  ]
+  ],
+  [
+{
+  category: "GAISA PLŪSMAS VEIDI",
+  words: ["VELKME", "VĒJŠ", "VIESULIS", "VĒSMA"],
+  difficulty: 1,
+},
+{
+  category: "SVĒTKU VAI ATZĪMĒJAMO DIENU NOSAUKUMĀ",
+  words: ["VALENTĪNS", "VASARA", "VALSTS VALODA", "VECGADS"],
+  difficulty: 2,
+},
+{
+  category: "ZVEJNIECĪBAS TERMINI",
+  words: ["VABA", "VADS", "VALGUMS", "VENTERIS"],
+  difficulty: 3,
+},
+{
+  category: "TIEK LIETOTI KĀ IZSAUKSMES VĀRDI",
+  words: ["VĀKS", "VELNS", "VAI", "VAU"],
+  difficulty: 4,
+},
+  ],
+  [
+    {
+  category: "AUGSTĀKĀ DAĻA",
+  words: ["MUGURA", "KORE", "VIRSOTNE", "GALOTNE"],
+  difficulty: 1,
+},
+{
+  category: "JUMTA BŪVKONSTRUKCIJAS",
+  words: ["SPĀRE", "STATNE", "ATGĀZNIS", "KOPNE"],
+  difficulty: 2,
+},
+{
+  category: "SĒNE",
+  words: ["SMILTENE", "VILNĪTIS", "LĀCĪTIS", "AUSAINE"],
+  difficulty: 3,
+},
+{
+  category: "AR DZELTENMELNU \"IDENTITĀTI\"",
+  words: ["VĀLODZE", "MANČESTRA", "VARAKĻĀNI", "LAPSENE"],
+  difficulty: 4,
+},
+],
 ];
