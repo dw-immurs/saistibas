@@ -1802,4 +1802,70 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
 ],
+[
+{
+  category: "SASVEICINĀŠANĀS VEIDI",
+  words: ["MĀJIENS", "APSKĀVIENS", "SKŪPSTS", "ROKASSPIEDIENS"],
+  difficulty: 1,
+},
+{
+  category: "BRAUKŠANAS...",
+  words: ["NORĀDE", "ĀTRUMS", "JOSLA", "VIRZIENS"],
+  difficulty: 2,
+},
+{
+  category: "TIEVUMA ETALONI",
+  words: ["DIEGS", "SĒRKOCIŅŠ", "KĀRTS", "SKALS"],
+  difficulty: 3,
+},
+{
+  category: "ATRODAMI TVITERĪ",
+  words: ["PAVEDIENS", "GRĀMATZĪME", "SARAKSTS", "MELNRAKSTS"],
+  difficulty: 4,
+},
+],
+[
+{
+  category: "VINGROŠANAS RĪKI",
+  words: ["ĀZIS", "STIENIS", "SIENA", "RIŅĶI"],
+  difficulty: 1,
+},
+{
+  category: "BĒDU...",
+  words: ["IELEJA", "BRĀLIS", "ZIŅAS", "LAIKI"],
+  difficulty: 2,
+},
+{
+  category: "VIENMĒR SEKO",
+  words: ["ĒNA", "ATSKATS", "ASTE", "AITAS"],
+  difficulty: 3,
+},
+{
+  category: "KAM IZVEIDOTI REZERVĀTI GAUJAS NACIONĀLAJĀ PARKĀ",
+  words: ["MEŽS", "PURVS", "SENKRASTS", "GRAVAS"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "KUR SASTOPAMA MĒLĪTE",
+  words: ["KONDITOREJA", "REVOLVERIS", "SAKSOFONS", "KURPE"],
+  difficulty: 3,
+},
+{
+  category: "NOTIEK NO RĪTA",
+  words: ["AUSMA", "ROSME", "BROAKSTIS", "KAFIJA"],
+  difficulty: 1,
+},
+{
+  category: "PROGRAMMĒŠANAS VALODAS (IZTULKOTAS LATVISKI)",
+  words: ["PITONS", "RUBĪNS", "RŪSA", "SVĪRE"],
+  difficulty: 4,
+},
+{
+  category: "DAUDZKRĀSU ATMOSFĒRAS PARĀDĪBA",
+  words: ["DARDEDZE", "VARAVĪKSNE", "DZĒRVE", "DRĪKSNE"],
+  difficulty: 2,
+},
+],
 ];
