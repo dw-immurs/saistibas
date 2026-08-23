@@ -1854,7 +1854,7 @@ export const CONNECTION_GAMES = [
 },
 {
   category: "NOTIEK NO RĪTA",
-  words: ["AUSMA", "ROSME", "BROAKSTIS", "KAFIJA"],
+  words: ["AUSMA", "ROSME", "BROKASTIS", "KAFIJA"],
   difficulty: 1,
 },
 {
@@ -1866,6 +1866,28 @@ export const CONNECTION_GAMES = [
   category: "DAUDZKRĀSU ATMOSFĒRAS PARĀDĪBA",
   words: ["DARDEDZE", "VARAVĪKSNE", "DZĒRVE", "DRĪKSNE"],
   difficulty: 2,
+},
+],
+[
+{
+  category: "SAVIENOJUMS",
+  words: ["TILTS", "PĀREJA", "TUNELIS", "KORIDORS"],
+  difficulty: 2,
+},
+{
+  category: "PIRMĀS TELPAS ĒKĀ",
+  words: ["PRIEKŠNAMS", "HALLE", "FOAJĒ", "VESTIBILS"],
+  difficulty: 1,
+},
+{
+  category: "NUMURI AUTO REĢISTRĀCIJAS APLIECĪBĀ",
+  words: ["ŠASIJA", "REĢISTRĀCIJA", "APLIECĪBA", "TIPA APSTIPRINĀJUMS"],
+  difficulty: 3,
+},
+{
+  category: "BUNDZINIEKA EKIPĒJUMĀ",
+  words: ["KARDĀNS", "ŠĶĪVIS", "VĀLĪTE", "STATĪVS"],
+  difficulty: 4,
 },
 ],
 ];
