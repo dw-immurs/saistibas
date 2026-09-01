@@ -1890,4 +1890,70 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
 ],
+[
+{
+  category: "MĀCĪBU PRIEKŠMETU ŽARGONI",
+  words: ["LITENE", "MATENE", "VĀCENE", "FISENE"],
+  difficulty: 1,
+},
+{
+  category: "MITRA, STAIGNA VIETA",
+  words: ["PLĀCIS", "PURS", "MUKA", "LĪKŠŅA"],
+  difficulty: 2,
+},
+{
+  category: "CIEMI, KUR ALU DARA",
+  words: ["LIZUMS", "RAUNA", "UPESPILS", "RAISKUMS"],
+  difficulty: 3,
+},
+{
+  category: "LATVIEŠU TĒLNIEKI",
+  words: ["RANKA", "ZĀLE", "MAURS", "TITĀNS"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "KARTUPEĻU ĒDIENI",
+  words: ["ČIPSI", "FRĪ", "PANKŪKAS", "BIEZENIS"],
+  difficulty: 1,
+},
+{
+  category: "FRANČU...",
+  words: ["BIZE", "LICEJS", "KARBONĀDE", "SKŪPSTS"],
+  difficulty: 2,
+},
+{
+  category: "AR CAURUMIEM",
+  words: ["EMENTĀLERS", "MONSTERA", "SIETS", "POGA"],
+  difficulty: 3,
+},
+{
+  category: "LATVIJAS MŪZIKAS DUETI",
+  words: ["TEHNIKUMS", "DIFŪZIJA", "ŠOKOLĀDE", "OLAS"],
+  difficulty: 4,
+},
+],
+[
+{
+  category: "SKOLU VEIDOS",
+  words: ["AUGSTS", "PAMATS", "VIDUS", "SĀKUMS"],
+  difficulty: 1,
+},
+{
+  category: "INICIATORS",
+  words: ["ŠĀVIENS", "SIGNĀLS", "INDIKATORS", "IMPULSS"],
+  difficulty: 2,
+},
+{
+  category: "\"-ISMOS\"",
+  words: ["MAKJAVELLI", "SOCIĀLS", "RASE", "MERKANTILS"],
+  difficulty: 3,
+},
+{
+  category: "AN-",
+  words: ["DANTE", "TANTE", "ĪSS", "ŠOVS"],
+  difficulty: 4,
+},
+],
 ];
