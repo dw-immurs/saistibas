@@ -1956,4 +1956,48 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
 ],
+[
+  {
+  category: "SKAĻA NEAPMIERINĀTĪBAS IZPAUSME",
+  words: ["VAIMANAS", "ŽĒLAS", "VAIDI", "GAUDAS"],
+  difficulty: 1,
+},
+{
+  category: "ELLES...",
+  words: ["ĶĒĶIS", "IZDZIMUMS", "MOKAS", "KATLS"],
+  difficulty: 2,
+},
+{
+  category: "AR POSMIEM",
+  words: ["VAŽAS", "DĒLE", "VĒSTURE", "IZGLĪTĪBA"],
+  difficulty: 3,
+},
+{
+  category: "IEVAS ŽURNĀLI",
+  words: ["VIRTUVE", "MEZGLS", "STĀSTI", "VESELĪBA"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "AKTĪVI RUNĀTIES",
+  words: ["VĀRĪTIES", "CEPTIES", "SPRĒGĀT", "ČALOT"],
+  difficulty: 1,
+},
+{
+  category: "DZERT (PARASTI ALKOHOLU)",
+  words: ["MEST", "ŅEMT", "TRIEKT", "STRĒBT"],
+  difficulty: 2,
+},
+{
+  category: "AR \"NO-\": NEUZKRĪTOŠI PAMEST [KĀDU VIETU]",
+  words: ["SVĪST", "PLAUKT", "ZUST", "ŠMAUKT"],
+  difficulty: 3,
+},
+{
+  category: "NEDRĪKST DARĪT BASKETBOLĀ",
+  words: ["NOSTAIGĀT", "SIST", "IZLĒKT", "TĒLOT"],
+  difficulty: 4,
+},
+],
 ];
