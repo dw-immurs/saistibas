@@ -2000,4 +2000,70 @@ export const CONNECTION_GAMES = [
   difficulty: 4,
 },
 ],
+[
+  {
+  category: "NAMEJS",
+  words: ["KUĢIS", "MĀCĪBAS", "VALDNIEKS", "SISTĒMA"],
+  difficulty: 4,
+},
+{
+  category: "AR ZARIEM",
+  words: ["GRĀBEKLIS", "SHĒMA", "KOKS", "PIRMKODS"],
+  difficulty: 3,
+},
+{
+  category: "RĪCĪBAS PIEEJA",
+  words: ["PLĀNS", "RISINĀJUMS", "STRATĒĢIJA", "DOMA"],
+  difficulty: 2,
+},
+{
+  category: "NEGUDRU CILVĒKU APZĪMĒJUMS",
+  words: ["ĀMURS", "CIRVIS", "ZĀBAKS", "PĀLIS"],
+  difficulty: 1,
+},
+],
+[
+  {
+  category: "BEIDZAS AR DARBĪBAS VĀRDU NĀKOTNĒ",
+  words: ["OTRAIS TEMPS", "ANDRIS VILKS", "MĒS TIKSIMIES", "SEPTIŅSIMT GADU JŪGS"],
+  difficulty: 3,
+},
+{
+  category: "LĪNIJAS",
+  words: ["DIAGONĀLE", "MERIDIĀNS", "AUGSTUMA LĪKNE", "TAISNE"],
+  difficulty: 1,
+},
+{
+  category: "APZĪMĒ AR KP",
+  words: ["PORZIŅĢIS", "KONTROLPUNKTS", "TAME IMPALA", "KONKURENCES PADOME"],
+  difficulty: 4,
+},
+{
+  category: "LITERATŪRAS TERMINI",
+  words: ["LIRISKAIS ES", "METAFORA", "GREDZENVEIDA KOMPOZĪCIJA", "RETORISKAIS JAUTĀJUMS"],
+  difficulty: 2,
+},
+],
+[
+  {
+  category: "UZŅĒMUMA VAI IESTĀDES VIENĪBA",
+  words: ["NODAĻA", "FILIĀLE", "DAĻA", "STRUKTŪRA"],
+  difficulty: 1,
+},
+{
+  category: "EKRĀN-",
+  words: ["TAPETE", "UZŅĒMUMS", "SAUDZĒTĀJS", "LAIKS"],
+  difficulty: 2,
+},
+{
+  category: "IZDOMĀTI TRANSPORTLĪDZEKĻI",
+  words: ["SLOTA", "BETMOBILIS", "TELEPORTS", "PAKLĀJS"],
+  difficulty: 3,
+},
+{
+  category: "SARUNVALODAS AIZGUVUMI NO VĀCU VALODAS",
+  words: ["ŠAUFELE", "VĀĢIS", "ŠVAMME", "BILDE"],
+  difficulty: 4,
+},
+]
 ];
