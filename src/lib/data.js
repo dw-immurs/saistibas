@@ -2065,5 +2065,27 @@ export const CONNECTION_GAMES = [
   words: ["ŠAUFELE", "VĀĢIS", "ŠVAMME", "BILDE"],
   difficulty: 4,
 },
+],
+[
+  {
+  category: "PĒC SATVERSMES PREAMBULAS: TO SARGĀ LATVIJAS TAUTA",
+  words: ["VIENOTĪBA", "TERITORIJA", "NEATKARĪBA", "DEMOKRĀTIJA"],
+  difficulty: 4,
+},
+{
+  category: "-S CENTRS",
+  words: ["MASA", "SASKAŅA", "APRŪPE", "KRĪZE"],
+  difficulty: 3,
+},
+{
+  category: "DAUDZVEIDĪBA",
+  words: ["EKLEKTIKA", "ASORTI", "RAIBUMS", "KOKTEILIS"],
+  difficulty: 2,
+},
+{
+  category: "VIRSMAS ĪPAŠĪBA",
+  words: ["KRĀSA", "TEKSTŪRA", "SPĪDUMS", "GLUDUMS"],
+  difficulty: 1,
+},
 ]
 ];
