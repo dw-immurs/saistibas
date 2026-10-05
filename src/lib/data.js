@@ -2087,5 +2087,115 @@ export const CONNECTION_GAMES = [
   words: ["KRĀSA", "TEKSTŪRA", "SPĪDUMS", "GLUDUMS"],
   difficulty: 1,
 },
+],
+[
+  {
+  category: "LĪNIJAS ĢEOMETRIJĀ [ATKAL...] ",
+  words: ["MEDIĀNA", "STARS", "LOKS", "HORDA"],
+  difficulty: 2,
+},
+{
+  category: "TIEK ATTĒLOTS TABULĀ",
+  words: ["REIZRĒĶINS", "STATISTIKA", "BUDŽETS", "DATI"],
+  difficulty: 3,
+},
+{
+  category: "GALĒJĀ PAKĀPE",
+  words: ["POLS", "EKSTRĒMS", "GALĒJĪBA", "MAKSIMUMS"],
+  difficulty: 1,
+},
+{
+  category: "PASTAS ŠĶIRNES VIENSKAITLĪ",
+  words: ["RADZIŅŠ", "ALFABĒTS", "TAURENIS", "MĒLĪTE"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "ĒST GATAVOTĀJI",
+  words: ["SAIMNIEKI", "PAVĀRI", "KOKI", "ŠEFI"],
+  difficulty: 1,
+},
+{
+  category: "EIROVĪZIJAS UZVARĒTĀJI",
+  words: ["LĒNA", "DARA", "LORDI", "NIKOLA"],
+  difficulty: 2,
+},
+{
+  category: "SVIN VĀRDA DIENU APRĪLĪ",
+  words: ["STRAUJA", "ZĪLE", "VIJA", "ŽUBĪTE"],
+  difficulty: 3,
+},
+{
+  category: "BALTMAIŽU NOSAUKUMĀ",
+  words: ["KUNGI", "ZEMNIEKI", "DIENA", "ĪSTA"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "SĒNES DAĻA",
+  words: ["GREDZENS", "CEPURĪTE", "ADATIŅA", "KĀTS"],
+  difficulty: 1,
+},
+{
+  category: "14. SAEIMAS EKSDEPUTĀTI",
+  words: ["ZARIŅI", "LAPIŅŠ", "KARIŅŠ", "KOLS"],
+  difficulty: 2,
+},
+{
+  category: "VAR PIELIKT",
+  words: ["BIKSES", "PUNKTS", "VĒDERS", "ALGA"],
+  difficulty: 3,
+},
+{
+  category: "PAR TĀS GARUMU DISKUTĒ",
+  words: ["DOMUZĪME", "GAUJA", "SLIMĪBAS LAPA", "DARBADIENA"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "TIPISKAS PIEKĻUVES LOMAS SISTĒMĀS",
+  words: ["VIESIS", "LIETOTĀJS", "MODERATORS", "ADMINISTRATORS"],
+  difficulty: 1,
+},
+{
+  category: "APDZĪVOTAS VIETAS DEMINUTĪVS",
+  words: ["MIESTIŅŠ", "CIEMIŅŠ", "PILSĒTELE", "SĀDŽIŅA"],
+  difficulty: 2,
+},
+{
+  category: "ATSLĒGAS VĀRDI ĪPAŠAJAI PUSDIENU CENAI",
+  words: ["BIZNESS", "DIENA", "KOMPLEKTS", "PIEDĀVĀJUMS"],
+  difficulty: 3,
+},
+{
+  category: "AR RUPJMAIZES KLĀTBŪTNI",
+  words: ["KVASS", "KULTŪRAS KANONS", "KĀRTOJUMS", "ĶIPLOKU GRAUZDIŅŠ"],
+  difficulty: 4,
+},
+],
+[
+  {
+  category: "KOKAUGI (IEKĻUVA 15. SAEIMĀ NO AS)",
+  words: ["VĪKSNA", "PRIEDE", "MELNALKSNIS", "OZOLIŅŠ"],
+  difficulty: 1,
+},
+{
+  category: "IEGARENA DETAĻA KAUT KĀ AIZVĒRŠANAI",
+  words: ["SPRŪDS", "TAPA", "KORĶIS", "PIRKSTS"],
+  difficulty: 2,
+},
+{
+  category: "AINĀRI / AINARI",
+  words: ["BUMBIERIS", "ŠLESERS", "DIMANTS", "GULBIS"],
+  difficulty: 3,
+},
+{
+  category: "SAISTĪTS AR IMANTU KALNIŅU",
+  words: ["ŠUVAJEVS", "TB/LNNK", "KORĀNS", "BIZBIZMĀRĪTE"],
+  difficulty: 4,
+},
 ]
 ];
